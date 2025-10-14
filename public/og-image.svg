@@ -1,0 +1,22 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="url(#gradient)"/>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2E50"/>
+      <stop offset="100%" stop-color="#00C4B4"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Knetix Logo -->
+  <svg x="400" y="200" width="400" height="230" viewBox="0 0 400 230">
+    <circle cx="200" cy="115" r="100" fill="#0A2E50"/>
+    <path d="M100 30H140L200 90L140 150L200 210H100L140 150L100 90L140 30L100 30Z" fill="#00C4B4"/>
+    <circle cx="330" cy="65" r="15" fill="#FF8C00"/>
+    <circle cx="330" cy="165" r="15" fill="#FF8C00"/>
+    <path d="M200 90L330 65M200 150L330 165" stroke="#FF8C00" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+  
+  <!-- Text -->
+  <text x="600" y="150" font-family="Montserrat" font-size="80px" font-weight="700" fill="white" text-anchor="middle">Knetix</text>
+  <text x="600" y="220" font-family="Open Sans" font-size="30px" fill="#FFFFFF" text-anchor="middle">Powering Your Digital Evolution</text>
+</svg>
