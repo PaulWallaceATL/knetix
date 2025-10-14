@@ -30,13 +30,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
-      { url: "/favicon.svg", sizes: "any", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=2", sizes: "32x32", type: "image/x-icon" },
+      { url: "/favicon.svg?v=2", sizes: "any", type: "image/svg+xml" },
       { url: "/logo-192.png", sizes: "192x192", type: "image/png" },
       { url: "/logo-512.png", sizes: "512x512", type: "image/png" }
     ],
-    shortcut: "/favicon.ico",
-    apple: "/favicon.svg",
+    shortcut: "/favicon.ico?v=2",
+    apple: "/favicon.svg?v=2",
   },
   openGraph: {
     type: "website",
@@ -70,9 +70,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico?v=2" sizes="32x32" />
+        <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg?v=2" />
+        <link rel="shortcut icon" href="/favicon.ico?v=2" />
         <StructuredData />
       </head>
       <body
