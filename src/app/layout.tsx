@@ -28,13 +28,32 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://knetix.com",
+    url: "https://knetix.vercel.app",
     title: "Knetix - Powering Your Digital Evolution",
     description: "Enterprise IT solutions for forward-thinking businesses",
     siteName: "Knetix",
+    images: [
+      {
+        url: "https://knetix.vercel.app/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Knetix - Enterprise IT Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Knetix - Powering Your Digital Evolution",
+    description: "Enterprise IT solutions for forward-thinking businesses",
+    images: ["https://knetix.vercel.app/og-image.jpg"],
   },
 };
 
