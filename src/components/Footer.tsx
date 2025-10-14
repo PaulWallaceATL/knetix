@@ -250,7 +250,7 @@ export default function Footer() {
               </ul>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Social Media & Trust Badges */}
         <motion.div 

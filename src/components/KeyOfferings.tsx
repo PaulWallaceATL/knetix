@@ -201,7 +201,7 @@ export default function KeyOfferings() {
               </Link>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* CTA Section */}
         <motion.div 
