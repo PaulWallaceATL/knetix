@@ -1,3 +1,5 @@
+'use client';
+
 export default function CookiesPage() {
   return (
     <main className="py-20 bg-white">
