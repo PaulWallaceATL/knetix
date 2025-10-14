@@ -1,3 +1,5 @@
+import AnimatedCounter from './AnimatedCounter';
+
 const benefits = [
   {
     title: 'Strategic Growth & Scalability',
@@ -75,10 +77,12 @@ export default function WhyKnetix() {
           ))}
         </div>
 
-        {/* Stats or Additional Info */}
+        {/* Stats with Animated Counters */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <div className="text-4xl font-bold text-[#00C4B4] mb-2">99.9%</div>
+            <div className="text-4xl font-bold text-[#00C4B4] mb-2">
+              <AnimatedCounter end={99.9} decimals={1} suffix="%" />
+            </div>
             <div className="text-gray-700 font-semibold">Uptime Guarantee</div>
           </div>
           <div>
@@ -86,11 +90,15 @@ export default function WhyKnetix() {
             <div className="text-gray-700 font-semibold">Expert Support</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-[#00C4B4] mb-2">500+</div>
+            <div className="text-4xl font-bold text-[#00C4B4] mb-2">
+              <AnimatedCounter end={500} suffix="+" />
+            </div>
             <div className="text-gray-700 font-semibold">Clients Served</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-[#00C4B4] mb-2">15+</div>
+            <div className="text-4xl font-bold text-[#00C4B4] mb-2">
+              <AnimatedCounter end={15} suffix="+" />
+            </div>
             <div className="text-gray-700 font-semibold">Years Experience</div>
           </div>
         </div>
