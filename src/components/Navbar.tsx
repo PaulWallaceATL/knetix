@@ -11,7 +11,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -29,17 +29,17 @@ export default function Navbar() {
     <motion.nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'glass-card backdrop-blur-xl border-b border-white/10' 
+          ? 'bg-white/80 backdrop-blur-xl border-b border-gray-200' 
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-clean">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
+          <Link href="/" className="flex items-center">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -60,15 +60,15 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="relative text-deep-ocean hover:text-vibrant-teal font-semibold transition-colors duration-300 group"
+                  className="apple-text-callout text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-vibrant-teal to-accent-orange transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </motion.div>
             ))}
             
-            {/* Premium CTA Button */}
+            {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -76,10 +76,9 @@ export default function Navbar() {
             >
               <Link
                 href="/contact"
-                className="relative px-6 py-3 bg-gradient-to-r from-accent-orange to-warm-orange text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105 overflow-hidden group"
+                className="apple-button apple-button-primary px-6 py-3"
               >
-                <span className="relative z-10">Get Started</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-warm-orange to-accent-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                Get Started
               </Link>
             </motion.div>
           </div>
@@ -88,7 +87,7 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center">
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-lg text-deep-ocean hover:text-vibrant-teal hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-vibrant-teal transition-all duration-300"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-all duration-300"
               whileTap={{ scale: 0.95 }}
             >
               <span className="sr-only">Open main menu</span>
@@ -136,44 +135,46 @@ export default function Navbar() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="lg:hidden glass-card border-t border-white/10"
+            className="lg:hidden bg-white border-t border-gray-200"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <div className="px-4 pt-2 pb-3 space-y-1">
-              {navLinks.map((link, index) => (
+            <div className="container-clean py-4">
+              <div className="space-y-4">
+                {navLinks.map((link, index) => (
+                  <motion.div
+                    key={link.name}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                  >
+                    <Link
+                      href={link.href}
+                      className="block apple-text-callout text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
+                ))}
+                
                 <motion.div
-                  key={link.name}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
+                  className="pt-4"
                 >
                   <Link
-                    href={link.href}
-                    className="block px-3 py-3 rounded-lg text-base font-medium text-deep-ocean hover:text-vibrant-teal hover:bg-white/10 transition-all duration-300"
+                    href="/contact"
+                    className="apple-button apple-button-primary w-full justify-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {link.name}
+                    Get Started
                   </Link>
                 </motion.div>
-              ))}
-              
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
-                className="pt-4"
-              >
-                <Link
-                  href="/contact"
-                  className="block w-full text-center px-3 py-3 rounded-lg text-base font-medium bg-gradient-to-r from-accent-orange to-warm-orange text-white hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         )}
