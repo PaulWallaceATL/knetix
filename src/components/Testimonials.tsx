@@ -110,7 +110,7 @@ export default function Testimonials() {
             <span className="gradient-text">What Our Clients Say</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto text-premium leading-relaxed">
-            Don't just take our word for it. Hear from the enterprises that have transformed their operations with Knetix.
+            Don&apos;t just take our word for it. Hear from the enterprises that have transformed their operations with Knetix.
           </p>
         </motion.div>
 
