@@ -58,7 +58,7 @@ export default function Testimonials() {
       name: "Lisa Park",
       title: "Chief Information Officer",
       company: "FinanceFirst",
-      content: "Knetix's managed services have revolutionized our IT operations. We've reduced downtime by 95% and our team can focus on strategic initiatives instead of firefighting.",
+      content: "Knetix&apos;s managed services have revolutionized our IT operations. We&apos;ve reduced downtime by 95% and our team can focus on strategic initiatives instead of firefighting.",
       rating: 5,
       industry: "Financial Services",
       project: "Managed Services",
@@ -158,7 +158,7 @@ export default function Testimonials() {
 
                   {/* Quote */}
                   <blockquote className="text-2xl md:text-3xl text-gray-800 text-center leading-relaxed mb-12 text-premium">
-                    "{testimonials[currentSlide].content}"
+                    &ldquo;{testimonials[currentSlide].content}&rdquo;
                   </blockquote>
 
                   {/* Author Info */}
