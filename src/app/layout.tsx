@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Knetix",
     images: [
       {
-        url: "https://knetix.vercel.app/og-image.jpg",
+        url: "https://knetix.vercel.app/og-image.jpg?v=3",
         width: 1200,
         height: 630,
         alt: "Knetix - Enterprise IT Solutions",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Knetix - Powering Your Digital Evolution",
     description: "Enterprise IT solutions for forward-thinking businesses",
-    images: ["https://knetix.vercel.app/og-image.jpg"],
+    images: ["https://knetix.vercel.app/og-image.jpg?v=3"],
   },
 };
 
@@ -72,6 +72,21 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon.svg?v=3" />
         <link rel="shortcut icon" href="/favicon.svg?v=3" />
+        
+        {/* Explicit Open Graph tags for iMessage */}
+        <meta property="og:title" content="Knetix - Powering Your Digital Evolution" />
+        <meta property="og:description" content="Enterprise IT solutions for forward-thinking businesses" />
+        <meta property="og:image" content="https://knetix.vercel.app/og-image.jpg?v=3" />
+        <meta property="og:url" content="https://knetix.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Knetix" />
+        
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Knetix - Powering Your Digital Evolution" />
+        <meta name="twitter:description" content="Enterprise IT solutions for forward-thinking businesses" />
+        <meta name="twitter:image" content="https://knetix.vercel.app/og-image.jpg?v=3" />
+        
         <StructuredData />
       </head>
       <body
