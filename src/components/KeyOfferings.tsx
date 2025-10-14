@@ -102,40 +102,101 @@ export default function KeyOfferings() {
           </p>
         </motion.div>
 
-        {/* Airbnb-Style Cards Grid */}
+        {/* Enhanced Cards Grid with Scroll Animations */}
         <div className="grid-clean">
           {offerings.map((offering, index) => (
             <motion.div
               key={offering.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 60, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: index * 0.15,
+                ease: [0.25, 0.46, 0.45, 0.94]
+              }}
+              viewport={{ once: true, margin: "-100px" }}
+              whileHover={{ y: -10 }}
             >
               <Link href={offering.href} className="group block">
-                <div className="airbnb-card h-full group-hover:scale-105 transition-transform duration-300">
-                  {/* Icon */}
-                  <div className={`w-16 h-16 rounded-2xl ${colorClasses[offering.color as keyof typeof colorClasses]} flex items-center justify-center mb-6`}>
-                    {offering.icon}
-                  </div>
+                <motion.div 
+                  className="airbnb-card h-full relative overflow-hidden"
+                  whileHover={{ 
+                    scale: 1.02,
+                    boxShadow: "0 20px 40px -12px rgba(0, 0, 0, 0.25)"
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {/* Animated Background Gradient */}
+                  <motion.div
+                    className={`absolute inset-0 bg-gradient-to-br ${colorClasses[offering.color as keyof typeof colorClasses]} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                    initial={false}
+                  />
+                  {/* Animated Icon */}
+                  <motion.div 
+                    className={`w-16 h-16 rounded-2xl ${colorClasses[offering.color as keyof typeof colorClasses]} flex items-center justify-center mb-6 relative`}
+                    whileHover={{ 
+                      scale: 1.1,
+                      rotate: 5
+                    }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <motion.div
+                      animate={{
+                        scale: [1, 1.1, 1],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: index * 0.2
+                      }}
+                    >
+                      {offering.icon}
+                    </motion.div>
+                  </motion.div>
 
                   {/* Content */}
-                  <div className="space-y-4">
-                    <h3 className="apple-text-title3 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                  <div className="space-y-4 relative z-10">
+                    <motion.h3 
+                      className="apple-text-title3 text-gray-900 group-hover:text-blue-600 transition-colors duration-300"
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       {offering.title}
-                    </h3>
-                    <p className="apple-text-body text-gray-600 leading-relaxed">
+                    </motion.h3>
+                    <motion.p 
+                      className="apple-text-body text-gray-600 leading-relaxed"
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       {offering.description}
-                    </p>
+                    </motion.p>
                   </div>
 
-                  {/* Arrow */}
-                  <div className="mt-6 flex items-center text-blue-600 group-hover:translate-x-2 transition-transform duration-300">
+                  {/* Animated Arrow */}
+                  <motion.div 
+                    className="mt-6 flex items-center text-blue-600 group-hover:text-purple-600 transition-colors duration-300 relative z-10"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     <span className="apple-text-callout font-medium">Learn more</span>
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <motion.svg 
+                      className="w-4 h-4 ml-2" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                      whileHover={{ x: 3 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
+                    </motion.svg>
+                  </motion.div>
+
+                  {/* Hover Effect Overlay */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"
+                    initial={false}
+                  />
                 </div>
               </Link>
             </motion.div>

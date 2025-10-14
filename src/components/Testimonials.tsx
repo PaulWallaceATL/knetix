@@ -79,20 +79,32 @@ export default function Testimonials() {
   return (
     <section className="section-clean bg-gray-50">
       <div className="container-clean">
-        {/* Header */}
+        {/* Enhanced Header with Staggered Animation */}
         <motion.div 
           className="text-center space-y-clean-lg mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <h2 className="apple-text-title1 text-gray-900">
+          <motion.h2 
+            className="apple-text-title1 text-gray-900"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+            viewport={{ once: true }}
+          >
             What Our Clients Say
-          </h2>
-          <p className="apple-text-body text-gray-600 max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            className="apple-text-body text-gray-600 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+            viewport={{ once: true }}
+          >
             Don&apos;t just take our word for it. Hear from the enterprises that have transformed their operations with Knetix.
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Testimonial Carousel */}
@@ -106,19 +118,35 @@ export default function Testimonials() {
               transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="relative"
             >
-              {/* Clean Testimonial Card */}
-              <div className="airbnb-card text-center">
-                {/* Stars */}
-                <div className="flex justify-center mb-8">
+              {/* Enhanced Testimonial Card */}
+              <div className="airbnb-card text-center relative overflow-hidden group">
+                {/* Animated Background */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  initial={false}
+                />
+                
+                {/* Animated Stars */}
+                <div className="flex justify-center mb-8 relative z-10">
                   {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
                     <motion.svg 
                       key={i}
-                      className="w-5 h-5 text-yellow-400 mx-1" 
+                      className="w-5 h-5 text-yellow-400 mx-1 cursor-pointer" 
                       fill="currentColor" 
                       viewBox="0 0 20 20"
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: i * 0.1 }}
+                      initial={{ opacity: 0, scale: 0, rotate: -180 }}
+                      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                      transition={{ 
+                        delay: i * 0.1,
+                        duration: 0.6,
+                        ease: [0.25, 0.46, 0.45, 0.94]
+                      }}
+                      whileHover={{ 
+                        scale: 1.3, 
+                        rotate: 15,
+                        transition: { duration: 0.2 }
+                      }}
+                      whileTap={{ scale: 0.9 }}
                     >
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </motion.svg>
@@ -130,35 +158,72 @@ export default function Testimonials() {
                   &ldquo;{testimonials[currentSlide].content}&rdquo;
                 </blockquote>
 
-                {/* Author Info */}
-                <div className="flex flex-col items-center space-y-4">
-                  {/* Avatar */}
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-lg">
-                    {testimonials[currentSlide].name.split(' ').map(n => n[0]).join('')}
-                  </div>
+                {/* Enhanced Author Info */}
+                <div className="flex flex-col items-center space-y-4 relative z-10">
+                  {/* Animated Avatar */}
+                  <motion.div 
+                    className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-lg relative overflow-hidden"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-400 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                      initial={false}
+                    />
+                    <span className="relative z-10">
+                      {testimonials[currentSlide].name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </motion.div>
                   
-                  {/* Details */}
-                  <div className="text-center">
-                    <div className="apple-text-title3 text-gray-900 mb-1">
+                  {/* Details with Staggered Animation */}
+                  <motion.div 
+                    className="text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                  >
+                    <motion.div 
+                      className="apple-text-title3 text-gray-900 mb-1"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       {testimonials[currentSlide].name}
-                    </div>
-                    <div className="apple-text-callout text-gray-600 mb-2">
+                    </motion.div>
+                    <motion.div 
+                      className="apple-text-callout text-gray-600 mb-2"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       {testimonials[currentSlide].title}
-                    </div>
-                    <div className="apple-text-footnote text-gray-500 mb-4">
+                    </motion.div>
+                    <motion.div 
+                      className="apple-text-footnote text-gray-500 mb-4"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       {testimonials[currentSlide].company}
-                    </div>
+                    </motion.div>
                     
-                    {/* Industry & Results */}
+                    {/* Animated Industry & Results Badges */}
                     <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full apple-text-footnote">
+                      <motion.span 
+                        className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full apple-text-footnote cursor-pointer"
+                        whileHover={{ scale: 1.1, backgroundColor: "#dbeafe" }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                      >
                         {testimonials[currentSlide].industry}
-                      </span>
-                      <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full apple-text-footnote">
+                      </motion.span>
+                      <motion.span 
+                        className="px-3 py-1 bg-green-100 text-green-700 rounded-full apple-text-footnote cursor-pointer"
+                        whileHover={{ scale: 1.1, backgroundColor: "#dcfce7" }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                      >
                         {testimonials[currentSlide].results}
-                      </span>
+                      </motion.span>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </motion.div>
