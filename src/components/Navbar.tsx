@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import KnetixLogo from './KnetixLogo';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,9 +21,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-3xl font-bold text-[#0A2E50]">
-              Knetix
-            </span>
+            <KnetixLogo size="md" />
           </Link>
 
           {/* Desktop Navigation */}

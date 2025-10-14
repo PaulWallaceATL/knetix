@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import KnetixLogo from './KnetixLogo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -37,7 +38,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-[#00C4B4]">Knetix</h3>
+            <div className="mb-4">
+              <KnetixLogo size="lg" className="text-[#00C4B4]" />
+            </div>
             <p className="text-gray-300 mb-4">
               Empowering businesses with intelligent, secure, and scalable technology solutions.
             </p>

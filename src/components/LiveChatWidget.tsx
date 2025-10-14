@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { MessageCircle, X, Send } from 'lucide-react';
+import KnetixLogo from './KnetixLogo';
 
 export default function LiveChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +38,7 @@ export default function LiveChatWidget() {
           <div className="bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                <MessageCircle className="w-6 h-6" />
+                <KnetixLogo showText={false} size="sm" className="text-white" />
               </div>
               <div>
                 <div className="font-bold">Chat with Knetix</div>
@@ -58,8 +59,8 @@ export default function LiveChatWidget() {
             <div className="space-y-4">
               {/* Bot Message */}
               <div className="flex gap-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-[#00C4B4] to-[#0A2E50] rounded-full flex items-center justify-center flex-shrink-0 text-white text-sm font-bold">
-                  K
+                <div className="w-8 h-8 bg-gradient-to-br from-[#00C4B4] to-[#0A2E50] rounded-full flex items-center justify-center flex-shrink-0">
+                  <KnetixLogo showText={false} size="sm" className="text-white" />
                 </div>
                 <div className="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm max-w-[80%]">
                   <p className="text-sm text-gray-800">
