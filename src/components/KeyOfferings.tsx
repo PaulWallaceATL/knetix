@@ -103,7 +103,13 @@ export default function KeyOfferings() {
         </motion.div>
 
         {/* Enhanced Cards Grid with Scroll Animations */}
-        <div className="grid-clean">
+        <motion.div 
+          className="grid-clean"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           {offerings.map((offering, index) => (
             <motion.div
               key={offering.title}
