@@ -74,83 +74,9 @@ export default function Footer() {
         />
       </div>
 
-      {/* Newsletter Section */}
-      <motion.div 
-        className="relative z-10 border-b border-gray-800"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-        viewport={{ once: true }}
-      >
-        <div className="container-clean py-16">
-          <motion.div 
-            className="text-center max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <motion.h3 
-              className="apple-text-title2 mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              Stay ahead of the curve
-            </motion.h3>
-            <motion.p 
-              className="apple-text-body text-gray-400 mb-10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              Get the latest insights, updates, and exclusive content delivered to your inbox.
-            </motion.p>
-            
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <motion.input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-grow px-6 py-4 rounded-xl bg-gray-800/50 backdrop-blur-lg border border-gray-700 text-white placeholder-gray-400 apple-focus focus:border-blue-500 transition-all duration-300"
-                whileFocus={{ scale: 1.02, borderColor: "#3b82f6" }}
-                transition={{ duration: 0.2 }}
-              />
-              <motion.button
-                className="relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl overflow-hidden group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 1 }}
-                viewport={{ once: true }}
-              >
-                <span className="relative z-10">Subscribe</span>
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  initial={false}
-                />
-                <motion.div
-                  className="absolute inset-0 bg-white/20"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: "100%" }}
-                  transition={{ duration: 0.6 }}
-                />
-              </motion.button>
-            </motion.div>
-          </motion.div>
-        </div>
-      </motion.div>
 
       {/* Main Footer Content */}
-      <div className="relative z-10 container-clean py-12">
+      <div className="relative z-10 container-clean pt-16 pb-12">
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12"
           initial={{ opacity: 0 }}
@@ -252,103 +178,56 @@ export default function Footer() {
           ))}
         </motion.div>
 
-        {/* Social Media & Trust Badges */}
-        <motion.div 
-          className="border-t border-gray-800 pt-12 mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0">
-            {/* Enhanced Social Media */}
-            <motion.div 
-              className="flex items-center space-x-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <span className="apple-text-body text-gray-400">Follow Us:</span>
-              <div className="flex space-x-4">
-                {[
-                  { name: 'LinkedIn', icon: '💼', href: '#', color: 'from-blue-500 to-blue-600' },
-                  { name: 'Twitter', icon: '🐦', href: '#', color: 'from-sky-500 to-sky-600' },
-                  { name: 'YouTube', icon: '📺', href: '#', color: 'from-red-500 to-red-600' },
-                  { name: 'GitHub', icon: '🐙', href: '#', color: 'from-gray-600 to-gray-700' },
-                ].map((social, index) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.href}
-                    className={`w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-lg hover:bg-gradient-to-r ${social.color} transition-all duration-300 group relative overflow-hidden`}
-                    whileHover={{ scale: 1.1, rotate: 5, y: -2 }}
-                    whileTap={{ scale: 0.9 }}
-                    initial={{ opacity: 0, y: 20, scale: 0.8 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ 
-                      duration: 0.5, 
-                      delay: index * 0.1,
-                      ease: [0.25, 0.46, 0.45, 0.94]
-                    }}
-                    viewport={{ once: true }}
-                  >
-                    <motion.span 
-                      className="relative z-10 group-hover:text-white transition-colors duration-300"
-                      whileHover={{ scale: 1.2 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {social.icon}
-                    </motion.span>
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      initial={false}
-                    />
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Enhanced Trust Badges */}
-            <motion.div 
-              className="flex items-center space-x-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              {[
-                { title: "SOC 2", subtitle: "Certified", color: "from-blue-400 to-blue-500" },
-                { title: "ISO 27001", subtitle: "Compliant", color: "from-green-400 to-green-500" },
-                { title: "99.9%", subtitle: "Uptime", color: "from-purple-400 to-purple-500" },
-              ].map((badge, index) => (
+                {/* Trust Badges */}
                 <motion.div 
-                  key={badge.title}
-                  className="text-center group cursor-pointer"
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  initial={{ opacity: 0, y: 20 }}
+                  className="border-t border-gray-800 pt-12 mb-12"
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  <motion.div 
-                    className={`apple-text-title3 bg-gradient-to-r ${badge.color} bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300`}
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {badge.title}
-                  </motion.div>
-                  <div className="apple-text-footnote text-gray-500 group-hover:text-gray-300 transition-colors duration-300">
-                    {badge.subtitle}
+                  <div className="flex justify-center">
+                    {/* Enhanced Trust Badges */}
+                    <motion.div 
+                      className="flex items-center space-x-8"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.6 }}
+                      viewport={{ once: true }}
+                    >
+                      {[
+                        { title: "SOC 2", subtitle: "Certified", color: "from-blue-400 to-blue-500" },
+                        { title: "ISO 27001", subtitle: "Compliant", color: "from-green-400 to-green-500" },
+                        { title: "99.9%", subtitle: "Uptime", color: "from-purple-400 to-purple-500" },
+                      ].map((badge, index) => (
+                        <motion.div 
+                          key={badge.title}
+                          className="text-center group cursor-pointer"
+                          whileHover={{ scale: 1.05, y: -2 }}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                          viewport={{ once: true }}
+                        >
+                          <motion.div 
+                            className={`apple-text-title3 bg-gradient-to-r ${badge.color} bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300`}
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            {badge.title}
+                          </motion.div>
+                          <div className="apple-text-footnote text-gray-500 group-hover:text-gray-300 transition-colors duration-300">
+                            {badge.subtitle}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </motion.div>
                   </div>
                 </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </motion.div>
 
         {/* Bottom Section */}
         <motion.div 
-          className="border-t border-gray-800 pt-8 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0"
+          className="border-t border-gray-800 pt-12 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}

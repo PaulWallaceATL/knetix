@@ -31,8 +31,8 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-r from-[#0A2E50] to-[#00C4B4]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gradient-to-r from-[#0A2E50] to-[#00C4B4]">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center text-white mb-8">
           <Mail className="w-12 h-12 mx-auto mb-4 text-[#FF8C00]" />
           <h3 className="text-3xl font-bold mb-4">Stay Ahead of the Curve</h3>
