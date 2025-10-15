@@ -83,7 +83,7 @@ const colorClasses = {
 
 export default function KeyOfferings() {
   return (
-    <section className="section-clean bg-white">
+    <section className="py-16 md:py-20 bg-white">
       <div className="container-clean">
         {/* Header */}
         <motion.div 

@@ -10,44 +10,26 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         {/* Floating Orbs */}
         <motion.div 
-          className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-400/30 to-purple-600/30 rounded-full blur-3xl"
+          className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"
           animate={{
-            x: [0, 30, 0],
-            y: [0, -20, 0],
-            scale: [1, 1.1, 1],
+            y: [0, -10, 0],
           }}
           transition={{
-            duration: 8,
+            duration: 6,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         />
         <motion.div 
-          className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-tl from-pink-400/30 to-orange-500/30 rounded-full blur-3xl"
+          className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-tl from-pink-400/20 to-orange-500/20 rounded-full blur-3xl"
           animate={{
-            x: [0, -25, 0],
-            y: [0, 15, 0],
-            scale: [1, 0.9, 1],
+            y: [0, 10, 0],
           }}
           transition={{
-            duration: 10,
+            duration: 8,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1
-          }}
-        />
-        <motion.div 
-          className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-teal-400/20 to-cyan-500/20 rounded-full blur-2xl"
-          animate={{
-            x: [0, 20, 0],
-            y: [0, -30, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
           }}
         />
         
@@ -56,7 +38,6 @@ export default function HeroSection() {
           className="absolute top-1/3 right-1/3 w-16 h-16 border border-white/10 rounded-lg"
           animate={{
             rotate: [0, 360],
-            scale: [1, 1.1, 1],
           }}
           transition={{
             duration: 20,
@@ -67,11 +48,10 @@ export default function HeroSection() {
         <motion.div 
           className="absolute bottom-1/3 left-1/3 w-12 h-12 border border-white/10 rounded-full"
           animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.7, 0.3],
+            opacity: [0.3, 0.6, 0.3],
           }}
           transition={{
-            duration: 6,
+            duration: 4,
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -84,7 +64,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-clean flex items-center min-h-screen">
+      <div className="relative z-10 container-clean flex items-center min-h-screen pt-20">
         <div className="w-full">
           <motion.div 
             className="text-center max-w-5xl mx-auto space-y-clean-lg"

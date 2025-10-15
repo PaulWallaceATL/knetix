@@ -11,16 +11,28 @@ import BottomCTA from '@/components/BottomCTA';
 
 export default function Home() {
   return (
-    <main>
+    <main className="space-y-0">
       <HeroSection />
-      <TrustBadges />
+      <div className="py-8">
+        <TrustBadges />
+      </div>
       <KeyOfferings />
-      <WhyKnetix />
-      <ClientLogos />
-      <CaseStudies />
+      <div className="py-8">
+        <WhyKnetix />
+      </div>
+      <div className="py-8">
+        <ClientLogos />
+      </div>
+      <div className="py-8">
+        <CaseStudies />
+      </div>
       <Testimonials />
-      <FAQ />
-      <Newsletter />
+      <div className="py-8">
+        <FAQ />
+      </div>
+      <div className="py-8">
+        <Newsletter />
+      </div>
       <BottomCTA />
     </main>
   );

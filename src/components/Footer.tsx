@@ -150,9 +150,9 @@ export default function Footer() {
       </motion.div>
 
       {/* Main Footer Content */}
-      <div className="relative z-10 container-clean py-16">
+      <div className="relative z-10 container-clean py-12">
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
