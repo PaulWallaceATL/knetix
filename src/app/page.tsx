@@ -30,9 +30,7 @@ export default function Home() {
       <div className="py-8">
         <FAQ />
       </div>
-      <div className="py-8">
-        <Newsletter />
-      </div>
+      <Newsletter />
       <BottomCTA />
     </main>
   );

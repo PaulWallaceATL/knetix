@@ -27,11 +27,7 @@ export default function Navbar() {
 
   return (
     <motion.nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200' 
-          : 'bg-black/20 backdrop-blur-sm border-b border-white/10'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 transition-all duration-300"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -60,11 +56,7 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className={`apple-text-callout transition-colors duration-300 relative group ${
-                    isScrolled 
-                      ? 'text-gray-700 hover:text-blue-600' 
-                      : 'text-white hover:text-blue-300'
-                  }`}
+                  className="apple-text-callout text-gray-700 hover:text-blue-600 transition-colors duration-300 relative group"
                 >
                   {link.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
