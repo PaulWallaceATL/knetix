@@ -71,14 +71,15 @@ export default function CybersecurityPage() {
       <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white">
         <div className="container-clean text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Secure Your Digital Assets
+            Strengthen Your Security Posture
           </h2>
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-12 font-light">
-            Get a complimentary security assessment and discover vulnerabilities before threats do.
+          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-12 font-light leading-relaxed">
+            Get a complimentary security assessment from our certified security experts. 
+            We&apos;ll identify vulnerabilities, assess your risk profile, and provide actionable recommendations.
           </p>
           <Link href="/contact">
             <button className="px-12 py-5 rounded-xl bg-white text-[#0A2E50] font-bold text-lg hover:bg-white/90 hover:shadow-2xl transition-all">
-              Request Security Assessment
+              Schedule Security Assessment
             </button>
           </Link>
         </div>

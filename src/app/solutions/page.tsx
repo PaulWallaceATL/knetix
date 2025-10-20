@@ -75,12 +75,12 @@ export default function SolutionsPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
         <div className="container-clean text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Innovative Solutions for a Connected World
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Enterprise Solutions That Drive Results
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Knetix delivers comprehensive technology solutions designed to optimize performance, 
-            enhance security, and drive seamless communication across your enterprise.
+          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            From cloud infrastructure to cybersecurity, we deliver comprehensive technology solutions 
+            that optimize performance, enhance security, and accelerate business growth.
           </p>
         </div>
       </section>
@@ -135,16 +135,17 @@ export default function SolutionsPage() {
       <section className="bg-[#F0F2F5] py-12 md:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50] mb-6">
-            Not Sure Which Solution is Right for You?
+            Need Help Choosing the Right Solution?
           </h2>
-          <p className="text-lg text-gray-700 mb-8">
-            Our experts are here to help you find the perfect technology solutions for your unique business needs.
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            Our enterprise solutions team will assess your needs and recommend the optimal technology 
+            stack for your business. Get a free consultation with no obligations.
           </p>
           <Link
             href="/contact"
             className="inline-block bg-[#FF8C00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            Schedule a Consultation
+            Get a Free Assessment
           </Link>
         </div>
       </section>

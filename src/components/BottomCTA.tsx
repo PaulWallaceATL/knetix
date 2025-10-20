@@ -11,24 +11,25 @@ export default function BottomCTA() {
       <div className="relative max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
         {/* Headline */}
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-          Ready to Transform Your Business?
+          Start Your Digital Transformation Today
         </h2>
 
         {/* Sub-headline */}
         <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
-          Partner with Knetix and unlock limitless possibilities for innovation and growth.
+          Join hundreds of enterprises that trust Knetix to power their technology infrastructure. 
+          Let&apos;s discuss how we can help you achieve your goals.
         </p>
 
         {/* CTA Button */}
         <Link href="/contact">
           <button className="px-12 py-5 rounded-xl bg-white text-[#0A2E50] font-bold text-lg hover:bg-white/90 hover:shadow-2xl hover:shadow-white/20 transition-all duration-300 hover:-translate-y-1">
-            Contact Us Today
+            Schedule Free Consultation
           </button>
         </Link>
 
         {/* Additional Info */}
-        <p className="mt-10 text-base text-white/60">
-          Schedule a free consultation and discover how we can drive your success.
+        <p className="mt-10 text-base text-white/70">
+          No obligations. Just a conversation about your technology needs and how we can help.
         </p>
       </div>
 

@@ -102,7 +102,7 @@ export default function Testimonials() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             viewport={{ once: true }}
           >
-            Don&apos;t just take our word for it. Hear from the enterprises that have transformed their operations with Knetix.
+            See how leading enterprises have transformed their operations and achieved measurable results with Knetix solutions.
           </motion.p>
         </motion.div>
 

@@ -88,12 +88,12 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
         <div className="container-clean text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Let&apos;s Build Your Future, Together
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Let&apos;s Start Your Transformation
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Have questions, need a consultation, or ready to start your digital transformation 
-            journey? Reach out to Knetix today.
+          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            Ready to elevate your technology infrastructure? Our enterprise solutions team is here to help. 
+            Get a free consultation and discover what&apos;s possible.
           </p>
         </div>
       </section>
@@ -104,9 +104,13 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-[#0A2E50] mb-6">
+              <h2 className="text-3xl font-bold text-[#0A2E50] mb-4">
                 Send Us a Message
               </h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Fill out the form below and our team will respond within 24 hours. 
+                For urgent inquiries, please call us directly at (555) 123-4567.
+              </p>
 
               {submitSuccess && (
                 <div className="mb-6 bg-green-50 border-l-4 border-green-500 p-4 rounded">
@@ -256,12 +260,12 @@ export default function ContactPage() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-[#0A2E50] mb-6">
-                Get in Touch
+              <h2 className="text-3xl font-bold text-[#0A2E50] mb-4">
+                Contact Information
               </h2>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                We&apos;re here to answer your questions and help you take the next step in your 
-                digital transformation journey. Reach out to us through any of the channels below.
+                Multiple ways to connect with our team. Choose the method that works best for you, 
+                and we&apos;ll respond promptly to discuss your technology needs.
               </p>
 
               {/* Contact Details */}
@@ -337,13 +341,14 @@ export default function ContactPage() {
       <section className="bg-[#F0F2F5] py-12 md:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl font-bold text-[#0A2E50] mb-4">
-            Prefer to Schedule a Call?
+            Ready to Discuss Your Project?
           </h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Book a free 30-minute consultation with one of our technology experts.
+          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            Schedule a free 30-minute consultation with our enterprise solutions team. 
+            We&apos;ll discuss your challenges and explore how Knetix can help.
           </p>
-          <button className="bg-[#00C4B4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#00b3a3] transition-all duration-300 shadow-lg hover:shadow-xl">
-            Schedule a Consultation
+          <button className="bg-[#00C4B4] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#00b3a3] transition-all duration-300 shadow-lg hover:shadow-xl">
+            Book Your Free Consultation
           </button>
         </div>
       </section>

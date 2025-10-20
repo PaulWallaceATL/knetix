@@ -116,8 +116,8 @@ export default function EnterpriseHero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-lg md:text-xl lg:text-2xl text-white/70 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed font-light px-4"
         >
-          Drive exponential growth, optimize operations, and secure your digital future with 
-          enterprise-grade technology solutions.
+          Accelerate growth, streamline operations, and protect your digital assets with 
+          enterprise-grade technology solutions built for tomorrow.
         </motion.p>
 
           {/* CTA Buttons - with 3D depth */}

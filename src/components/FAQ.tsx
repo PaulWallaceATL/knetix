@@ -41,10 +41,11 @@ export default function FAQ() {
     <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50] mb-4">
-            Frequently Asked Questions
+            Questions? We Have Answers
           </h2>
-          <p className="text-lg text-gray-700">
-            Get answers to common questions about our services and solutions
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Find quick answers to the most common questions about Knetix services, 
+            implementation timelines, and support.
           </p>
         </div>
 
@@ -81,14 +82,14 @@ export default function FAQ() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-700 mb-6">
-            Still have questions? We&apos;re here to help!
+          <p className="text-gray-700 mb-6 text-lg">
+            Don&apos;t see your question answered? Our team is ready to help.
           </p>
           <a
             href="/contact"
-            className="inline-block bg-[#FF8C00] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-block bg-[#FF8C00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            Contact Our Team
+            Ask Us Anything
           </a>
         </div>
     </div>

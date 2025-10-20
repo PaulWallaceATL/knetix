@@ -93,11 +93,11 @@ export default function KeyOfferings() {
           viewport={{ once: true }}
         >
           <h2 className="apple-text-title1 text-gray-900">
-            Our Solutions
+            Enterprise Solutions That Scale With You
           </h2>
           <p className="apple-text-body text-gray-600 max-w-3xl mx-auto">
-            At Knetix, we don&apos;t just provide technology; we forge partnerships that transform your business. 
-            Our expert team crafts and implements secure, scalable IT solutions designed to propel you towards your most ambitious goals.
+            Transform your business with secure, scalable IT solutions designed for enterprise excellence. 
+            From cloud infrastructure to cybersecurity, we provide the technology foundation your organization needs to thrive.
           </p>
         </motion.div>
 

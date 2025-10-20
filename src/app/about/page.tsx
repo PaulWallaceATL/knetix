@@ -56,12 +56,12 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            About Knetix
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Technology Partners You Can Trust
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Empowering businesses with intelligent, secure, and scalable technology solutions 
-            since day one.
+          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            For over 15 years, we&apos;ve helped enterprises transform their operations with 
+            intelligent, secure, and scalable technology solutions.
           </p>
         </div>
       </section>
@@ -75,16 +75,18 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <div className="text-gray-700 leading-relaxed space-y-4">
-                <p>
-                  Knetix was founded on the principle that technology should be a catalyst for growth, 
-                  not a barrier. With decades of collective experience in the IT landscape, our founders 
-                  envisioned a partnership-driven approach, where deep industry insight meets cutting-edge 
-                  innovation.
+                <p className="text-lg">
+                  Knetix was founded on a simple yet powerful principle: <strong>technology should accelerate growth, not create barriers</strong>.
                 </p>
                 <p>
-                  We&apos;ve grown from a vision to a trusted partner for enterprises seeking to navigate 
-                  the complexities of the digital age. Our journey has been marked by an unwavering 
-                  commitment to excellence, innovation, and client success.
+                  With decades of collective experience in enterprise IT, our founders envisioned a new kind of 
+                  technology partner—one that combines deep industry expertise with cutting-edge innovation and 
+                  a genuine commitment to client success.
+                </p>
+                <p>
+                  Today, we&apos;re proud to serve enterprises across healthcare, finance, manufacturing, and technology sectors. 
+                  Our journey has been marked by an unwavering commitment to excellence, innovation, and delivering 
+                  measurable business value.
                 </p>
               </div>
             </div>
@@ -140,14 +142,31 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50] mb-6">
-              Our Philosophy
+              Our Approach: Partnership Over Transactions
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              We believe in empowering businesses through strategic technology adoption. Our philosophy 
-              centers on understanding your unique ecosystem, anticipating future challenges, and delivering 
-              bespoke solutions that not only solve immediate needs but also lay a robust foundation for 
-              sustainable success. Your ambition fuels our innovation.
-            </p>
+            <div className="text-lg text-gray-700 leading-relaxed space-y-4">
+              <p>
+                We believe in empowering businesses through strategic technology partnerships, not just 
+                one-time implementations.
+              </p>
+              <p>
+                Our approach centers on three key principles:
+              </p>
+              <ul className="text-left max-w-2xl mx-auto space-y-3 mt-6">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#00C4B4] font-bold text-xl">•</span>
+                  <span><strong>Understand your ecosystem</strong> — We take time to learn your business, challenges, and goals</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#00C4B4] font-bold text-xl">•</span>
+                  <span><strong>Anticipate future needs</strong> — We design solutions that scale with your growth</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#00C4B4] font-bold text-xl">•</span>
+                  <span><strong>Deliver measurable results</strong> — We focus on business outcomes, not just technology</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -192,23 +211,24 @@ export default function AboutPage() {
       <section className="bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Join Us on Your Digital Journey
+            Ready to Transform Your IT Infrastructure?
           </h2>
-          <p className="text-lg text-gray-200 mb-8">
-            Discover how Knetix can transform your business with innovative technology solutions.
+          <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+            Let&apos;s discuss how Knetix can help you achieve your technology goals. 
+            Schedule a free consultation with our enterprise solutions team.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-[#FF8C00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block bg-[#FF8C00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Get in Touch
+              Schedule Consultation
             </Link>
             <Link
               href="/solutions"
-              className="bg-white text-[#0A2E50] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block bg-white text-[#0A2E50] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Explore Solutions
+              View Solutions
             </Link>
           </div>
         </div>
