@@ -52,7 +52,7 @@ export default function EnterpriseHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-3 px-4 md:px-6 py-2 md:py-3 mb-6 md:mb-8 bg-white/5 backdrop-blur-md rounded-full border border-white/10 relative z-30"
+          className="inline-flex items-center gap-3 px-4 md:px-6 py-2 md:py-3 mb-6 md:mb-8 mt-4 md:mt-6 lg:mt-8 bg-white/5 backdrop-blur-md rounded-full border border-white/10 relative z-30"
         >
           <div className="w-2 h-2 rounded-full bg-cyan-400" />
           <span className="text-white/80 text-sm font-medium tracking-wide">

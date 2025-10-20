@@ -241,16 +241,16 @@ export default function EnterpriseNavbar() {
             className="lg:hidden bg-white border-t border-gray-200 overflow-y-auto"
             style={{ maxHeight: 'calc(100vh - 80px)' }}
           >
-            <div className="container-clean py-4 space-y-3">
+            <div className="container-clean py-6 space-y-4">
               <div>
-                <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2 px-3">Solutions</div>
-                <div className="space-y-1">
+                <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-3 px-3">Solutions</div>
+                <div className="space-y-2">
                   {solutions.map((solution, index) => (
                     <Link
                       key={index}
                       href={solution.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 transition-colors"
+                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
                     >
                       <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 text-white flex-shrink-0">
                         {solution.icon}
@@ -261,11 +261,11 @@ export default function EnterpriseNavbar() {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-gray-200">
+              <div className="pt-4 border-t border-gray-200">
                 <Link
                   href="/services"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 text-white flex-shrink-0">
                     <Server className="w-5 h-5" />
@@ -274,15 +274,15 @@ export default function EnterpriseNavbar() {
                 </Link>
               </div>
 
-              <div className="pt-3 border-t border-gray-200">
-                <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2 px-3">Company</div>
-                <div className="space-y-1">
+              <div className="pt-4 border-t border-gray-200">
+                <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-3 px-3">Company</div>
+                <div className="space-y-2">
                   {company.map((item, index) => (
                     <Link
                       key={index}
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 transition-colors"
+                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
                     >
                       <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 text-white flex-shrink-0">
                         {item.icon}
@@ -293,7 +293,7 @@ export default function EnterpriseNavbar() {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-gray-200">
+              <div className="pt-4 pb-2 border-t border-gray-200">
                 <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                   <button className="btn btn-primary w-full justify-center text-sm">
                     Get Started
