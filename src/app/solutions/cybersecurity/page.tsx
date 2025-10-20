@@ -1,56 +1,86 @@
 import Link from 'next/link';
+import SolutionHero from '@/components/SolutionHero';
+import SolutionFeatures from '@/components/SolutionFeatures';
+import SolutionBenefits from '@/components/SolutionBenefits';
+import { Shield, Lock, Eye, AlertTriangle, FileCheck, Users } from 'lucide-react';
 
 export default function CybersecurityPage() {
+  const stats = [
+    { value: 'Zero', label: 'Breaches' },
+    { value: 'SOC 2', label: 'Certified' },
+    { value: '24/7', label: 'Threat Monitoring' },
+    { value: '100%', label: 'Compliance' },
+  ];
+
+  const features = [
+    {
+      title: 'Zero Trust Architecture',
+      description: 'Implement comprehensive zero-trust security frameworks that verify every access request regardless of location.',
+      icon: <Shield className="w-8 h-8" />,
+    },
+    {
+      title: 'Advanced Threat Detection',
+      description: 'Identify and neutralize threats in real-time with AI-powered security analytics and behavioral monitoring.',
+      icon: <Eye className="w-8 h-8" />,
+    },
+    {
+      title: 'Data Encryption',
+      description: 'Protect sensitive data with military-grade encryption both at rest and in transit across all systems.',
+      icon: <Lock className="w-8 h-8" />,
+    },
+    {
+      title: 'Incident Response',
+      description: 'Rapid response and remediation with our 24/7 security operations center and expert incident handlers.',
+      icon: <AlertTriangle className="w-8 h-8" />,
+    },
+    {
+      title: 'Compliance Management',
+      description: 'Meet regulatory requirements with automated compliance monitoring for GDPR, HIPAA, SOC 2, and more.',
+      icon: <FileCheck className="w-8 h-8" />,
+    },
+    {
+      title: 'Security Training',
+      description: 'Empower your team with comprehensive security awareness training and phishing simulation programs.',
+      icon: <Users className="w-8 h-8" />,
+    },
+  ];
+
+  const benefits = [
+    'Protect against evolving cyber threats with AI-powered detection',
+    'Achieve compliance with industry regulations and standards',
+    'Reduce security incidents by up to 90% with proactive monitoring',
+    'Safeguard customer data and maintain trust',
+    'Minimize downtime with rapid incident response',
+    '24/7 security operations center monitoring',
+  ];
+
   return (
     <main className="pt-20">
-      <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Cybersecurity</h1>
-          <p className="text-xl text-gray-200 max-w-3xl">
-            Fortify your defenses with future-ready security solutions, safeguarding your valuable data and ensuring uninterrupted operations against evolving threats.
+      <SolutionHero
+        title="Enterprise Cybersecurity"
+        subtitle="Security Solutions"
+        description="Fortify your defenses with future-ready security solutions, safeguarding your valuable data and ensuring uninterrupted operations."
+        stats={stats}
+      />
+
+      <SolutionFeatures features={features} />
+
+      <SolutionBenefits benefits={benefits} />
+
+      {/* CTA Section */}
+      <section className="py-24 md:py-32 bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white">
+        <div className="container-clean text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            Secure Your Digital Assets
+          </h2>
+          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-12 font-light">
+            Get a complimentary security assessment and discover vulnerabilities before threats do.
           </p>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0A2E50] mb-6">Overview</h2>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                Cyber threats are evolving faster than ever. Our comprehensive cybersecurity solutions 
-                protect your business with multi-layered defense strategies, advanced threat detection, 
-                and proactive security management.
-              </p>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                We help you build a robust security posture that safeguards your data, ensures compliance, 
-                and gives you peace of mind in an increasingly complex threat landscape.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-[#0A2E50] mb-6">Key Features</h3>
-              <ul className="space-y-4">
-                {['Threat Detection & Prevention', 'Data Protection & Encryption', 'Compliance Management', 'Security Audits & Assessments', 'Incident Response', 'Vulnerability Management'].map((feature) => (
-                  <li key={feature} className="flex items-start">
-                    <svg className="w-6 h-6 text-[#00C4B4] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-[#0A2E50] mb-6">Secure your digital assets today</h3>
-            <Link
-              href="/contact"
-              className="inline-block bg-[#FF8C00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Get a Security Assessment
-            </Link>
-          </div>
+          <Link href="/contact">
+            <button className="px-12 py-5 rounded-xl bg-white text-[#0A2E50] font-bold text-lg hover:bg-white/90 hover:shadow-2xl transition-all">
+              Request Security Assessment
+            </button>
+          </Link>
         </div>
       </section>
     </main>

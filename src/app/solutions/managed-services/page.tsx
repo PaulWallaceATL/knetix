@@ -1,59 +1,88 @@
 import Link from 'next/link';
+import SolutionHero from '@/components/SolutionHero';
+import SolutionFeatures from '@/components/SolutionFeatures';
+import SolutionBenefits from '@/components/SolutionBenefits';
+import { Server, Clock, Shield, Wrench, BarChart, Users } from 'lucide-react';
 
 export default function ManagedServicesPage() {
+  const stats = [
+    { value: '24/7', label: 'Support' },
+    { value: '< 15min', label: 'Response Time' },
+    { value: '99.9%', label: 'Uptime' },
+    { value: '50+', label: 'Experts' },
+  ];
+
+  const features = [
+    {
+      title: '24/7 Monitoring',
+      description: 'Round-the-clock infrastructure monitoring with proactive alerting and immediate issue resolution.',
+      icon: <Clock className="w-8 h-8" />,
+    },
+    {
+      title: 'Proactive Maintenance',
+      description: 'Prevent issues before they occur with automated patching, updates, and system optimization.',
+      icon: <Wrench className="w-8 h-8" />,
+    },
+    {
+      title: 'Security Management',
+      description: 'Comprehensive security services including threat monitoring, vulnerability scanning, and incident response.',
+      icon: <Shield className="w-8 h-8" />,
+    },
+    {
+      title: 'Infrastructure Management',
+      description: 'Complete management of servers, storage, networking, and cloud resources by certified experts.',
+      icon: <Server className="w-8 h-8" />,
+    },
+    {
+      title: 'Performance Reporting',
+      description: 'Detailed analytics and reporting on system health, performance trends, and capacity planning.',
+      icon: <BarChart className="w-8 h-8" />,
+    },
+    {
+      title: 'Dedicated Support Team',
+      description: 'Access to experienced engineers who know your environment and act as an extension of your team.',
+      icon: <Users className="w-8 h-8" />,
+    },
+  ];
+
+  const benefits = [
+    'Free up internal IT resources to focus on strategic initiatives',
+    'Reduce IT costs by up to 40% with predictable monthly pricing',
+    'Access enterprise-level expertise without full-time hiring',
+    'Ensure 24/7 coverage without night shifts or on-call rotations',
+    'Improve system reliability with proactive monitoring',
+    'Stay compliant with industry regulations and best practices',
+  ];
+
   return (
     <main className="pt-20">
-      <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Managed Services</h1>
-          <p className="text-xl text-gray-200 max-w-3xl">
-            Gain comprehensive support, proactive monitoring, and expert guidance for optimal IT performance and reliability with our end-to-end managed services.
+      <SolutionHero
+        title="Managed IT Services"
+        subtitle="Managed Services"
+        description="Gain comprehensive support, proactive monitoring, and expert guidance for optimal IT performance and reliability."
+        stats={stats}
+      />
+
+      <SolutionFeatures features={features} />
+
+      <SolutionBenefits benefits={benefits} />
+
+      {/* CTA Section */}
+      <section className="py-24 md:py-32 bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white">
+        <div className="container-clean text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            Focus on Your Business, Not IT
+          </h2>
+          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-12 font-light">
+            Let our experts handle your IT infrastructure while you drive business growth.
           </p>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0A2E50] mb-6">Overview</h2>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                Focus on your core business while we manage your IT infrastructure. Our managed 
-                services provide 24/7 monitoring, proactive maintenance, and expert support to 
-                ensure your technology runs smoothly and efficiently.
-              </p>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                From help desk support to strategic IT planning, we become an extension of your 
-                team, providing the expertise and resources you need to succeed.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-[#0A2E50] mb-6">Key Features</h3>
-              <ul className="space-y-4">
-                {['24/7 Monitoring & Support', 'Proactive Maintenance', 'Help Desk Services', 'IT Strategy Consulting', 'Patch Management', 'Backup & Recovery'].map((feature) => (
-                  <li key={feature} className="flex items-start">
-                    <svg className="w-6 h-6 text-[#00C4B4] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-[#0A2E50] mb-6">Let us manage your IT infrastructure</h3>
-            <Link
-              href="/contact"
-              className="inline-block bg-[#FF8C00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
+          <Link href="/contact">
+            <button className="px-12 py-5 rounded-xl bg-white text-[#0A2E50] font-bold text-lg hover:bg-white/90 hover:shadow-2xl transition-all">
               Get Started Today
-            </Link>
-          </div>
+            </button>
+          </Link>
         </div>
       </section>
     </main>
   );
 }
-

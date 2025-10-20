@@ -1,59 +1,88 @@
 import Link from 'next/link';
+import SolutionHero from '@/components/SolutionHero';
+import SolutionFeatures from '@/components/SolutionFeatures';
+import SolutionBenefits from '@/components/SolutionBenefits';
+import { Phone, Video, MessageSquare, Users, Calendar, FileText } from 'lucide-react';
 
 export default function UnifiedCommunicationsPage() {
+  const stats = [
+    { value: '40%', label: 'Productivity Gain' },
+    { value: '60%', label: 'Cost Savings' },
+    { value: '99.9%', label: 'Call Quality' },
+    { value: 'Global', label: 'Coverage' },
+  ];
+
+  const features = [
+    {
+      title: 'Enterprise VoIP',
+      description: 'Crystal-clear voice communications with advanced call routing, auto-attendant, and call analytics.',
+      icon: <Phone className="w-8 h-8" />,
+    },
+    {
+      title: 'Video Conferencing',
+      description: 'HD video meetings with screen sharing, recording, and seamless integration with your workflow tools.',
+      icon: <Video className="w-8 h-8" />,
+    },
+    {
+      title: 'Team Messaging',
+      description: 'Secure instant messaging and collaboration spaces for teams, projects, and departments.',
+      icon: <MessageSquare className="w-8 h-8" />,
+    },
+    {
+      title: 'Presence Management',
+      description: 'See real-time availability status across your organization to connect with the right people instantly.',
+      icon: <Users className="w-8 h-8" />,
+    },
+    {
+      title: 'Meeting Scheduling',
+      description: 'Intelligent calendar integration and meeting room management for effortless coordination.',
+      icon: <Calendar className="w-8 h-8" />,
+    },
+    {
+      title: 'File Sharing',
+      description: 'Secure document collaboration with version control and enterprise-grade encryption.',
+      icon: <FileText className="w-8 h-8" />,
+    },
+  ];
+
+  const benefits = [
+    'Increase team productivity by 40% with seamless collaboration tools',
+    'Reduce communication costs by up to 60% compared to traditional systems',
+    'Enable remote work with enterprise-grade reliability',
+    'Integrate with existing business applications (CRM, ERP, etc.)',
+    'Scale effortlessly as your organization grows',
+    'Maintain business continuity with 99.9% uptime SLA',
+  ];
+
   return (
     <main className="pt-20">
-      <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Unified Communications</h1>
-          <p className="text-xl text-gray-200 max-w-3xl">
-            Foster effortless collaboration and effective communication across all channels, empowering your workforce to connect from anywhere.
+      <SolutionHero
+        title="Unified Communications"
+        subtitle="Collaboration Platform"
+        description="Foster effortless collaboration and effective communication across all channels, empowering your workforce to connect from anywhere."
+        stats={stats}
+      />
+
+      <SolutionFeatures features={features} />
+
+      <SolutionBenefits benefits={benefits} />
+
+      {/* CTA Section */}
+      <section className="py-24 md:py-32 bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white">
+        <div className="container-clean text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            Transform Team Collaboration
+          </h2>
+          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-12 font-light">
+            Schedule a demo to see how unified communications can revolutionize your workplace.
           </p>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0A2E50] mb-6">Overview</h2>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                Transform how your teams collaborate with our unified communications solutions. 
-                We integrate voice, video, messaging, and collaboration tools into a seamless 
-                platform that works across devices and locations.
-              </p>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                Enable your workforce to communicate and collaborate effectively, whether they&apos;re 
-                in the office, at home, or on the go.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-[#0A2E50] mb-6">Key Features</h3>
-              <ul className="space-y-4">
-                {['Video Conferencing', 'Team Collaboration Tools', 'Voice Solutions', 'Mobile Integration', 'Instant Messaging', 'File Sharing & Co-authoring'].map((feature) => (
-                  <li key={feature} className="flex items-start">
-                    <svg className="w-6 h-6 text-[#00C4B4] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-[#0A2E50] mb-6">Enhance your team collaboration</h3>
-            <Link
-              href="/contact"
-              className="inline-block bg-[#FF8C00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Request a Demo
-            </Link>
-          </div>
+          <Link href="/contact">
+            <button className="px-12 py-5 rounded-xl bg-white text-[#0A2E50] font-bold text-lg hover:bg-white/90 hover:shadow-2xl transition-all">
+              Schedule Demo
+            </button>
+          </Link>
         </div>
       </section>
     </main>
   );
 }
-
