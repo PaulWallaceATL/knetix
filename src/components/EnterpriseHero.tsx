@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, CheckCircle, TrendingUp, Shield, Zap } from 'lucide-react';
 import Hero3DOrb from './Hero3DOrb';
-import Floating3DMetrics from './Floating3DMetrics';
 
 export default function EnterpriseHero() {
   // Spectacular 3D motion design - sophisticated and impressive
@@ -44,9 +43,6 @@ export default function EnterpriseHero() {
 
       {/* Impressive 3D Orbs and Geometric Shapes */}
       <Hero3DOrb />
-      
-      {/* Floating 3D Metric Cards */}
-      <Floating3DMetrics />
 
       {/* Content */}
       <div className="relative z-20 w-full">
