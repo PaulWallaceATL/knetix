@@ -79,33 +79,35 @@ export default function EnterpriseFooter() {
 
       {/* Newsletter Section */}
       <div className="relative z-10 border-b border-white/10">
-        <div className="container-clean py-16">
+        <div className="container-clean py-20 md:py-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-3xl mx-auto text-center"
           >
-            <h3 className="text-h2 mb-4">Stay Ahead of the Curve</h3>
-            <p className="text-body-lg text-white/80 mb-8">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Stay Ahead of the Curve
+            </h3>
+            <p className="text-lg md:text-xl text-white/70 mb-10 leading-relaxed">
               Get the latest insights, industry trends, and exclusive content delivered to your inbox.
             </p>
             
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
-                className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 backdrop-blur-sm"
+                className="flex-1 px-6 py-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 backdrop-blur-sm transition-all"
               />
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="btn btn-accent px-8"
+                className="px-10 py-4 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all disabled:opacity-50"
                 disabled={subscribed}
               >
                 {subscribed ? (
@@ -113,7 +115,6 @@ export default function EnterpriseFooter() {
                 ) : (
                   <>
                     Subscribe
-                    <Send className="w-4 h-4" />
                   </>
                 )}
               </motion.button>
@@ -123,8 +124,8 @@ export default function EnterpriseFooter() {
       </div>
 
       {/* Main Footer Content */}
-      <div className="relative z-10 container-clean pt-20 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
+      <div className="relative z-10 container-clean py-16 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-20">
           {/* Company Info */}
           <motion.div
             className="lg:col-span-2"
@@ -200,7 +201,7 @@ export default function EnterpriseFooter() {
 
         {/* Trust Badges */}
         <motion.div
-          className="border-t border-white/10 pt-12 mb-12"
+          className="border-t border-white/10 pt-16 mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -235,7 +236,7 @@ export default function EnterpriseFooter() {
 
         {/* Bottom Section */}
         <motion.div
-          className="border-t border-white/10 pt-12 flex flex-col lg:flex-row justify-between items-center gap-6"
+          className="border-t border-white/10 pt-16 flex flex-col lg:flex-row justify-between items-center gap-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
