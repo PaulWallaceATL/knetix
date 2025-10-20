@@ -109,7 +109,7 @@ export default function CookieConsent() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => setShowSettings(true)}
-                      className="btn btn-outline flex-1 lg:flex-none"
+                      className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-white text-white font-semibold hover:bg-white/10 transition-all flex-1 lg:flex-none"
                     >
                       <Settings className="w-4 h-4" />
                       Customize
@@ -119,7 +119,7 @@ export default function CookieConsent() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={handleReject}
-                      className="btn btn-ghost flex-1 lg:flex-none"
+                      className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-white font-semibold hover:bg-white/10 transition-all flex-1 lg:flex-none"
                     >
                       Reject All
                     </motion.button>
@@ -217,7 +217,7 @@ export default function CookieConsent() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={handleAcceptAll}
-                      className="btn btn-outline flex-1"
+                      className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-white text-white font-semibold hover:bg-white/10 transition-all flex-1"
                     >
                       Accept All
                     </motion.button>
