@@ -88,7 +88,7 @@ export default function TrustBuilders() {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-20 lg:py-24 bg-white relative overflow-hidden">
       {/* Static background - removed animation to prevent flickering */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div
@@ -103,7 +103,7 @@ export default function TrustBuilders() {
 
       <div className="container-clean relative z-10">
         {/* Certifications & Compliance */}
-        <IntersectionObserverWrapper animation="fadeInUp" className="mb-32">
+        <IntersectionObserverWrapper animation="fadeInUp" className="mb-16 md:mb-24">
           <div className="text-center mb-16">
             <motion.div
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-green-50 border border-blue-100 mb-6"
@@ -124,7 +124,7 @@ export default function TrustBuilders() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
@@ -151,7 +151,7 @@ export default function TrustBuilders() {
         </IntersectionObserverWrapper>
 
         {/* Strategic Partnerships */}
-        <IntersectionObserverWrapper animation="fadeInUp" className="mb-32">
+        <IntersectionObserverWrapper animation="fadeInUp" className="mb-16 md:mb-24">
           <div className="glass-card rounded-3xl p-12 bg-gradient-to-br from-slate-50 to-blue-50">
             <div className="text-center mb-12">
               <motion.div
@@ -214,7 +214,7 @@ export default function TrustBuilders() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
                 key={index}

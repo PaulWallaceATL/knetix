@@ -238,50 +238,64 @@ export default function EnterpriseNavbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white border-t border-gray-200 overflow-hidden"
+            className="lg:hidden bg-white border-t border-gray-200 overflow-y-auto"
+            style={{ maxHeight: 'calc(100vh - 80px)' }}
           >
-            <div className="container-clean py-6 space-y-4">
+            <div className="container-clean py-4 space-y-3">
               <div>
-                <div className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Solutions</div>
-                <div className="space-y-2">
+                <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2 px-3">Solutions</div>
+                <div className="space-y-1">
                   {solutions.map((solution, index) => (
                     <Link
                       key={index}
                       href={solution.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 transition-colors"
                     >
-                      <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                      <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 text-white flex-shrink-0">
                         {solution.icon}
                       </div>
-                      <span className="font-semibold text-gray-900">{solution.name}</span>
+                      <span className="font-semibold text-sm text-gray-900">{solution.name}</span>
                     </Link>
                   ))}
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-gray-200">
-                <div className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Company</div>
-                <div className="space-y-2">
+              <div className="pt-3 border-t border-gray-200">
+                <Link
+                  href="/services"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 text-white flex-shrink-0">
+                    <Server className="w-5 h-5" />
+                  </div>
+                  <span className="font-semibold text-sm text-gray-900">Services</span>
+                </Link>
+              </div>
+
+              <div className="pt-3 border-t border-gray-200">
+                <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2 px-3">Company</div>
+                <div className="space-y-1">
                   {company.map((item, index) => (
                     <Link
                       key={index}
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 transition-colors"
                     >
-                      <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                      <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 text-white flex-shrink-0">
                         {item.icon}
                       </div>
-                      <span className="font-semibold text-gray-900">{item.name}</span>
+                      <span className="font-semibold text-sm text-gray-900">{item.name}</span>
                     </Link>
                   ))}
                 </div>
               </div>
 
-              <div className="pt-4">
+              <div className="pt-3 border-t border-gray-200">
                 <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  <button className="btn btn-primary w-full justify-center">
+                  <button className="btn btn-primary w-full justify-center text-sm">
                     Get Started
                     <ArrowRight className="w-4 h-4" />
                   </button>

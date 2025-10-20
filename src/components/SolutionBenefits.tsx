@@ -9,9 +9,9 @@ interface SolutionBenefitsProps {
 
 export default function SolutionBenefits({ benefits }: SolutionBenefitsProps) {
   return (
-    <section className="py-24 md:py-32 bg-gradient-to-br from-slate-50 to-white">
+    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-slate-50 to-white">
       <div className="container-clean">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left: Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

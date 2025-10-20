@@ -78,8 +78,8 @@ export default function EnterpriseFooter() {
       </div>
 
       {/* Newsletter Section */}
-      <div className="relative z-10 border-b border-white/10 my-32">
-        <div className="container-clean py-32 md:py-40">
+      <div className="relative z-10 border-b border-white/10">
+        <div className="container-clean py-16 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -87,14 +87,14 @@ export default function EnterpriseFooter() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h3 className="text-4xl md:text-5xl font-bold text-white mb-8 mt-8">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Stay Ahead of the Curve
             </h3>
-            <p className="text-xl md:text-2xl text-white/70 mb-12 leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-white/70 mb-8 leading-relaxed font-light">
               Get the latest insights, industry trends, and exclusive content delivered to your inbox.
             </p>
             
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto mb-8">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
               <input
                 type="email"
                 value={email}
@@ -124,8 +124,8 @@ export default function EnterpriseFooter() {
       </div>
 
       {/* Main Footer Content */}
-      <div className="relative z-10 container-clean pt-8 pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-24">
+      <div className="relative z-10 container-clean pt-16 md:pt-20 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 md:gap-12 mb-16">
           {/* Company Info */}
           <motion.div
             className="lg:col-span-2"
@@ -201,7 +201,7 @@ export default function EnterpriseFooter() {
 
         {/* Trust Badges */}
         <motion.div
-          className="border-t border-white/10 pt-20 mb-20"
+          className="border-t border-white/10 pt-12 mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -236,7 +236,7 @@ export default function EnterpriseFooter() {
 
         {/* Bottom Section */}
         <motion.div
-          className="border-t border-white/10 pt-20 pb-8 flex flex-col lg:flex-row justify-between items-center gap-6"
+          className="border-t border-white/10 pt-8 pb-8 flex flex-col lg:flex-row justify-between items-center gap-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

@@ -68,7 +68,7 @@ export default function NetworkPerformancePage() {
       <SolutionBenefits benefits={benefits} />
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white">
         <div className="container-clean text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Ready to Optimize Your Network?

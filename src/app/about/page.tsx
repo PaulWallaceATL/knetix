@@ -54,7 +54,7 @@ export default function AboutPage() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-24 md:py-32">
+      <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             About Knetix
@@ -67,7 +67,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -136,7 +136,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Philosophy */}
-      <section className="py-20 bg-[#F0F2F5]">
+      <section className="py-16 md:py-20 lg:py-24 bg-[#F0F2F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50] mb-6">
@@ -156,7 +156,7 @@ export default function AboutPage() {
       <TeamGrid />
 
       {/* Our Values */}
-      <section className="py-20 bg-gradient-to-br from-[#F0F2F5] to-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#F0F2F5] to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50] mb-6">
@@ -167,7 +167,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {values.map((value, index) => (
               <div
                 key={index}
@@ -189,7 +189,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white py-16">
+      <section className="bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Join Us on Your Digital Journey

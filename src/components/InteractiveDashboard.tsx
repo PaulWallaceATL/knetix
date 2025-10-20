@@ -40,7 +40,7 @@ export default function InteractiveDashboard() {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
+    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
       {/* Static background grid - removed animation to prevent flickering */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div
@@ -58,7 +58,7 @@ export default function InteractiveDashboard() {
 
       <div className="container-clean relative z-10">
         {/* Header */}
-        <IntersectionObserverWrapper animation="fadeInUp" className="text-center mb-20">
+        <IntersectionObserverWrapper animation="fadeInUp" className="text-center mb-12 md:mb-16">
           <motion.div
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-dark border border-white/20 mb-6"
             whileHover={{ scale: 1.05 }}
@@ -80,7 +80,7 @@ export default function InteractiveDashboard() {
         </IntersectionObserverWrapper>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
           {stats.map((stat, index) => (
             <StatsCounter
               key={index}
@@ -97,7 +97,7 @@ export default function InteractiveDashboard() {
 
         {/* Performance Indicators */}
         <IntersectionObserverWrapper animation="fadeInUp">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 title: "Lightning Fast",
