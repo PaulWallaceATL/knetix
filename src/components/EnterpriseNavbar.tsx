@@ -76,35 +76,39 @@ export default function EnterpriseNavbar() {
               <AnimatePresence>
                 {activeMegaMenu === 'solutions' && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 z-50"
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    className="fixed left-1/2 -translate-x-1/2 top-24 w-[900px] max-w-[90vw] bg-white rounded-2xl shadow-2xl border border-gray-200 p-8 z-50"
                   >
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-3 gap-4 mb-6">
                       {solutions.map((solution, index) => (
                         <Link
                           key={index}
                           href={solution.href}
-                          className="group flex items-start gap-4 p-4 rounded-xl hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all"
+                          onClick={() => setActiveMegaMenu(null)}
+                          className="group flex flex-col items-center text-center p-6 rounded-xl hover:bg-gradient-to-br hover:from-blue-50 hover:to-cyan-50 transition-all hover:shadow-lg"
                         >
-                          <div className="flex-shrink-0 p-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white group-hover:scale-110 transition-transform">
+                          <motion.div 
+                            className="flex-shrink-0 p-4 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 text-white mb-4 shadow-lg"
+                            whileHover={{ scale: 1.1, rotateY: 180 }}
+                            transition={{ duration: 0.4 }}
+                          >
                             {solution.icon}
+                          </motion.div>
+                          <div className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+                            {solution.name}
                           </div>
-                          <div>
-                            <div className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">
-                              {solution.name}
-                            </div>
-                            <div className="text-sm text-gray-500">{solution.description}</div>
-                          </div>
+                          <div className="text-sm text-gray-500">{solution.description}</div>
                         </Link>
                       ))}
                     </div>
-                    <div className="mt-6 pt-6 border-t border-gray-200">
+                    <div className="pt-6 border-t border-gray-200 flex justify-center">
                       <Link
                         href="/solutions"
-                        className="flex items-center justify-between text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                        onClick={() => setActiveMegaMenu(null)}
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:shadow-lg transition-all"
                       >
                         View All Solutions
                         <ArrowRight className="w-4 h-4" />
@@ -134,29 +138,36 @@ export default function EnterpriseNavbar() {
               <AnimatePresence>
                 {activeMegaMenu === 'company' && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-[300px] bg-white rounded-2xl shadow-2xl border border-gray-200 p-4 z-50"
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    className="fixed left-1/2 -translate-x-1/2 top-24 w-[600px] max-w-[90vw] bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 z-50"
                   >
-                    {company.map((item, index) => (
-                      <Link
-                        key={index}
-                        href={item.href}
-                        className="group flex items-start gap-4 p-3 rounded-xl hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all"
-                      >
-                        <div className="flex-shrink-0 p-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white group-hover:scale-110 transition-transform">
-                          {item.icon}
-                        </div>
-                        <div>
-                          <div className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">
-                            {item.name}
+                    <div className="grid grid-cols-2 gap-3">
+                      {company.map((item, index) => (
+                        <Link
+                          key={index}
+                          href={item.href}
+                          onClick={() => setActiveMegaMenu(null)}
+                          className="group flex items-start gap-4 p-4 rounded-xl hover:bg-gradient-to-br hover:from-blue-50 hover:to-cyan-50 transition-all hover:shadow-md"
+                        >
+                          <motion.div 
+                            className="flex-shrink-0 p-3 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600 text-white shadow-md"
+                            whileHover={{ scale: 1.1, rotateY: 180 }}
+                            transition={{ duration: 0.4 }}
+                          >
+                            {item.icon}
+                          </motion.div>
+                          <div>
+                            <div className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">
+                              {item.name}
+                            </div>
+                            <div className="text-sm text-gray-500">{item.description}</div>
                           </div>
-                          <div className="text-sm text-gray-500">{item.description}</div>
-                        </div>
-                      </Link>
-                    ))}
+                        </Link>
+                      ))}
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>

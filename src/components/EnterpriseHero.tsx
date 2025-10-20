@@ -2,9 +2,12 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, PlayCircle, CheckCircle, TrendingUp, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Sparkles, CheckCircle, TrendingUp, Shield, Zap } from 'lucide-react';
+import Hero3DOrb from './Hero3DOrb';
+import Floating3DMetrics from './Floating3DMetrics';
+
 export default function EnterpriseHero() {
-  // Sophisticated, refined motion design - quality over quantity
+  // Spectacular 3D motion design - sophisticated and impressive
 
   return (
     <section
@@ -170,8 +173,8 @@ export default function EnterpriseHero() {
               }}
             >
               <span className="flex items-center gap-3 text-white font-semibold text-lg">
-                <PlayCircle className="w-5 h-5" />
-                Watch Demo
+                <Sparkles className="w-5 h-5" />
+                Explore Solutions
               </span>
             </motion.div>
           </Link>
