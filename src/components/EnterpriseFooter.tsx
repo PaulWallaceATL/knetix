@@ -65,7 +65,7 @@ export default function EnterpriseFooter() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-[#000D33] via-[#0A2E50] to-[#000D33] text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-[#000D33] via-[#0A2E50] to-[#000D33] text-white overflow-hidden mt-20 md:mt-24 lg:mt-32">
       {/* Static Background - removed animation to prevent flickering */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div
@@ -79,7 +79,7 @@ export default function EnterpriseFooter() {
 
       {/* Newsletter Section */}
       <div className="relative z-10 border-b border-white/10">
-        <div className="container-clean py-20 md:py-24 lg:py-28">
+        <div className="container-clean pt-20 md:pt-24 lg:pt-28 pb-24 md:pb-28 lg:pb-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
