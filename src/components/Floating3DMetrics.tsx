@@ -4,21 +4,51 @@ import { motion } from 'framer-motion';
 import { TrendingUp, Shield, Zap, Globe, Award, Users } from 'lucide-react';
 
 export default function Floating3DMetrics() {
+  // Simplified metrics for better visibility - only show 3 most important ones
+  // Positioned safely within viewport boundaries
   const metrics = [
-    { icon: <TrendingUp className="w-5 h-5" />, value: '300%', label: 'ROI', color: 'from-green-400 to-emerald-500', position: 'top-[15%] left-[8%]', delay: 1.5 },
-    { icon: <Shield className="w-5 h-5" />, value: '99.99%', label: 'Uptime', color: 'from-cyan-400 to-blue-500', position: 'top-[25%] right-[12%]', delay: 1.7 },
-    { icon: <Zap className="w-5 h-5" />, value: '24/7', label: 'Support', color: 'from-purple-400 to-pink-500', position: 'bottom-[30%] left-[10%]', delay: 1.9 },
-    { icon: <Globe className="w-5 h-5" />, value: '50+', label: 'Countries', color: 'from-blue-400 to-indigo-500', position: 'bottom-[35%] right-[8%]', delay: 2.1 },
-    { icon: <Award className="w-5 h-5" />, value: 'SOC 2', label: 'Certified', color: 'from-yellow-400 to-orange-500', position: 'top-[45%] left-[6%]', delay: 2.3 },
-    { icon: <Users className="w-5 h-5" />, value: '500+', label: 'Clients', color: 'from-pink-400 to-rose-500', position: 'top-[50%] right-[10%]', delay: 2.5 },
+    { 
+      icon: <TrendingUp className="w-4 h-4 md:w-5 md:h-5" />, 
+      value: '300%', 
+      label: 'ROI', 
+      color: 'from-green-400 to-emerald-500', 
+      // Safe positioning - always visible
+      mobilePos: 'top-[12%] left-[5%]',
+      desktopPos: 'top-[15%] left-[10%]',
+      delay: 1.5 
+    },
+    { 
+      icon: <Shield className="w-4 h-4 md:w-5 md:h-5" />, 
+      value: '99.99%', 
+      label: 'Uptime', 
+      color: 'from-cyan-400 to-blue-500', 
+      mobilePos: 'top-[12%] right-[5%]',
+      desktopPos: 'top-[20%] right-[10%]',
+      delay: 1.7 
+    },
+    { 
+      icon: <Zap className="w-4 h-4 md:w-5 md:h-5" />, 
+      value: '24/7', 
+      label: 'Support', 
+      color: 'from-purple-400 to-pink-500', 
+      mobilePos: 'bottom-[15%] left-[5%]',
+      desktopPos: 'bottom-[25%] left-[10%]',
+      delay: 1.9 
+    },
   ];
 
   return (
-    <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {metrics.map((metric, index) => (
         <motion.div
           key={index}
-          className={`absolute ${metric.position} hidden xl:block`}
+          className={`absolute ${metric.mobilePos} lg:${metric.desktopPos.replace('top-', '').replace('bottom-', '').replace('left-', '').replace('right-', '')}`}
+          style={{
+            top: metric.desktopPos.includes('top') ? metric.desktopPos.match(/top-\[(.*?)\]/)?.[1] : 'auto',
+            bottom: metric.desktopPos.includes('bottom') ? metric.desktopPos.match(/bottom-\[(.*?)\]/)?.[1] : 'auto',
+            left: metric.desktopPos.includes('left') ? metric.desktopPos.match(/left-\[(.*?)\]/)?.[1] : 'auto',
+            right: metric.desktopPos.includes('right') ? metric.desktopPos.match(/right-\[(.*?)\]/)?.[1] : 'auto',
+          }}
           initial={{ opacity: 0, scale: 0, rotateY: -180 }}
           animate={{ opacity: 1, scale: 1, rotateY: 0 }}
           transition={{ 
@@ -29,9 +59,9 @@ export default function Floating3DMetrics() {
         >
           <motion.div
             animate={{
-              y: [0, -20, 0],
-              rotateX: [0, 10, 0],
-              rotateY: [0, 5, 0],
+              y: [0, -15, 0],
+              rotateX: [0, 8, 0],
+              rotateY: [0, 4, 0],
             }}
             transition={{
               duration: 5 + index,
@@ -40,29 +70,29 @@ export default function Floating3DMetrics() {
               delay: index * 0.3
             }}
             whileHover={{
-              scale: 1.1,
-              rotateY: 15,
-              z: 100,
+              scale: 1.08,
+              rotateY: 12,
+              z: 80,
               transition: { duration: 0.3 }
             }}
-            className={`glass-dark rounded-2xl p-4 border-2 bg-gradient-to-br ${metric.color} border-opacity-40 shadow-2xl cursor-pointer`}
+            className={`glass-dark rounded-xl md:rounded-2xl p-3 md:p-4 border-2 bg-gradient-to-br ${metric.color} border-opacity-40 shadow-2xl cursor-pointer max-w-[120px] md:max-w-none`}
             style={{
               transformStyle: 'preserve-3d',
-              boxShadow: '0 20px 60px rgba(0, 196, 180, 0.3)',
+              boxShadow: '0 15px 40px rgba(0, 196, 180, 0.25)',
               borderImageSlice: 1,
             }}
           >
             <motion.div
-              className="flex items-center gap-3 mb-2"
+              className="flex items-center gap-2 md:gap-3 mb-1 md:mb-2"
               style={{ transform: 'translateZ(20px)' }}
             >
-              <div className={`p-2 rounded-lg bg-white/20 text-white`}>
+              <div className={`p-1.5 md:p-2 rounded-lg bg-white/20 text-white`}>
                 {metric.icon}
               </div>
-              <div className="text-white font-bold text-2xl">{metric.value}</div>
+              <div className="text-white font-bold text-lg md:text-2xl">{metric.value}</div>
             </motion.div>
             <div 
-              className="text-white/70 text-xs font-medium uppercase tracking-wider"
+              className="text-white/80 text-[10px] md:text-xs font-medium uppercase tracking-wider"
               style={{ transform: 'translateZ(10px)' }}
             >
               {metric.label}
@@ -70,7 +100,7 @@ export default function Floating3DMetrics() {
             
             {/* 3D depth shadow */}
             <div 
-              className="absolute inset-0 bg-black/40 rounded-2xl blur-xl"
+              className="absolute inset-0 bg-black/30 rounded-xl md:rounded-2xl blur-xl"
               style={{ transform: 'translateZ(-20px)' }}
             />
           </motion.div>

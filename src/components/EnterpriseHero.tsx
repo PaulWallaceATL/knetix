@@ -11,7 +11,7 @@ export default function EnterpriseHero() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#000D33] via-[#0A2E50] to-[#000D33] pt-24 pb-40"
+      className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#000D33] via-[#0A2E50] to-[#000D33] pt-20 pb-24 md:pb-32 lg:pb-40"
       style={{ perspective: '2000px' }}
     >
       {/* Refined gradient background - slow, elegant shift */}
@@ -180,29 +180,29 @@ export default function EnterpriseHero() {
           </Link>
         </motion.div>
 
-        {/* Key Value Props - 3D cards with depth */}
+        {/* Key Value Props - 3D cards with depth - Responsive and contained */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto px-4"
           style={{ transformStyle: 'preserve-3d' }}
         >
           {[
             { 
-              icon: <TrendingUp className="w-6 h-6" />, 
+              icon: <TrendingUp className="w-5 h-5 md:w-6 md:h-6" />, 
               title: "300% ROI", 
               subtitle: "Average Return",
               color: "from-green-400 to-emerald-500"
             },
             { 
-              icon: <Shield className="w-6 h-6" />, 
+              icon: <Shield className="w-5 h-5 md:w-6 md:h-6" />, 
               title: "99.99% Uptime", 
               subtitle: "Enterprise SLA",
               color: "from-blue-400 to-cyan-500"
             },
             { 
-              icon: <Zap className="w-6 h-6" />, 
+              icon: <Zap className="w-5 h-5 md:w-6 md:h-6" />, 
               title: "24/7 Support", 
               subtitle: "Global Coverage",
               color: "from-purple-400 to-pink-500"
@@ -214,17 +214,17 @@ export default function EnterpriseHero() {
               animate={{ opacity: 1, y: 0, rotateX: 0 }}
               transition={{ duration: 0.8, delay: 0.9 + index * 0.15 }}
               whileHover={{ 
-                y: -8,
-                rotateX: 5,
+                y: -6,
+                rotateX: 3,
                 transition: { duration: 0.3 }
               }}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 transition-all duration-300 shadow-xl hover:shadow-2xl"
+              className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-6 lg:p-8 border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 transition-all duration-300 shadow-xl hover:shadow-2xl"
               style={{
                 transformStyle: 'preserve-3d',
               }}
             >
               <motion.div 
-                className={`inline-flex items-center justify-center w-16 h-16 mb-6 rounded-xl bg-gradient-to-br ${item.color} shadow-xl`}
+                className={`inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 mb-4 md:mb-6 rounded-xl bg-gradient-to-br ${item.color} shadow-xl`}
                 style={{ transform: 'translateZ(30px)' }}
                 whileHover={{ 
                   rotateY: 180,
@@ -236,13 +236,13 @@ export default function EnterpriseHero() {
                 </div>
               </motion.div>
               <div 
-                className={`text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}
+                className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-3 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}
                 style={{ transform: 'translateZ(20px)' }}
               >
                 {item.title}
               </div>
               <div 
-                className="text-white/60 text-sm font-medium tracking-wide uppercase"
+                className="text-white/60 text-xs md:text-sm font-medium tracking-wide uppercase"
                 style={{ transform: 'translateZ(10px)' }}
               >
                 {item.subtitle}
