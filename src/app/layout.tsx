@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Open_Sans } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import EnterpriseNavbar from "@/components/EnterpriseNavbar";
 import EnterpriseFooter from "@/components/EnterpriseFooter";
@@ -8,16 +8,18 @@ import LiveChatWidget from "@/components/LiveChatWidget";
 import ScrollToTop from "@/components/ScrollToTop";
 import CookieConsent from "@/components/CookieConsent";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: 'swap',
 });
 
-const openSans = Open_Sans({
-  variable: "--font-open-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -127,7 +129,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body
-        className={`${montserrat.variable} ${openSans.variable} antialiased`}
+        className={`${inter.variable} ${manrope.variable} antialiased`}
       >
         <EnterpriseNavbar />
         {children}

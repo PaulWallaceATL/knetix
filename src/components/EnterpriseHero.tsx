@@ -39,101 +39,11 @@ export default function EnterpriseHero() {
         />
       </div>
 
-      {/* 3D Geometric Accents - Sophisticated but Noticeable */}
-      <motion.div
-        className="absolute top-20 right-[10%] w-64 h-64 pointer-events-none hidden lg:block"
-        animate={{
-          rotateX: [0, 360],
-          rotateY: [0, 180],
-        }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        style={{
-          transformStyle: 'preserve-3d',
-        }}
-      >
-        <div className="w-full h-full border-2 border-cyan-400/30 rounded-3xl shadow-2xl" style={{ transform: 'translateZ(0px)' }} />
-        <div className="absolute inset-4 border-2 border-blue-400/20 rounded-3xl" style={{ transform: 'translateZ(30px)' }} />
-        <div className="absolute inset-8 border border-purple-400/15 rounded-3xl" style={{ transform: 'translateZ(60px)' }} />
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-32 left-[8%] w-72 h-72 pointer-events-none hidden lg:block"
-        animate={{
-          rotateY: [0, 360],
-          rotateZ: [0, 180],
-        }}
-        transition={{
-          duration: 40,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        style={{
-          transformStyle: 'preserve-3d',
-        }}
-      >
-        <div className="w-full h-full border-2 border-cyan-400/30 rounded-full shadow-2xl" style={{ transform: 'translateZ(0px)' }} />
-        <div className="absolute inset-6 border-2 border-green-400/20 rounded-full" style={{ transform: 'translateZ(40px)' }} />
-      </motion.div>
-
-      {/* Floating 3D Accent Cards - Noticeable but refined */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0, rotateY: -180 }}
-        animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-        transition={{ duration: 1.2, delay: 1.8 }}
-        className="absolute top-40 left-[5%] pointer-events-none hidden xl:block"
-      >
-        <motion.div
-          animate={{
-            y: [0, -15, 0],
-            rotateX: [0, 5, 0],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="glass-dark rounded-2xl p-6 border border-cyan-400/40 shadow-2xl"
-          style={{
-            transformStyle: 'preserve-3d',
-            boxShadow: '0 20px 40px rgba(0, 196, 180, 0.2)'
-          }}
-        >
-          <div className="text-cyan-400 text-4xl font-bold mb-2">99.99%</div>
-          <div className="text-white/70 text-sm font-medium">Uptime SLA</div>
-        </motion.div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0, rotateY: 180 }}
-        animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-        transition={{ duration: 1.2, delay: 2 }}
-        className="absolute top-1/3 right-[6%] pointer-events-none hidden xl:block"
-      >
-        <motion.div
-          animate={{
-            y: [0, -20, 0],
-            rotateX: [0, -5, 0],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-          className="glass-dark rounded-2xl p-6 border border-blue-400/40 shadow-2xl"
-          style={{
-            transformStyle: 'preserve-3d',
-            boxShadow: '0 20px 40px rgba(99, 102, 241, 0.2)'
-          }}
-        >
-          <div className="text-blue-400 text-4xl font-bold mb-2">SOC 2</div>
-          <div className="text-white/70 text-sm font-medium">Certified</div>
-        </motion.div>
-      </motion.div>
+      {/* Impressive 3D Orbs and Geometric Shapes */}
+      <Hero3DOrb />
+      
+      {/* Floating 3D Metric Cards */}
+      <Floating3DMetrics />
 
       {/* Content */}
       <div className="relative z-20 w-full">
@@ -152,17 +62,52 @@ export default function EnterpriseHero() {
           <CheckCircle className="w-4 h-4 text-cyan-400" />
         </motion.div>
 
-        {/* Main Headline - elegant simplicity */}
+        {/* Main Headline - 3D perspective entry */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+          initial={{ opacity: 0, y: 40, rotateX: -20, z: -200 }}
+          animate={{ opacity: 1, y: 0, rotateX: 0, z: 0 }}
+          transition={{ duration: 1.2, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight tracking-tight"
+          style={{
+            transformStyle: 'preserve-3d',
+            textShadow: '0 20px 60px rgba(0, 0, 0, 0.5)',
+          }}
         >
-          <span className="block">Transform Your Business</span>
-          <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <motion.span 
+            className="block"
+            style={{ transform: 'translateZ(30px)' }}
+            animate={{
+              textShadow: [
+                '0 0 30px rgba(0, 196, 180, 0.0)',
+                '0 0 60px rgba(0, 196, 180, 0.4)',
+                '0 0 30px rgba(0, 196, 180, 0.0)',
+              ]
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            Transform Your Business
+          </motion.span>
+          <motion.span 
+            className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent"
+            style={{ 
+              transform: 'translateZ(50px)',
+              backgroundSize: '200% 200%',
+            }}
+            animate={{
+              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
             With Intelligence
-          </span>
+          </motion.span>
         </motion.h1>
 
         {/* Subheadline - clean and readable */}
