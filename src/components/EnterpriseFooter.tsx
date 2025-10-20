@@ -78,8 +78,8 @@ export default function EnterpriseFooter() {
       </div>
 
       {/* Newsletter Section */}
-      <div className="relative z-10 border-b border-white/10">
-        <div className="container-clean py-20 md:py-24">
+      <div className="relative z-10 border-b border-white/10 mb-24">
+        <div className="container-clean py-24 md:py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -124,8 +124,8 @@ export default function EnterpriseFooter() {
       </div>
 
       {/* Main Footer Content */}
-      <div className="relative z-10 container-clean py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-20">
+      <div className="relative z-10 container-clean pt-0 pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-24">
           {/* Company Info */}
           <motion.div
             className="lg:col-span-2"
@@ -201,7 +201,7 @@ export default function EnterpriseFooter() {
 
         {/* Trust Badges */}
         <motion.div
-          className="border-t border-white/10 pt-16 mb-16"
+          className="border-t border-white/10 pt-20 mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -236,7 +236,7 @@ export default function EnterpriseFooter() {
 
         {/* Bottom Section */}
         <motion.div
-          className="border-t border-white/10 pt-16 flex flex-col lg:flex-row justify-between items-center gap-6"
+          className="border-t border-white/10 pt-20 pb-8 flex flex-col lg:flex-row justify-between items-center gap-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

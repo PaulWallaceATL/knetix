@@ -1,56 +1,86 @@
 import Link from 'next/link';
+import SolutionHero from '@/components/SolutionHero';
+import SolutionFeatures from '@/components/SolutionFeatures';
+import SolutionBenefits from '@/components/SolutionBenefits';
+import { Network, Zap, Shield, TrendingUp, Server, Globe } from 'lucide-react';
 
 export default function NetworkPerformancePage() {
+  const stats = [
+    { value: '50%', label: 'Faster Performance' },
+    { value: '99.99%', label: 'Uptime SLA' },
+    { value: '40%', label: 'Cost Reduction' },
+    { value: '24/7', label: 'Monitoring' },
+  ];
+
+  const features = [
+    {
+      title: 'SD-WAN Solutions',
+      description: 'Optimize your wide area network with intelligent routing and bandwidth management for superior application performance.',
+      icon: <Network className="w-8 h-8" />,
+    },
+    {
+      title: 'Application Acceleration',
+      description: 'Deliver lightning-fast user experiences with advanced caching, compression, and protocol optimization.',
+      icon: <Zap className="w-8 h-8" />,
+    },
+    {
+      title: 'Network Security',
+      description: 'Protect your network infrastructure with integrated security, DDoS protection, and threat intelligence.',
+      icon: <Shield className="w-8 h-8" />,
+    },
+    {
+      title: 'Performance Analytics',
+      description: 'Gain real-time visibility into network performance with comprehensive monitoring and reporting tools.',
+      icon: <TrendingUp className="w-8 h-8" />,
+    },
+    {
+      title: 'Load Balancing',
+      description: 'Distribute traffic intelligently across resources to ensure optimal performance and eliminate bottlenecks.',
+      icon: <Server className="w-8 h-8" />,
+    },
+    {
+      title: 'Global CDN',
+      description: 'Accelerate content delivery worldwide with our enterprise-grade content distribution network.',
+      icon: <Globe className="w-8 h-8" />,
+    },
+  ];
+
+  const benefits = [
+    'Reduce latency and improve application response times by up to 50%',
+    'Maximize network uptime with 99.99% SLA guarantee',
+    'Lower WAN costs through intelligent bandwidth optimization',
+    'Gain complete visibility with real-time network analytics',
+    'Scale effortlessly to support business growth',
+    'Enterprise-grade security integrated at every layer',
+  ];
+
   return (
     <main className="pt-20">
-      <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Network Performance</h1>
-          <p className="text-xl text-gray-200 max-w-3xl">
-            Boost application delivery, maximize uptime, and optimize WAN costs for seamless connectivity and peak operational efficiency.
+      <SolutionHero
+        title="Network Performance Optimization"
+        subtitle="Infrastructure Solutions"
+        description="Boost application delivery, maximize uptime, and optimize WAN costs for seamless connectivity and peak operational efficiency."
+        stats={stats}
+      />
+
+      <SolutionFeatures features={features} />
+
+      <SolutionBenefits benefits={benefits} />
+
+      {/* CTA Section */}
+      <section className="py-24 md:py-32 bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white">
+        <div className="container-clean text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            Ready to Optimize Your Network?
+          </h2>
+          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-12 font-light">
+            Let our experts design a network performance solution tailored to your business needs.
           </p>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0A2E50] mb-6">Overview</h2>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                In today&apos;s digital-first world, network performance is critical to business success. 
-                Our comprehensive network solutions ensure your applications deliver optimal performance, 
-                your infrastructure maintains maximum uptime, and your WAN costs are optimized.
-              </p>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                We leverage cutting-edge technologies and industry best practices to design, implement, 
-                and manage high-performance networks that scale with your business needs.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-[#0A2E50] mb-6">Key Features</h3>
-              <ul className="space-y-4">
-                {['Application Delivery Optimization', 'WAN Cost Reduction', 'Uptime Maximization', 'Performance Monitoring', 'Load Balancing', 'Traffic Optimization'].map((feature) => (
-                  <li key={feature} className="flex items-start">
-                    <svg className="w-6 h-6 text-[#00C4B4] mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-[#0A2E50] mb-6">Ready to optimize your network?</h3>
-            <Link
-              href="/contact"
-              className="inline-block bg-[#FF8C00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Contact Our Experts
-            </Link>
-          </div>
+          <Link href="/contact">
+            <button className="px-12 py-5 rounded-xl bg-white text-[#0A2E50] font-bold text-lg hover:bg-white/90 hover:shadow-2xl transition-all">
+              Schedule Consultation
+            </button>
+          </Link>
         </div>
       </section>
     </main>
