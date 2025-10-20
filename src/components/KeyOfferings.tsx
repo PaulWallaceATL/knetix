@@ -83,8 +83,7 @@ const colorClasses = {
 
 export default function KeyOfferings() {
   return (
-    <section className="py-16 md:py-20 bg-white">
-      <div className="container-clean">
+    <div>
         {/* Header */}
         <motion.div 
           className="text-center space-y-clean-lg mb-16"
@@ -224,7 +223,6 @@ export default function KeyOfferings() {
             View All Solutions
           </Link>
         </motion.div>
-      </div>
-    </section>
+    </div>
   );
 }

@@ -41,8 +41,7 @@ const benefits = [
 
 export default function WhyKnetix() {
   return (
-    <section className="py-20 bg-gradient-to-br from-[#F0F2F5] to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div>
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50] mb-6">
@@ -102,8 +101,7 @@ export default function WhyKnetix() {
             <div className="text-gray-700 font-semibold">Years Experience</div>
           </div>
         </div>
-      </div>
-    </section>
+    </div>
   );
 }
 

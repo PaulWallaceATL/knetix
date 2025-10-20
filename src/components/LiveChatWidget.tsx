@@ -21,7 +21,8 @@ export default function LiveChatWidget() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 bg-gradient-to-br from-[#00C4B4] to-[#0A2E50] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 group"
+          className="fixed bottom-6 right-6 bg-gradient-to-br from-[#00C4B4] to-[#0A2E50] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform group"
+          style={{ zIndex: 1050 }}
           aria-label="Open chat"
         >
           <MessageCircle className="w-6 h-6" />
@@ -33,7 +34,7 @@ export default function LiveChatWidget() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-96 bg-white rounded-2xl shadow-2xl z-50 overflow-hidden border-2 border-[#00C4B4]">
+        <div className="fixed bottom-6 right-6 w-96 bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-[#00C4B4]" style={{ zIndex: 1050 }}>
           {/* Header */}
           <div className="bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">

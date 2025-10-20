@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import EnterpriseNavbar from "@/components/EnterpriseNavbar";
+import EnterpriseFooter from "@/components/EnterpriseFooter";
 import StructuredData from "@/components/StructuredData";
 import LiveChatWidget from "@/components/LiveChatWidget";
 import ScrollToTop from "@/components/ScrollToTop";
+import CookieConsent from "@/components/CookieConsent";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -20,14 +21,27 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Knetix - Powering Your Digital Evolution | Enterprise IT Solutions",
-  description: "Accelerate growth, streamline operations, and secure your future with intelligent technology solutions tailored for tomorrow's challenges. Trusted by 500+ enterprises worldwide for cybersecurity, cloud infrastructure, and managed services.",
-  keywords: "IT Solutions, Enterprise Technology, Cybersecurity, Cloud Infrastructure, Managed Services, Digital Transformation, Network Performance, Unified Communications",
+  title: "Knetix - Transform Your Business With Enterprise Technology Solutions",
+  description: "Partner with industry-leading experts to accelerate growth, optimize operations, and secure your digital future. Trusted by Fortune 500 companies worldwide. 99.99% uptime SLA, SOC 2 certified, 24/7 support.",
+  keywords: "Enterprise IT Solutions, Digital Transformation, Cloud Infrastructure, Cybersecurity Services, Managed IT Services, Network Performance Optimization, Unified Communications, Contact Center Solutions, IT Consulting, Technology Modernization, Cloud Migration, Zero Trust Security, Enterprise Software, Business Technology, IT Strategy",
   authors: [{ name: "Knetix" }],
+  creator: "Knetix",
+  publisher: "Knetix",
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
+  alternates: {
+    canonical: "https://knetix.vercel.app",
+  },
+  category: "Technology",
   icons: {
     icon: [
       { url: "/favicon.svg?v=3", sizes: "any", type: "image/svg+xml" },
@@ -41,23 +55,29 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://knetix.vercel.app",
-    title: "Knetix - Powering Your Digital Evolution",
-    description: "Enterprise IT solutions for forward-thinking businesses",
+    title: "Knetix - Transform Your Business With Enterprise Technology Solutions",
+    description: "Partner with industry-leading experts to accelerate growth and secure your digital future. Trusted by Fortune 500 companies. 99.99% uptime SLA.",
     siteName: "Knetix",
     images: [
       {
         url: "https://knetix.vercel.app/og-image.jpg?v=4",
         width: 1200,
         height: 630,
-        alt: "Knetix - Enterprise IT Solutions",
+        alt: "Knetix - Enterprise Technology Solutions for Digital Transformation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Knetix - Powering Your Digital Evolution",
-    description: "Enterprise IT solutions for forward-thinking businesses",
-    images: ["https://knetix.vercel.app/og-image.jpg?v=3"],
+    site: "@knetix",
+    creator: "@knetix",
+    title: "Knetix - Transform Your Business With Enterprise Technology",
+    description: "Industry-leading IT solutions trusted by Fortune 500 companies. 99.99% uptime, SOC 2 certified, 24/7 support.",
+    images: ["https://knetix.vercel.app/og-image.jpg?v=4"],
+  },
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
   },
 };
 
@@ -73,30 +93,48 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon.svg?v=3" />
         <link rel="shortcut icon" href="/favicon.svg?v=3" />
         
-        {/* Explicit Open Graph tags for iMessage */}
-        <meta property="og:title" content="Knetix - Powering Your Digital Evolution" />
-        <meta property="og:description" content="Enterprise IT solutions for forward-thinking businesses" />
+        {/* DNS Prefetch & Preconnect for Performance */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Explicit Open Graph tags */}
+        <meta property="og:title" content="Knetix - Transform Your Business With Enterprise Technology Solutions" />
+        <meta property="og:description" content="Partner with industry-leading experts to accelerate growth and secure your digital future. Trusted by Fortune 500 companies." />
         <meta property="og:image" content="https://knetix.vercel.app/og-image.jpg?v=4" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://knetix.vercel.app" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Knetix" />
+        <meta property="og:locale" content="en_US" />
         
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Knetix - Powering Your Digital Evolution" />
-        <meta name="twitter:description" content="Enterprise IT solutions for forward-thinking businesses" />
+        <meta name="twitter:site" content="@knetix" />
+        <meta name="twitter:creator" content="@knetix" />
+        <meta name="twitter:title" content="Knetix - Transform Your Business With Enterprise Technology" />
+        <meta name="twitter:description" content="Industry-leading IT solutions trusted by Fortune 500 companies. 99.99% uptime, SOC 2 certified, 24/7 support." />
         <meta name="twitter:image" content="https://knetix.vercel.app/og-image.jpg?v=4" />
+        
+        {/* Additional SEO Tags */}
+        <meta name="theme-color" content="#0A2E50" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="format-detection" content="telephone=no" />
         
         <StructuredData />
       </head>
       <body
         className={`${montserrat.variable} ${openSans.variable} antialiased`}
       >
-        <Navbar />
+        <EnterpriseNavbar />
         {children}
-        <Footer />
+        <EnterpriseFooter />
         <LiveChatWidget />
         <ScrollToTop />
+        <CookieConsent />
       </body>
     </html>
   );

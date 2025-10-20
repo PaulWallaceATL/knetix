@@ -77,8 +77,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-16 md:py-20 bg-gray-50">
-      <div className="container-clean">
+    <div>
         {/* Enhanced Header with Staggered Animation */}
         <motion.div 
           className="text-center space-y-clean-lg mb-16"
@@ -285,7 +284,6 @@ export default function Testimonials() {
             <div className="apple-text-headline text-gray-400">Enterprise</div>
           </div>
         </motion.div>
-      </div>
-    </section>
+    </div>
   );
 }

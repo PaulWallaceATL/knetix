@@ -11,8 +11,7 @@ const clients = [
 
 export default function ClientLogos() {
   return (
-    <section className="py-16 bg-white border-y border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div>
         <div className="text-center mb-12">
           <p className="text-sm font-semibold text-[#00C4B4] uppercase tracking-wide mb-2">
             Trusted by Industry Leaders
@@ -47,8 +46,7 @@ export default function ClientLogos() {
             Join 500+ companies that trust Knetix for their technology needs
           </p>
         </div>
-      </div>
-    </section>
+    </div>
   );
 }
 
