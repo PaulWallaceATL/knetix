@@ -64,12 +64,12 @@ export default function StatsCounter({
       className="text-center group"
     >
       <motion.div
-        whileHover={{ scale: 1.05, y: -5 }}
+        whileHover={{ scale: 1.02, y: -2 }}
         transition={{ duration: 0.3 }}
-        className="relative p-8 rounded-2xl bg-white border border-gray-200 hover:border-transparent hover:shadow-2xl transition-all duration-300"
+        className="relative p-8 rounded-2xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300"
       >
-        {/* Animated gradient border on hover */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-sm"></div>
+        {/* Subtle gradient border on hover - reduced intensity to prevent flickering */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-50 transition-opacity duration-500 -z-10 blur-md"></div>
         
         {/* Icon */}
         {icon && (
@@ -105,19 +105,7 @@ export default function StatsCounter({
           {label}
         </motion.div>
         
-        {/* Decorative element */}
-        <motion.div
-          className="absolute top-0 right-0 w-20 h-20 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
+        {/* Removed decorative element - was causing flickering */}
       </motion.div>
     </motion.div>
   );

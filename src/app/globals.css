@@ -163,19 +163,31 @@ body {
 * {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
-  will-change: auto;
 }
 
-/* Smooth hardware acceleration for animations */
+/* Smooth hardware acceleration for animations - prevent flickering */
 .animate-fade-in,
 .animate-fade-in-up,
 .animate-scale-in,
 .hover-lift,
-.hover-scale {
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
+.hover-scale,
+.glass,
+.glass-dark,
+.glass-card {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+}
+
+/* Disable animations for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Typography Styles */
@@ -635,6 +647,7 @@ button, a, input, textarea, select {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(0, 13, 51, 0.1);
+  transform: translate3d(0, 0, 0);
 }
 
 /* Legacy card support */
@@ -881,6 +894,7 @@ button, a, input, textarea, select {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translate3d(0, 0, 0);
 }
 
 .glass-dark {
@@ -888,6 +902,7 @@ button, a, input, textarea, select {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translate3d(0, 0, 0);
 }
 
 /* Gradient Text */
@@ -922,14 +937,14 @@ button, a, input, textarea, select {
   background: radial-gradient(circle at center, var(--knetix-secondary), var(--knetix-primary));
 }
 
-/* Hover Effects */
+/* Hover Effects - Reduced to prevent glitching */
 .hover-lift {
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 .hover-glow:hover {
@@ -941,7 +956,7 @@ button, a, input, textarea, select {
 }
 
 .hover-scale:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 /* Badge Styles */

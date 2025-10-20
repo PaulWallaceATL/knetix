@@ -89,22 +89,14 @@ export default function TrustBuilders() {
 
   return (
     <section className="py-20 md:py-32 bg-white relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 opacity-5">
-        <motion.div
+      {/* Static background - removed animation to prevent flickering */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div
           className="absolute inset-0"
           style={{
             backgroundImage: `linear-gradient(90deg, #0A2E50 1px, transparent 1px),
                              linear-gradient(180deg, #0A2E50 1px, transparent 1px)`,
             backgroundSize: '60px 60px'
-          }}
-          animate={{
-            backgroundPosition: ['0 0', '60px 60px'],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
           }}
         />
       </div>

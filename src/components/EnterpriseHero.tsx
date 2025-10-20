@@ -1,56 +1,35 @@
 'use client';
 
 import Link from 'next/link';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowRight, PlayCircle, CheckCircle, TrendingUp, Shield, Zap } from 'lucide-react';
-import { useRef } from 'react';
 
 export default function EnterpriseHero() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"]
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
-  const y = useTransform(scrollYProgress, [0, 0.5], [0, 50]);
+  // Removed aggressive parallax effects that cause content to disappear and flickering
 
   return (
     <section
-      ref={ref}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#000D33] via-[#0A2E50] to-[#000D33] pt-24 pb-40"
     >
-      {/* Animated Background Patterns */}
+      {/* Static Background Patterns - removed animations to prevent flickering */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <motion.div
+        <div
           className="absolute top-0 left-0 w-full h-full"
           style={{
             backgroundImage: `radial-gradient(circle at 20% 50%, rgba(0, 196, 180, 0.15) 0%, transparent 50%), 
                              radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%)`
           }}
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
         />
       </div>
 
-      {/* Floating geometric shapes */}
+      {/* Subtle geometric shapes - reduced animation */}
       <motion.div
         className="absolute top-20 right-20 w-72 h-72 rounded-full border border-white/10 pointer-events-none"
         animate={{
-          y: [0, -30, 0],
-          rotate: [0, 90, 0],
-          scale: [1, 1.1, 1],
+          rotate: [0, 360],
         }}
         transition={{
-          duration: 20,
+          duration: 60,
           repeat: Infinity,
           ease: "linear"
         }}
@@ -58,12 +37,10 @@ export default function EnterpriseHero() {
       <motion.div
         className="absolute bottom-20 left-20 w-96 h-96 rounded-full border border-cyan-400/10 pointer-events-none"
         animate={{
-          y: [0, 30, 0],
-          rotate: [0, -90, 0],
-          scale: [1, 0.9, 1],
+          rotate: [0, -360],
         }}
         transition={{
-          duration: 15,
+          duration: 80,
           repeat: Infinity,
           ease: "linear"
         }}
@@ -71,10 +48,7 @@ export default function EnterpriseHero() {
 
       {/* Content */}
       <div className="relative z-20 w-full">
-      <motion.div
-        style={{ opacity, scale, y }}
-        className="container-clean text-center py-8"
-      >
+      <div className="container-clean text-center py-8">
         {/* Trust Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,18 +56,7 @@ export default function EnterpriseHero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="inline-flex items-center gap-3 px-6 py-3 mb-8 glass-dark rounded-full relative z-30"
         >
-          <motion.div
-            className="w-2 h-2 rounded-full bg-gradient-to-r from-green-400 to-cyan-400"
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.7, 1, 0.7],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
+          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-400 to-cyan-400" />
           <span className="text-white/90 text-sm font-semibold tracking-wide">
             TRUSTED BY FORTUNE 500 COMPANIES
           </span>
@@ -190,19 +153,15 @@ export default function EnterpriseHero() {
           ].map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20, scale: 0.9 }}
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
-              whileHover={{ y: -8, scale: 1.05 }}
+              whileHover={{ y: -4, scale: 1.02 }}
               className="glass-dark rounded-2xl p-6 border border-white/10 hover:border-white/30 transition-all group cursor-pointer"
             >
-              <motion.div
-                className={`inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-gradient-to-r ${item.color}`}
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div className={`inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-gradient-to-r ${item.color}`}>
                 {item.icon}
-              </motion.div>
+              </div>
               <div className={`text-3xl font-bold mb-2 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
                 {item.title}
               </div>
@@ -210,7 +169,7 @@ export default function EnterpriseHero() {
             </motion.div>
           ))}
         </motion.div>
-      </motion.div>
+      </div>
       </div>
 
       {/* Scroll Indicator - Positioned absolutely at bottom */}

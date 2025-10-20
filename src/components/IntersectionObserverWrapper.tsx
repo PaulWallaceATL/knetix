@@ -28,14 +28,14 @@ export default function IntersectionObserverWrapper({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          if (once) {
-            observer.disconnect();
-          }
-        } else if (!once) {
-          setIsVisible(false);
+          // Always disconnect after animating to keep content visible
+          observer.disconnect();
         }
       },
-      { threshold }
+      { 
+        threshold,
+        rootMargin: '50px' // Start animation earlier for smoother experience
+      }
     );
 
     if (ref.current) {
@@ -51,28 +51,28 @@ export default function IntersectionObserverWrapper({
       visible: { opacity: 1 }
     },
     fadeInUp: {
-      hidden: { opacity: 0, y: 40 },
+      hidden: { opacity: 0, y: 20 },
       visible: { opacity: 1, y: 0 }
     },
     fadeInDown: {
-      hidden: { opacity: 0, y: -40 },
+      hidden: { opacity: 0, y: -20 },
       visible: { opacity: 1, y: 0 }
     },
     fadeInLeft: {
-      hidden: { opacity: 0, x: -40 },
+      hidden: { opacity: 0, x: -20 },
       visible: { opacity: 1, x: 0 }
     },
     fadeInRight: {
-      hidden: { opacity: 0, x: 40 },
+      hidden: { opacity: 0, x: 20 },
       visible: { opacity: 1, x: 0 }
     },
     scaleIn: {
-      hidden: { opacity: 0, scale: 0.8 },
+      hidden: { opacity: 0, scale: 0.95 },
       visible: { opacity: 1, scale: 1 }
     },
     slideInBlur: {
-      hidden: { opacity: 0, y: 40, filter: 'blur(8px)' },
-      visible: { opacity: 1, y: 0, filter: 'blur(0px)' }
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 }
     }
   };
 
@@ -85,7 +85,7 @@ export default function IntersectionObserverWrapper({
       animate={isVisible ? "visible" : "hidden"}
       variants={selectedAnimation}
       transition={{
-        duration: 0.8,
+        duration: 0.6,
         delay,
         ease: [0.25, 0.46, 0.45, 0.94]
       }}

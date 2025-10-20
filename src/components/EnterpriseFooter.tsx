@@ -66,21 +66,13 @@ export default function EnterpriseFooter() {
 
   return (
     <footer className="relative bg-gradient-to-br from-[#000D33] via-[#0A2E50] to-[#000D33] text-white overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-10">
-        <motion.div
+      {/* Static Background - removed animation to prevent flickering */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div
           className="absolute inset-0"
           style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
             backgroundSize: '40px 40px'
-          }}
-          animate={{
-            backgroundPosition: ['0 0', '40px 40px'],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
           }}
         />
       </div>

@@ -41,50 +41,20 @@ export default function InteractiveDashboard() {
 
   return (
     <section className="py-20 md:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
-      {/* Animated background grid */}
-      <div className="absolute inset-0 opacity-10">
-        <motion.div
+      {/* Static background grid - removed animation to prevent flickering */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div
           className="absolute inset-0"
           style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
             backgroundSize: '50px 50px'
           }}
-          animate={{
-            backgroundPosition: ['0 0', '50px 50px'],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
         />
       </div>
 
-      {/* Floating orbs */}
-      <motion.div
-        className="absolute top-20 right-20 w-96 h-96 rounded-full bg-blue-500/20 blur-3xl"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      <motion.div
-        className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-purple-500/20 blur-3xl"
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.5, 0.3, 0.5],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
+      {/* Static orbs - removed animation to prevent flickering */}
+      <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-blue-500/20 blur-3xl opacity-40 pointer-events-none" />
+      <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-purple-500/20 blur-3xl opacity-40 pointer-events-none" />
 
       <div className="container-clean relative z-10">
         {/* Header */}

@@ -45,7 +45,7 @@ export default function ThoughtLeadership() {
   return (
     <section className="py-20 md:py-32 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, #0A2E50 1px, transparent 0)`,
           backgroundSize: '40px 40px'
