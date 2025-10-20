@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Shield, Award, Users, TrendingUp, Lock, CheckCircle, Zap, Globe } from 'lucide-react';
+import { Shield, Award, TrendingUp, Lock, CheckCircle, Zap, Globe } from 'lucide-react';
 import IntersectionObserverWrapper from './IntersectionObserverWrapper';
 
 export default function TrustBuilders() {

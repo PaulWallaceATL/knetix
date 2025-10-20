@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import KnetixLogo from './KnetixLogo';
-import { ChevronDown, Shield, Cloud, Network, Phone, Lock, Server, BookOpen, Users, Briefcase, Mail, ArrowRight } from 'lucide-react';
+import { ChevronDown, Shield, Cloud, Network, Phone, Server, BookOpen, Users, Briefcase, Mail, ArrowRight } from 'lucide-react';
 
 export default function EnterpriseNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);

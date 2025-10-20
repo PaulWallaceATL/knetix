@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import KnetixLogo from './KnetixLogo';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube, ArrowRight, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 export default function EnterpriseFooter() {
@@ -248,7 +248,7 @@ export default function EnterpriseFooter() {
 
           {/* Social Links */}
           <div className="flex items-center gap-3">
-            {socialLinks.map((social, index) => (
+            {socialLinks.map((social) => (
               <motion.a
                 key={social.name}
                 href={social.href}
