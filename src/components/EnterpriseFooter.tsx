@@ -79,7 +79,7 @@ export default function EnterpriseFooter() {
 
       {/* Newsletter Section */}
       <div className="relative z-10 border-b border-white/10">
-        <div className="container-clean pt-20 md:pt-24 lg:pt-28 pb-24 md:pb-28 lg:pb-32">
+        <div className="container-clean py-32 md:py-40 lg:py-48">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
