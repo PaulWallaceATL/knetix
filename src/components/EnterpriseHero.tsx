@@ -28,7 +28,7 @@ export default function EnterpriseHero() {
       />
 
       {/* Minimal grid overlay - static for stability */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <div
           className="absolute inset-0"
           style={{
@@ -39,19 +39,100 @@ export default function EnterpriseHero() {
         />
       </div>
 
-      {/* Single sophisticated geometric accent - top right */}
+      {/* 3D Geometric Accents - Sophisticated but Noticeable */}
       <motion.div
-        className="absolute top-32 right-32 w-80 h-80 pointer-events-none hidden xl:block opacity-20"
+        className="absolute top-20 right-[10%] w-64 h-64 pointer-events-none hidden lg:block"
         animate={{
-          rotateZ: [0, 360],
+          rotateX: [0, 360],
+          rotateY: [0, 180],
         }}
         transition={{
-          duration: 120,
+          duration: 30,
           repeat: Infinity,
           ease: "linear"
         }}
+        style={{
+          transformStyle: 'preserve-3d',
+        }}
       >
-        <div className="w-full h-full border border-white/20 rounded-2xl" style={{ transform: 'rotateX(60deg) rotateY(0deg)' }} />
+        <div className="w-full h-full border-2 border-cyan-400/30 rounded-3xl shadow-2xl" style={{ transform: 'translateZ(0px)' }} />
+        <div className="absolute inset-4 border-2 border-blue-400/20 rounded-3xl" style={{ transform: 'translateZ(30px)' }} />
+        <div className="absolute inset-8 border border-purple-400/15 rounded-3xl" style={{ transform: 'translateZ(60px)' }} />
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-32 left-[8%] w-72 h-72 pointer-events-none hidden lg:block"
+        animate={{
+          rotateY: [0, 360],
+          rotateZ: [0, 180],
+        }}
+        transition={{
+          duration: 40,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+        style={{
+          transformStyle: 'preserve-3d',
+        }}
+      >
+        <div className="w-full h-full border-2 border-cyan-400/30 rounded-full shadow-2xl" style={{ transform: 'translateZ(0px)' }} />
+        <div className="absolute inset-6 border-2 border-green-400/20 rounded-full" style={{ transform: 'translateZ(40px)' }} />
+      </motion.div>
+
+      {/* Floating 3D Accent Cards - Noticeable but refined */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0, rotateY: -180 }}
+        animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+        transition={{ duration: 1.2, delay: 1.8 }}
+        className="absolute top-40 left-[5%] pointer-events-none hidden xl:block"
+      >
+        <motion.div
+          animate={{
+            y: [0, -15, 0],
+            rotateX: [0, 5, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="glass-dark rounded-2xl p-6 border border-cyan-400/40 shadow-2xl"
+          style={{
+            transformStyle: 'preserve-3d',
+            boxShadow: '0 20px 40px rgba(0, 196, 180, 0.2)'
+          }}
+        >
+          <div className="text-cyan-400 text-4xl font-bold mb-2">99.99%</div>
+          <div className="text-white/70 text-sm font-medium">Uptime SLA</div>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0, rotateY: 180 }}
+        animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+        transition={{ duration: 1.2, delay: 2 }}
+        className="absolute top-1/3 right-[6%] pointer-events-none hidden xl:block"
+      >
+        <motion.div
+          animate={{
+            y: [0, -20, 0],
+            rotateX: [0, -5, 0],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+          className="glass-dark rounded-2xl p-6 border border-blue-400/40 shadow-2xl"
+          style={{
+            transformStyle: 'preserve-3d',
+            boxShadow: '0 20px 40px rgba(99, 102, 241, 0.2)'
+          }}
+        >
+          <div className="text-blue-400 text-4xl font-bold mb-2">SOC 2</div>
+          <div className="text-white/70 text-sm font-medium">Certified</div>
+        </motion.div>
       </motion.div>
 
       {/* Content */}
@@ -95,35 +176,55 @@ export default function EnterpriseHero() {
           enterprise-grade technology solutions.
         </motion.p>
 
-          {/* CTA Buttons - refined interactions */}
+          {/* CTA Buttons - with 3D depth */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+            style={{ transformStyle: 'preserve-3d' }}
           >
           <Link href="/contact">
             <motion.div
-              whileHover={{ scale: 1.03, y: -2 }}
+              whileHover={{ 
+                scale: 1.05, 
+                y: -4,
+                rotateX: 3,
+                transition: { duration: 0.3 }
+              }}
               whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.2 }}
-              className="relative px-12 py-4 rounded-xl overflow-hidden bg-gradient-to-r from-cyan-500 to-blue-600 shadow-lg hover:shadow-cyan-500/50"
+              className="relative px-12 py-5 rounded-xl overflow-hidden bg-gradient-to-r from-cyan-500 to-blue-600 shadow-2xl"
+              style={{
+                transformStyle: 'preserve-3d',
+                boxShadow: '0 20px 40px rgba(0, 196, 180, 0.3)'
+              }}
             >
-              <span className="relative z-10 flex items-center gap-3 text-white font-semibold text-lg">
+              <span className="relative z-10 flex items-center gap-3 text-white font-bold text-lg">
                 Start Your Transformation
                 <ArrowRight className="w-5 h-5" />
               </span>
+              <div 
+                className="absolute inset-0 bg-white/10 rounded-xl opacity-0 hover:opacity-100 transition-opacity"
+                style={{ transform: 'translateZ(5px)' }}
+              />
             </motion.div>
           </Link>
 
           <Link href="/solutions">
             <motion.div
-              whileHover={{ scale: 1.03, y: -2 }}
+              whileHover={{ 
+                scale: 1.05, 
+                y: -4,
+                rotateX: 3,
+                transition: { duration: 0.3 }
+              }}
               whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.2 }}
-              className="px-12 py-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/20 hover:bg-white/10 hover:border-white/30 transition-all"
+              className="px-12 py-5 rounded-xl bg-white/5 backdrop-blur-sm border-2 border-white/30 hover:bg-white/10 hover:border-cyan-400/50 transition-all shadow-xl"
+              style={{
+                transformStyle: 'preserve-3d',
+              }}
             >
-              <span className="flex items-center gap-3 text-white font-medium text-lg">
+              <span className="flex items-center gap-3 text-white font-semibold text-lg">
                 <PlayCircle className="w-5 h-5" />
                 Watch Demo
               </span>
@@ -131,12 +232,13 @@ export default function EnterpriseHero() {
           </Link>
         </motion.div>
 
-        {/* Key Value Props - refined cards */}
+        {/* Key Value Props - 3D cards with depth */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+          style={{ transformStyle: 'preserve-3d' }}
         >
           {[
             { 
@@ -160,23 +262,49 @@ export default function EnterpriseHero() {
           ].map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 transition-all duration-300"
+              initial={{ opacity: 0, y: 30, rotateX: -15 }}
+              animate={{ opacity: 1, y: 0, rotateX: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 + index * 0.15 }}
+              whileHover={{ 
+                y: -8,
+                rotateX: 5,
+                transition: { duration: 0.3 }
+              }}
+              className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 transition-all duration-300 shadow-xl hover:shadow-2xl"
+              style={{
+                transformStyle: 'preserve-3d',
+              }}
             >
-              <div className={`inline-flex items-center justify-center w-14 h-14 mb-6 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}>
+              <motion.div 
+                className={`inline-flex items-center justify-center w-16 h-16 mb-6 rounded-xl bg-gradient-to-br ${item.color} shadow-xl`}
+                style={{ transform: 'translateZ(30px)' }}
+                whileHover={{ 
+                  rotateY: 180,
+                  transition: { duration: 0.6 }
+                }}
+              >
                 <div className="text-white">
                   {item.icon}
                 </div>
-              </div>
-              <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
+              </motion.div>
+              <div 
+                className={`text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}
+                style={{ transform: 'translateZ(20px)' }}
+              >
                 {item.title}
               </div>
-              <div className="text-white/60 text-sm font-medium tracking-wide uppercase">
+              <div 
+                className="text-white/60 text-sm font-medium tracking-wide uppercase"
+                style={{ transform: 'translateZ(10px)' }}
+              >
                 {item.subtitle}
               </div>
+              
+              {/* 3D depth shadow */}
+              <div 
+                className="absolute inset-0 bg-black/30 rounded-xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{ transform: 'translateZ(-30px)' }}
+              />
             </motion.div>
           ))}
         </motion.div>
