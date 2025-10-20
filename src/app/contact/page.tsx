@@ -84,10 +84,10 @@ export default function ContactPage() {
   };
 
   return (
-    <main>
+    <main className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-24 md:py-32">
+        <div className="container-clean text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Let&apos;s Build Your Future, Together
           </h1>
@@ -99,8 +99,8 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form and Info Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container-clean">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
@@ -334,8 +334,8 @@ export default function ContactPage() {
       </section>
 
       {/* Additional CTA Section */}
-      <section className="bg-[#F0F2F5] py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-[#F0F2F5] py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl font-bold text-[#0A2E50] mb-4">
             Prefer to Schedule a Call?
           </h2>

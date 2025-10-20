@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 export default function CloudInfrastructurePage() {
   return (
-    <main>
-      <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-20">
+    <main className="pt-20">
+      <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Cloud Infrastructure</h1>
           <p className="text-xl text-gray-200 max-w-3xl">
