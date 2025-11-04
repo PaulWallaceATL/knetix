@@ -24,7 +24,7 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "Knetix - Transform Your Business With Enterprise Technology Solutions",
-  description: "Partner with industry-leading experts to accelerate growth, optimize operations, and secure your digital future. Trusted by Fortune 500 companies worldwide. 99.99% uptime SLA, SOC 2 certified, 24/7 support.",
+  description: "Partner with industry-leading experts to accelerate growth, optimize operations, and secure your digital future. Trusted by enterprises worldwide. 99.99% uptime SLA, SOC 2 certified, 24/7 support.",
   keywords: "Enterprise IT Solutions, Digital Transformation, Cloud Infrastructure, Cybersecurity Services, Managed IT Services, Network Performance Optimization, Unified Communications, Contact Center Solutions, IT Consulting, Technology Modernization, Cloud Migration, Zero Trust Security, Enterprise Software, Business Technology, IT Strategy",
   authors: [{ name: "Knetix" }],
   creator: "Knetix",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://knetix.vercel.app",
     title: "Knetix - Transform Your Business With Enterprise Technology Solutions",
-    description: "Partner with industry-leading experts to accelerate growth and secure your digital future. Trusted by Fortune 500 companies. 99.99% uptime SLA.",
+    description: "Partner with industry-leading experts to accelerate growth and secure your digital future. Trusted by enterprises worldwide. 99.99% uptime SLA.",
     siteName: "Knetix",
     images: [
       {
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     site: "@knetix",
     creator: "@knetix",
     title: "Knetix - Transform Your Business With Enterprise Technology",
-    description: "Industry-leading IT solutions trusted by Fortune 500 companies. 99.99% uptime, SOC 2 certified, 24/7 support.",
+    description: "Industry-leading IT solutions trusted by enterprises worldwide. 99.99% uptime, SOC 2 certified, 24/7 support.",
     images: ["https://knetix.vercel.app/og-image.jpg?v=4"],
   },
   verification: {
@@ -102,7 +102,7 @@ export default function RootLayout({
         
         {/* Explicit Open Graph tags */}
         <meta property="og:title" content="Knetix - Transform Your Business With Enterprise Technology Solutions" />
-        <meta property="og:description" content="Partner with industry-leading experts to accelerate growth and secure your digital future. Trusted by Fortune 500 companies." />
+        <meta property="og:description" content="Partner with industry-leading experts to accelerate growth and secure your digital future. Trusted by enterprises worldwide." />
         <meta property="og:image" content="https://knetix.vercel.app/og-image.jpg?v=4" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -116,7 +116,7 @@ export default function RootLayout({
         <meta name="twitter:site" content="@knetix" />
         <meta name="twitter:creator" content="@knetix" />
         <meta name="twitter:title" content="Knetix - Transform Your Business With Enterprise Technology" />
-        <meta name="twitter:description" content="Industry-leading IT solutions trusted by Fortune 500 companies. 99.99% uptime, SOC 2 certified, 24/7 support." />
+        <meta name="twitter:description" content="Industry-leading IT solutions trusted by enterprises worldwide. 99.99% uptime, SOC 2 certified, 24/7 support." />
         <meta name="twitter:image" content="https://knetix.vercel.app/og-image.jpg?v=4" />
         
         {/* Additional SEO Tags */}

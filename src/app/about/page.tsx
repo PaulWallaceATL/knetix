@@ -113,9 +113,9 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <div className="text-3xl font-bold">
-                      <AnimatedCounter end={500} suffix="+" />
+                      <AnimatedCounter end={100} suffix="%" />
                     </div>
-                    <div className="text-gray-200">Satisfied Clients</div>
+                    <div className="text-gray-200">Client Satisfaction</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">

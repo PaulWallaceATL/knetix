@@ -56,7 +56,7 @@ export default function EnterpriseHero() {
         >
           <div className="w-2 h-2 rounded-full bg-cyan-400" />
           <span className="text-white/80 text-sm font-medium tracking-wide">
-            TRUSTED BY FORTUNE 500 COMPANIES
+            TRUSTED BY ENTERPRISES WORLDWIDE
           </span>
           <CheckCircle className="w-4 h-4 text-cyan-400" />
         </motion.div>
@@ -88,7 +88,7 @@ export default function EnterpriseHero() {
               ease: "easeInOut"
             }}
           >
-            Transform Your Business
+            Optimize Any Cloud
           </motion.span>
           <motion.span 
             className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent"
@@ -105,7 +105,7 @@ export default function EnterpriseHero() {
               ease: "linear"
             }}
           >
-            With Intelligence
+            Unreal Experience
           </motion.span>
         </motion.h1>
 
@@ -116,8 +116,7 @@ export default function EnterpriseHero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-lg md:text-xl lg:text-2xl text-white/70 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed font-light px-4"
         >
-          Accelerate growth, streamline operations, and protect your digital assets with 
-          enterprise-grade technology solutions built for tomorrow.
+          We specialize in driving enterprise digital transformation. Accelerate growth, streamline operations, and secure your digital assets with intelligent technology solutions that propel your enterprise forward.
         </motion.p>
 
           {/* CTA Buttons - with 3D depth */}
@@ -188,7 +187,7 @@ export default function EnterpriseHero() {
             { 
               icon: <TrendingUp className="w-5 h-5 md:w-6 md:h-6" />, 
               title: "300% ROI", 
-              subtitle: "Average Return",
+              subtitle: "Average Cloud Savings",
               color: "from-green-400 to-emerald-500"
             },
             { 

@@ -91,9 +91,9 @@ export default function WhyKnetix() {
           </div>
           <div>
             <div className="text-4xl font-bold text-[#00C4B4] mb-2">
-              <AnimatedCounter end={500} suffix="+" />
+              <AnimatedCounter end={100} suffix="%" />
             </div>
-            <div className="text-gray-700 font-semibold">Clients Served</div>
+            <div className="text-gray-700 font-semibold">Client Retention</div>
           </div>
           <div>
             <div className="text-4xl font-bold text-[#00C4B4] mb-2">

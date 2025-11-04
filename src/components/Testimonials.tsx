@@ -277,11 +277,11 @@ export default function Testimonials() {
         >
           <p className="apple-text-callout text-gray-500 mb-8">Trusted by industry leaders worldwide</p>
           <div className="flex justify-center items-center space-x-8 opacity-60">
-            <div className="apple-text-headline text-gray-400">Fortune 500</div>
-            <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
-            <div className="apple-text-headline text-gray-400">Global 2000</div>
-            <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
             <div className="apple-text-headline text-gray-400">Enterprise</div>
+            <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+            <div className="apple-text-headline text-gray-400">Global Leaders</div>
+            <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+            <div className="apple-text-headline text-gray-400">Innovation</div>
           </div>
         </motion.div>
     </div>
