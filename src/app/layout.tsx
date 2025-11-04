@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { DM_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import EnterpriseNavbar from "@/components/EnterpriseNavbar";
 import EnterpriseFooter from "@/components/EnterpriseFooter";
@@ -8,17 +8,17 @@ import LiveChatWidget from "@/components/LiveChatWidget";
 import ScrollToTop from "@/components/ScrollToTop";
 import CookieConsent from "@/components/CookieConsent";
 
-const inter = Inter({
-  variable: "--font-inter",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
   display: 'swap',
 });
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
   display: 'swap',
 });
 
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     siteName: "Knetix",
     images: [
       {
-        url: "https://knetix.vercel.app/og-image.jpg?v=4",
+        url: "https://knetix.vercel.app/api/og",
         width: 1200,
         height: 630,
         alt: "Knetix - Enterprise Technology Solutions for Digital Transformation",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     creator: "@knetix",
     title: "Knetix - Transform Your Business With Enterprise Technology",
     description: "Industry-leading IT solutions trusted by enterprises worldwide. 99.99% uptime, SOC 2 certified, 24/7 support.",
-    images: ["https://knetix.vercel.app/og-image.jpg?v=4"],
+    images: ["https://knetix.vercel.app/api/og"],
   },
   verification: {
     google: "your-google-verification-code",
@@ -103,7 +103,7 @@ export default function RootLayout({
         {/* Explicit Open Graph tags */}
         <meta property="og:title" content="Knetix - Transform Your Business With Enterprise Technology Solutions" />
         <meta property="og:description" content="Partner with industry-leading experts to accelerate growth and secure your digital future. Trusted by enterprises worldwide." />
-        <meta property="og:image" content="https://knetix.vercel.app/og-image.jpg?v=4" />
+        <meta property="og:image" content="https://knetix.vercel.app/api/og" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://knetix.vercel.app" />
@@ -117,7 +117,7 @@ export default function RootLayout({
         <meta name="twitter:creator" content="@knetix" />
         <meta name="twitter:title" content="Knetix - Transform Your Business With Enterprise Technology" />
         <meta name="twitter:description" content="Industry-leading IT solutions trusted by enterprises worldwide. 99.99% uptime, SOC 2 certified, 24/7 support." />
-        <meta name="twitter:image" content="https://knetix.vercel.app/og-image.jpg?v=4" />
+        <meta name="twitter:image" content="https://knetix.vercel.app/api/og" />
         
         {/* Additional SEO Tags */}
         <meta name="theme-color" content="#0A2E50" />
@@ -129,7 +129,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body
-        className={`${inter.variable} ${manrope.variable} antialiased`}
+        className={`${dmSans.variable} ${spaceGrotesk.variable} antialiased`}
       >
         <EnterpriseNavbar />
         {children}
