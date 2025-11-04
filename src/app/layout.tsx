@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://knetix.vercel.app",
+    canonical: "https://knetix.io",
   },
   category: "Technology",
   icons: {
@@ -56,13 +56,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://knetix.vercel.app",
+    url: "https://knetix.io",
     title: "Knetix - Transform Your Business With Enterprise Technology Solutions",
     description: "Partner with industry-leading experts to accelerate growth and secure your digital future. Trusted by enterprises worldwide. 99.99% uptime SLA.",
     siteName: "Knetix",
     images: [
       {
-        url: "https://knetix.vercel.app/api/og",
+        url: "https://knetix.io/api/og",
         width: 1200,
         height: 630,
         alt: "Knetix - Enterprise Technology Solutions for Digital Transformation",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     creator: "@knetix",
     title: "Knetix - Transform Your Business With Enterprise Technology",
     description: "Industry-leading IT solutions trusted by enterprises worldwide. 99.99% uptime, SOC 2 certified, 24/7 support.",
-    images: ["https://knetix.vercel.app/api/og"],
+    images: ["https://knetix.io/api/og"],
   },
   verification: {
     google: "your-google-verification-code",
@@ -103,10 +103,10 @@ export default function RootLayout({
         {/* Explicit Open Graph tags */}
         <meta property="og:title" content="Knetix - Transform Your Business With Enterprise Technology Solutions" />
         <meta property="og:description" content="Partner with industry-leading experts to accelerate growth and secure your digital future. Trusted by enterprises worldwide." />
-        <meta property="og:image" content="https://knetix.vercel.app/api/og" />
+        <meta property="og:image" content="https://knetix.io/api/og" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content="https://knetix.vercel.app" />
+        <meta property="og:url" content="https://knetix.io" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Knetix" />
         <meta property="og:locale" content="en_US" />
@@ -117,7 +117,7 @@ export default function RootLayout({
         <meta name="twitter:creator" content="@knetix" />
         <meta name="twitter:title" content="Knetix - Transform Your Business With Enterprise Technology" />
         <meta name="twitter:description" content="Industry-leading IT solutions trusted by enterprises worldwide. 99.99% uptime, SOC 2 certified, 24/7 support." />
-        <meta name="twitter:image" content="https://knetix.vercel.app/api/og" />
+        <meta name="twitter:image" content="https://knetix.io/api/og" />
         
         {/* Additional SEO Tags */}
         <meta name="theme-color" content="#0A2E50" />
