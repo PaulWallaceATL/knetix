@@ -90,13 +90,11 @@ export default function EnterpriseNavbar() {
                           onClick={() => setActiveMegaMenu(null)}
                           className="group flex flex-col items-center text-center p-6 rounded-xl hover:bg-gradient-to-br hover:from-blue-50 hover:to-cyan-50 transition-all hover:shadow-lg"
                         >
-                          <motion.div 
+                          <div 
                             className="flex-shrink-0 p-4 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 text-white mb-4 shadow-lg"
-                            whileHover={{ scale: 1.1, rotateY: 180 }}
-                            transition={{ duration: 0.4 }}
                           >
                             {solution.icon}
-                          </motion.div>
+                          </div>
                           <div className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                             {solution.name}
                           </div>
@@ -152,13 +150,11 @@ export default function EnterpriseNavbar() {
                           onClick={() => setActiveMegaMenu(null)}
                           className="group flex items-start gap-4 p-4 rounded-xl hover:bg-gradient-to-br hover:from-blue-50 hover:to-cyan-50 transition-all hover:shadow-md"
                         >
-                          <motion.div 
+                          <div 
                             className="flex-shrink-0 p-3 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600 text-white shadow-md"
-                            whileHover={{ scale: 1.1, rotateY: 180 }}
-                            transition={{ duration: 0.4 }}
                           >
                             {item.icon}
-                          </motion.div>
+                          </div>
                           <div>
                             <div className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">
                               {item.name}

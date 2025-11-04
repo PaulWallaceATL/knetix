@@ -254,28 +254,6 @@ export default function EnterpriseHero() {
       </div>
       </div>
 
-      {/* Scroll Indicator - Positioned absolutely at bottom */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-8 md:bottom-12 lg:bottom-16 left-1/2 transform -translate-x-1/2 z-10 hidden sm:flex"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center gap-1 md:gap-2"
-        >
-          <span className="text-white/60 text-xs md:text-sm font-medium">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1.5 h-1.5 bg-white/60 rounded-full"
-            />
-          </div>
-        </motion.div>
-      </motion.div>
     </section>
   );
 }
