@@ -172,20 +172,20 @@ export default function EnterpriseHero() {
           {[
             { 
               icon: <TrendingUp className="w-5 h-5 md:w-6 md:h-6" />, 
-              title: "300% ROI", 
-              subtitle: "Average Cloud Savings",
+              title: "300+ Vendors. Endless Possibilities.", 
+              description: "Tap into our global partner ecosystem to build smarter, faster, and more resilient solutions.",
               color: "from-green-400 to-emerald-500"
             },
             { 
               icon: <Shield className="w-5 h-5 md:w-6 md:h-6" />, 
-              title: "99.99% Uptime", 
-              subtitle: "Enterprise SLA",
+              title: "100+ Certified Engineers. One Knetix Team.", 
+              description: "Architects and specialists working behind the scenes to optimize cost, security, and performance.",
               color: "from-blue-400 to-cyan-500"
             },
             { 
               icon: <Zap className="w-5 h-5 md:w-6 md:h-6" />, 
-              title: "24/7 Support", 
-              subtitle: "Global Coverage",
+              title: "Cloud Funding That Fuels Innovation.", 
+              description: "Unlock financial programs from AWS, Google, and Microsoft to stretch your cloud budget further.",
               color: "from-purple-400 to-pink-500"
             }
           ].map((item, index) => (
@@ -217,17 +217,17 @@ export default function EnterpriseHero() {
                 </div>
               </motion.div>
               <div 
-                className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1 md:mb-2 lg:mb-3 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}
+                className={`text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-2 md:mb-3 bg-gradient-to-r ${item.color} bg-clip-text text-transparent leading-snug`}
                 style={{ transform: 'translateZ(20px)' }}
               >
                 {item.title}
               </div>
-              <div 
-                className="text-white/60 text-xs md:text-sm font-medium tracking-wide uppercase"
+              <p 
+                className="text-white/70 text-sm md:text-base leading-relaxed"
                 style={{ transform: 'translateZ(10px)' }}
               >
-                {item.subtitle}
-              </div>
+                {item.description}
+              </p>
               
               {/* 3D depth shadow */}
               <div 
