@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, CheckCircle, TrendingUp, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Sparkles, TrendingUp, Shield, Zap } from 'lucide-react';
 import Hero3DOrb from './Hero3DOrb';
 
 export default function EnterpriseHero() {
@@ -47,20 +47,6 @@ export default function EnterpriseHero() {
       {/* Content */}
       <div className="relative z-20 w-full">
       <div className="container-clean text-center">
-        {/* Trust Badge - refined and elegant */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-3 px-4 md:px-6 py-2 md:py-3 mb-6 md:mb-8 mt-4 md:mt-6 lg:mt-8 bg-white/5 backdrop-blur-md rounded-full border border-white/10 relative z-30"
-        >
-          <div className="w-2 h-2 rounded-full bg-cyan-400" />
-          <span className="text-white/80 text-sm font-medium tracking-wide">
-            TRUSTED BY ENTERPRISES WORLDWIDE
-          </span>
-          <CheckCircle className="w-4 h-4 text-cyan-400" />
-        </motion.div>
-
         {/* Main Headline - 3D perspective entry */}
         <motion.h1
           initial={{ opacity: 0, y: 40, rotateX: -20, z: -200 }}
@@ -88,7 +74,7 @@ export default function EnterpriseHero() {
               ease: "easeInOut"
             }}
           >
-            Optimize Any Cloud
+            Optimize Any Cloud.
           </motion.span>
           <motion.span 
             className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent"
@@ -105,7 +91,7 @@ export default function EnterpriseHero() {
               ease: "linear"
             }}
           >
-            Unreal Experience
+            Maximize ROI.
           </motion.span>
         </motion.h1>
 
@@ -116,7 +102,7 @@ export default function EnterpriseHero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-lg md:text-xl lg:text-2xl text-white/70 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed font-light px-4"
         >
-          We specialize in driving enterprise digital transformation. Accelerate growth, streamline operations, and secure your digital assets with intelligent technology solutions that propel your enterprise forward.
+          We transform complexity into clarity, optimizing your cloud investments for maximum performance, security, and cost efficiency. Our intelligent automation and analytics help you reclaim wasted spend, improve resource utilization, and reinvest savings into innovation.
         </motion.p>
 
           {/* CTA Buttons - with 3D depth */}

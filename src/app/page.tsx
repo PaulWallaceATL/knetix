@@ -1,5 +1,4 @@
 import EnterpriseHero from '@/components/EnterpriseHero';
-import TrustBadges from '@/components/TrustBadges';
 import KeyOfferings from '@/components/KeyOfferings';
 import WhyKnetix from '@/components/WhyKnetix';
 import ClientLogos from '@/components/ClientLogos';
@@ -15,13 +14,6 @@ export default function Home() {
     <main className="overflow-x-hidden">
       {/* Hero Section - Full viewport with parallax */}
       <EnterpriseHero />
-      
-      {/* Trust Indicators */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <div className="container-clean">
-          <TrustBadges />
-        </div>
-      </section>
       
       {/* Core Offerings */}
       <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
