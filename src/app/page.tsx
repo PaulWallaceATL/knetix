@@ -2,10 +2,8 @@ import EnterpriseHero from '@/components/EnterpriseHero';
 import KeyOfferings from '@/components/KeyOfferings';
 import WhyKnetix from '@/components/WhyKnetix';
 import ClientLogos from '@/components/ClientLogos';
-import ThoughtLeadership from '@/components/ThoughtLeadership';
 import TrustBuilders from '@/components/TrustBuilders';
 import InteractiveDashboard from '@/components/InteractiveDashboard';
-import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import BottomCTA from '@/components/BottomCTA';
 
@@ -41,16 +39,6 @@ export default function Home() {
       
       {/* Trust & Credibility */}
       <TrustBuilders />
-      
-      {/* Thought Leadership & Insights */}
-      <ThoughtLeadership />
-      
-      {/* Social Proof - Testimonials */}
-      <section className="py-16 md:py-20 lg:py-24 bg-white">
-        <div className="container-clean">
-          <Testimonials />
-        </div>
-      </section>
       
       {/* FAQ */}
       <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
