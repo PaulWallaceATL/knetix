@@ -74,7 +74,7 @@ export default function EnterpriseHero() {
               ease: "easeInOut"
             }}
           >
-            Optimize Any Cloud.
+            Technology Advisors for Complex Change.
           </motion.span>
           <motion.span 
             className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent"
@@ -91,7 +91,7 @@ export default function EnterpriseHero() {
               ease: "linear"
             }}
           >
-            Maximize ROI.
+            Strategy. Architecture. Outcomes.
           </motion.span>
         </motion.h1>
 
@@ -102,7 +102,7 @@ export default function EnterpriseHero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-lg md:text-xl lg:text-2xl text-white/70 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed font-light px-4"
         >
-          We transform complexity into clarity, optimizing your cloud investments for maximum performance, security, and cost efficiency. Our intelligent automation and analytics help you reclaim wasted spend, improve resource utilization, and reinvest savings into innovation.
+          Knetix operates as an elite Technology Advisor inside the national TSD ecosystem. With decades of enterprise IT, deep engineering rigor, and a vendor-agnostic mindset, we solve the hardest cloud, security, data, and AI problems—without owning data centers or pushing proprietary infrastructure.
         </motion.p>
 
           {/* CTA Buttons - with 3D depth */}
@@ -129,7 +129,7 @@ export default function EnterpriseHero() {
               }}
             >
               <span className="relative z-10 flex items-center gap-2 md:gap-3 text-white font-bold text-base md:text-lg">
-                Start Your Transformation
+                Speak with a Technology Advisor
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </span>
               <div 
@@ -155,7 +155,7 @@ export default function EnterpriseHero() {
             >
               <span className="flex items-center gap-2 md:gap-3 text-white font-semibold text-base md:text-lg">
                 <Sparkles className="w-4 h-4 md:w-5 md:h-5" />
-                Explore Solutions
+                Explore Advisory Plays
               </span>
             </motion.div>
           </Link>
@@ -172,20 +172,20 @@ export default function EnterpriseHero() {
           {[
             { 
               icon: <TrendingUp className="w-5 h-5 md:w-6 md:h-6" />, 
-              title: "300+ Vendors. Endless Possibilities.", 
-              description: "Tap into our global partner ecosystem to build smarter, faster, and more resilient solutions.",
+              title: "Vendor-Agnostic Architecture", 
+              description: "Design multi-cloud, network, CX, and edge strategies backed by the strongest providers in the TSD ecosystem.",
               color: "from-green-400 to-emerald-500"
             },
             { 
               icon: <Shield className="w-5 h-5 md:w-6 md:h-6" />, 
-              title: "100+ Certified Engineers. One Knetix Team.", 
-              description: "Architects and specialists working behind the scenes to optimize cost, security, and performance.",
+              title: "Deep Engineering Bench", 
+              description: "Senior architects with decades of enterprise IT, security, data, and AI experience guiding every decision.",
               color: "from-blue-400 to-cyan-500"
             },
             { 
               icon: <Zap className="w-5 h-5 md:w-6 md:h-6" />, 
-              title: "Cloud Funding That Fuels Innovation.", 
-              description: "Unlock financial programs from AWS, Google, and Microsoft to stretch your cloud budget further.",
+              title: "FinOps & Resiliency Outcomes", 
+              description: "Turn cost, governance, and scalability requirements into measurable business value—not more infrastructure to manage.",
               color: "from-purple-400 to-pink-500"
             }
           ].map((item, index) => (

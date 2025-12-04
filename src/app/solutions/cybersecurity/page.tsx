@@ -6,10 +6,10 @@ import { Shield, Lock, Eye, AlertTriangle, FileCheck, Users } from 'lucide-react
 
 export default function CybersecurityPage() {
   const stats = [
-    { value: 'Zero', label: 'Breaches' },
-    { value: 'SOC 2', label: 'Certified' },
-    { value: '24/7', label: 'Threat Monitoring' },
-    { value: '100%', label: 'Compliance' },
+    { value: 'Zero Trust', label: 'Architectures' },
+    { value: 'Identity', label: 'Modernization' },
+    { value: 'Governance', label: 'Playbooks' },
+    { value: 'Compliance', label: 'Alignment' },
   ];
 
   const features = [
@@ -29,8 +29,8 @@ export default function CybersecurityPage() {
       icon: <Lock className="w-8 h-8" />,
     },
     {
-      title: 'Incident Response',
-      description: 'Rapid response and remediation with our 24/7 security operations center and expert incident handlers.',
+      title: 'Incident Response Readiness',
+      description: 'Coordination of MSSP/MDR partners, tabletop exercises, and executive communications.',
       icon: <AlertTriangle className="w-8 h-8" />,
     },
     {
@@ -46,12 +46,12 @@ export default function CybersecurityPage() {
   ];
 
   const benefits = [
-    'Protect against evolving cyber threats with AI-powered detection',
-    'Achieve compliance with industry regulations and standards',
-    'Reduce security incidents by up to 90% with proactive monitoring',
-    'Safeguard customer data and maintain trust',
-    'Minimize downtime with rapid incident response',
-    '24/7 security operations center monitoring',
+    'Security strategy rooted in zero-trust principles, identity, data protection, and resiliency.',
+    'Vendor-neutral evaluation of MSSPs, EDR/MDR, SOAR, and cloud-native security partners.',
+    'Regulatory alignment (HIPAA, PCI, SOX, GDPR, FedRAMP) embedded into architectures and operating models.',
+    'Implementation governance that keeps tooling, telemetry, and processes in sync without Knetix running a SOC.',
+    'Cross-functional enablement linking security, infrastructure, product, and business stakeholders.',
+    'Continuous measurement of risk reduction, event response readiness, and financial stewardship.',
   ];
 
   return (
@@ -59,7 +59,7 @@ export default function CybersecurityPage() {
       <SolutionHero
         title="Enterprise Cybersecurity"
         subtitle="Security Solutions"
-        description="Fortify your defenses with future-ready security solutions, safeguarding your valuable data and ensuring uninterrupted operations."
+        description="Design zero-trust security programs, modernize identity, govern data, and oversee the MSSP/MDR ecosystem that operates on your behalf."
         stats={stats}
       />
 

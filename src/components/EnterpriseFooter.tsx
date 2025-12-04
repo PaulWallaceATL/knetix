@@ -91,7 +91,7 @@ export default function EnterpriseFooter() {
               Stay Ahead of the Curve
             </h3>
             <p className="text-lg md:text-xl text-white/70 mb-8 leading-relaxed font-light">
-              Get the latest insights, industry trends, and exclusive content delivered to your inbox.
+              Briefings on cloud, security, data, AI, CX, FinOps, and resiliency strategies from the Technology Advisor perspective.
             </p>
             
             <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
@@ -136,8 +136,7 @@ export default function EnterpriseFooter() {
           >
             <KnetixLogo size="lg" className="mb-6" />
             <p className="text-body text-white/70 mb-8 leading-relaxed">
-              Empowering businesses with intelligent, secure, and scalable technology solutions 
-              that drive transformational results.
+              Knetix is a technology advisory and solutions agency embedded in the national TSD ecosystem. We solve complex cloud, security, data, AI, and CX problems with vendor-neutral strategy, architecture, and oversight—never by owning infrastructure.
             </p>
 
             {/* Contact Info */}
@@ -145,9 +144,8 @@ export default function EnterpriseFooter() {
               <div className="flex items-start gap-3 group cursor-pointer">
                 <MapPin className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
                 <div className="text-sm text-white/70 group-hover:text-white transition-colors">
-                  <div className="font-semibold">Headquarters</div>
-                  <div>2137 Chelsea Blvd. Unit C1</div>
-                  <div>Allen, TX 75013</div>
+                  <div className="font-semibold">Strategic Operations</div>
+                  <div>Distributed national footprint with primary presence in Dallas-Fort Worth.</div>
                 </div>
               </div>
 
@@ -199,7 +197,7 @@ export default function EnterpriseFooter() {
           ))}
         </div>
 
-        {/* Trust Badges */}
+        {/* Trust Pillars */}
         <motion.div
           className="border-t border-white/10 pt-12 mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -209,10 +207,10 @@ export default function EnterpriseFooter() {
         >
           <div className="flex flex-wrap justify-center items-center gap-12">
             {[
-              { title: "SOC 2", subtitle: "Type II Certified" },
-              { title: "ISO 27001", subtitle: "Compliant" },
-              { title: "GDPR", subtitle: "Compliant" },
-              { title: "99.99%", subtitle: "Uptime SLA" },
+              { title: "Vendor-Neutral TA", subtitle: "Strategy • Architecture • Oversight" },
+              { title: "300+ Providers", subtitle: "TSD Ecosystem Access" },
+              { title: "Engineering First", subtitle: "Deep Cloud • Security • Data • AI" },
+              { title: "Outcome-Driven", subtitle: "FinOps • Security • CX • Resiliency" },
             ].map((badge, index) => (
               <motion.div
                 key={badge.title}

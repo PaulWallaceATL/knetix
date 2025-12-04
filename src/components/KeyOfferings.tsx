@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 const offerings = [
   {
-    title: 'Network Performance',
-    description: 'Boost application delivery, maximize uptime, and optimize WAN costs for seamless connectivity and peak operational efficiency.',
+    title: 'Multi-Cloud Networking & Resiliency',
+    description: 'Engineer cloud, edge, and campus connectivity with vendor-agnostic designs, zero-trust guardrails, and TSD-sourced partners.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -16,8 +16,8 @@ const offerings = [
     color: 'blue',
   },
   {
-    title: 'Cybersecurity',
-    description: 'Fortify your defenses with future-ready security solutions, safeguarding your valuable data and ensuring uninterrupted operations against evolving threats.',
+    title: 'Cybersecurity & Governance',
+    description: 'Bring security architecture, identity, and compliance programs under one roadmap backed by proven ecosystem providers.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -27,8 +27,8 @@ const offerings = [
     color: 'red',
   },
   {
-    title: 'Unified Communications',
-    description: 'Foster effortless collaboration and effective communication across all channels, empowering your workforce to connect from anywhere.',
+    title: 'Unified Collaboration',
+    description: 'Reimagine workforce experiences across voice, video, messaging, and workflow platforms with measurable adoption plans.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -38,8 +38,8 @@ const offerings = [
     color: 'green',
   },
   {
-    title: 'Cloud Infrastructure',
-    description: 'Scale your business with robust, secure, and flexible cloud solutions that adapt to your evolving needs and drive innovation.',
+    title: 'Cloud, Data & FinOps',
+    description: 'Modernize architectures, rationalize spend, and activate FinOps guardrails across AWS, Azure, Google Cloud, and hybrid stacks.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -49,8 +49,8 @@ const offerings = [
     color: 'purple',
   },
   {
-    title: 'Contact Center',
-    description: 'Deliver exceptional customer experiences with intelligent contact center solutions that connect, engage, and delight your customers.',
+    title: 'Customer Experience Platforms',
+    description: 'Curate CCaaS and EX ecosystems that blend AI, analytics, and human insight to eliminate friction end-to-end.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -60,8 +60,8 @@ const offerings = [
     color: 'orange',
   },
   {
-    title: 'Managed Services',
-    description: 'Focus on your core business while we handle your IT infrastructure with comprehensive managed services that ensure optimal performance.',
+    title: 'Managed Transformation Oversight',
+    description: 'Gain ongoing governance, program management, and success metrics while your chosen providers operate the stack.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -93,11 +93,10 @@ export default function KeyOfferings() {
           viewport={{ once: true }}
         >
           <h2 className="apple-text-title1 text-gray-900">
-            Enterprise Solutions That Scale With You
+            Advisory Plays Built for Modern Enterprises
           </h2>
           <p className="apple-text-body text-gray-600 max-w-3xl mx-auto">
-            Transform your business with secure, scalable IT solutions designed for enterprise excellence. 
-            From cloud infrastructure to cybersecurity, we provide the technology foundation your organization needs to thrive.
+            We translate board-level mandates into pragmatic strategies for cloud, security, AI, data, and customer experience—aligning the right TSD partners, commercial constructs, and governance models to protect outcomes and optimize spend.
           </p>
         </motion.div>
 

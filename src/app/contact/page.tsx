@@ -89,11 +89,12 @@ export default function ContactPage() {
       <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
         <div className="container-clean text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Let&apos;s Start Your Transformation
+            Speak with a Technology Advisor
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Ready to elevate your technology infrastructure? Our enterprise solutions team is here to help. 
-            Get a free consultation and discover what&apos;s possible.
+            Knetix operates as an asset-light advisory agency embedded in the national TSD ecosystem. Share your cloud,
+            security, data, AI, CX, or resiliency mandate and we&apos;ll align the right strategy, architecture, and provider
+            oversight.
           </p>
         </div>
       </section>
@@ -108,8 +109,8 @@ export default function ContactPage() {
                 Send Us a Message
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Fill out the form below and our team will respond within 24 hours. 
-                For urgent inquiries, please call us directly at (555) 123-4567.
+                Provide context on your initiative and a senior Technology Advisor will respond within one business day. For
+                confidential or urgent programs, include secure contact preferences or call us directly at (555) 123-4567.
               </p>
 
               {submitSuccess && (
@@ -264,8 +265,8 @@ export default function ContactPage() {
                 Contact Information
               </h2>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                Multiple ways to connect with our team. Choose the method that works best for you, 
-                and we&apos;ll respond promptly to discuss your technology needs.
+                Reach us through any of the channels below. We keep engagements discreet and focus solely on the outcomes that
+                matter to your organization.
               </p>
 
               {/* Contact Details */}
@@ -278,9 +279,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#0A2E50] mb-1">Address</h3>
-                    <p className="text-gray-700">2137 Chelsea Blvd. Unit C1</p>
-                    <p className="text-gray-700">Allen, TX 75013</p>
+                    <h3 className="font-bold text-[#0A2E50] mb-1">Strategic Operations</h3>
+                    <p className="text-gray-700">Distributed advisory team with primary presence in Dallas–Fort Worth.</p>
                   </div>
                 </div>
 
@@ -315,9 +315,9 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#0A2E50] mb-1">Business Hours</h3>
-                    <p className="text-gray-700">Monday - Friday: 8:00 AM - 6:00 PM CST</p>
-                    <p className="text-gray-700">Saturday - Sunday: Closed</p>
+                    <h3 className="font-bold text-[#0A2E50] mb-1">Engagement Hours</h3>
+                    <p className="text-gray-700">Core availability: Monday – Friday, 8:00 AM – 6:00 PM CST</p>
+                    <p className="text-gray-700">Critical programs are supported under bespoke governance cadences.</p>
                   </div>
                 </div>
               </div>
@@ -328,8 +328,8 @@ export default function ContactPage() {
                   <svg className="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                   </svg>
-                  <p className="font-semibold">Map Location</p>
-                  <p className="text-sm">2137 Chelsea Blvd. Unit C1, Allen, TX</p>
+                  <p className="font-semibold">Engagement Hub</p>
+                  <p className="text-sm">Dallas–Fort Worth, operating nationally via the TSD ecosystem</p>
                 </div>
               </div>
             </div>
@@ -341,14 +341,14 @@ export default function ContactPage() {
       <section className="bg-[#F0F2F5] py-12 md:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl font-bold text-[#0A2E50] mb-4">
-            Ready to Discuss Your Project?
+            Ready to remove complexity from your transformation?
           </h2>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Schedule a free 30-minute consultation with our enterprise solutions team. 
-            We&apos;ll discuss your challenges and explore how Knetix can help.
+            Schedule a confidential strategy session with a principal Technology Advisor. We&apos;ll clarify objectives,
+            outline potential plays, and map the provider ecosystem—no obligation.
           </p>
           <button className="bg-[#00C4B4] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#00b3a3] transition-all duration-300 shadow-lg hover:shadow-xl">
-            Book Your Free Consultation
+            Book a Strategy Session
           </button>
         </div>
       </section>

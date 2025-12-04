@@ -6,60 +6,60 @@ import { Server, Clock, Shield, Wrench, BarChart, Users } from 'lucide-react';
 
 export default function ManagedServicesPage() {
   const stats = [
-    { value: '24/7', label: 'Support' },
-    { value: '< 15min', label: 'Response Time' },
-    { value: '99.9%', label: 'Uptime' },
-    { value: '50+', label: 'Experts' },
+    { value: 'Advisory', label: 'Governance' },
+    { value: 'PMO', label: 'Discipline' },
+    { value: 'KPI', label: 'Visibility' },
+    { value: 'TSD', label: 'Provider Network' },
   ];
 
   const features = [
     {
-      title: '24/7 Monitoring',
-      description: 'Round-the-clock infrastructure monitoring with proactive alerting and immediate issue resolution.',
+      title: 'Program Governance',
+      description: 'Portfolio-level steering, architecture assurance, and executive cadence to keep initiatives on track.',
       icon: <Clock className="w-8 h-8" />,
     },
     {
-      title: 'Proactive Maintenance',
-      description: 'Prevent issues before they occur with automated patching, updates, and system optimization.',
+      title: 'Provider Oversight',
+      description: 'Scorecards, playbooks, and accountability models for MSPs, cloud partners, telcos, and integrators.',
       icon: <Wrench className="w-8 h-8" />,
     },
     {
-      title: 'Security Management',
-      description: 'Comprehensive security services including threat monitoring, vulnerability scanning, and incident response.',
+      title: 'Security & Compliance Alignment',
+      description: 'Ensure delivery partners uphold zero-trust, regulatory, and audit requirements without Knetix running operations.',
       icon: <Shield className="w-8 h-8" />,
     },
     {
-      title: 'Infrastructure Management',
-      description: 'Complete management of servers, storage, networking, and cloud resources by certified experts.',
+      title: 'Architecture Management',
+      description: 'Guardrails and design authorities that prevent scope creep and keep implementations true to blueprint.',
       icon: <Server className="w-8 h-8" />,
     },
     {
       title: 'Performance Reporting',
-      description: 'Detailed analytics and reporting on system health, performance trends, and capacity planning.',
+      description: 'Dashboards covering KPI health, adoption, spend, and risk for executives and line leaders.',
       icon: <BarChart className="w-8 h-8" />,
     },
     {
-      title: 'Dedicated Support Team',
-      description: 'Access to experienced engineers who know your environment and act as an extension of your team.',
+      title: 'Change & Enablement',
+      description: 'Communication, training, and operating-model support that drive adoption and value realization.',
       icon: <Users className="w-8 h-8" />,
     },
   ];
 
   const benefits = [
-    'Free up internal IT resources to focus on strategic initiatives',
-    'Reduce IT costs by up to 40% with predictable monthly pricing',
-    'Access enterprise-level expertise without full-time hiring',
-    'Ensure 24/7 coverage without night shifts or on-call rotations',
-    'Improve system reliability with proactive monitoring',
-    'Stay compliant with industry regulations and best practices',
+    'Single point of accountability for multi-provider programs without adding internal headcount.',
+    'Architecture, security, compliance, and FinOps guardrails maintained throughout execution.',
+    'Real-time KPI dashboards connecting technology performance to business outcomes.',
+    'Change management and enablement that accelerate adoption and ROI.',
+    'Rapid escalation paths and remediation coordination across the TSD ecosystem.',
+    'Knetix stays asset-light and independent, ensuring every decision serves the client.',
   ];
 
   return (
     <main className="pt-20">
       <SolutionHero
-        title="Managed IT Services"
-        subtitle="Managed Services"
-        description="Gain comprehensive support, proactive monitoring, and expert guidance for optimal IT performance and reliability."
+        title="Managed Transformation Oversight"
+        subtitle="Advisory Governance"
+        description="We don’t run data centers or NOCs—we govern the ecosystem partners you already trust so complex programs remain on time, on budget, and on strategy."
         stats={stats}
       />
 

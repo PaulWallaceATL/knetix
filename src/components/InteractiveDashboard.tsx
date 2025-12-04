@@ -8,33 +8,32 @@ import IntersectionObserverWrapper from './IntersectionObserverWrapper';
 export default function InteractiveDashboard() {
   const stats = [
     {
-      end: 500,
+      end: 325,
       suffix: '+',
-      label: 'Enterprise Clients',
+      label: 'Ecosystem Providers Aligned',
       icon: <Users className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      end: 99.99,
-      decimals: 2,
-      suffix: '%',
-      label: 'Uptime SLA',
-      icon: <Server className="w-6 h-6" />,
+      end: 180,
+      suffix: '+',
+      label: 'Enterprise Programs Orchestrated',
+      icon: <TrendingUp className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-500'
     },
     {
-      end: 50,
+      end: 45,
       suffix: '+',
-      label: 'Countries Served',
+      label: 'Regulated Industries Served',
       icon: <Globe className="w-6 h-6" />,
       color: 'from-purple-500 to-pink-500'
     },
     {
-      end: 2.5,
-      decimals: 1,
-      suffix: 'M+',
-      label: 'Transactions Daily',
-      icon: <TrendingUp className="w-6 h-6" />,
+      end: 35,
+      suffix: '%',
+      decimals: 0,
+      label: 'Avg. Cloud & FinOps Savings',
+      icon: <Server className="w-6 h-6" />,
       color: 'from-orange-500 to-red-500'
     }
   ];
@@ -65,17 +64,16 @@ export default function InteractiveDashboard() {
           >
             <Zap className="w-5 h-5 text-yellow-400" />
             <span className="text-sm font-bold uppercase tracking-wider">
-              Real-Time Performance
+              Advisory Impact
             </span>
           </motion.div>
           
           <h2 className="text-h1 mb-6">
-            Numbers That Speak <span className="gradient-text-gold">Volumes</span>
+            Outcomes That <span className="gradient-text-gold">Stand Up</span> in the Boardroom
           </h2>
           
           <p className="text-body-lg text-white/80 max-w-3xl mx-auto">
-            Our commitment to excellence is reflected in every metric. See how we&apos;re delivering 
-            exceptional value to enterprises worldwide.
+            We measure what matters—cost optimization, resiliency, security posture, and adoption. These are the signals our Technology Advisors use to keep every transformation accountable.
           </p>
         </IntersectionObserverWrapper>
 
@@ -100,24 +98,24 @@ export default function InteractiveDashboard() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                title: "Lightning Fast",
-                metric: "<100ms",
-                description: "Average API response time",
+                title: "Cost & FinOps Governance",
+                metric: "Clarity",
+                description: "Integrated benchmarking, funding capture, and continuous optimization to keep investments disciplined.",
                 icon: <Zap className="w-8 h-8" />,
                 color: "from-yellow-400 to-orange-500"
               },
               {
-                title: "Rock Solid",
-                metric: "99.99%",
-                description: "Historical uptime reliability",
-                icon: <Server className="w-8 h-8" />,
+                title: "Resilience & Security",
+                metric: "Assured",
+                description: "Zero-trust architectures, continuity planning, and provider oversight without owning any infrastructure.",
+                icon: <Shield className="w-8 h-8" />,
                 color: "from-green-400 to-emerald-500"
               },
               {
-                title: "Enterprise Grade",
-                metric: "SOC 2",
-                description: "Type II certified security",
-                icon: <Shield className="w-8 h-8" />,
+                title: "AI & Data Readiness",
+                metric: "Operational",
+                description: "Reference architectures and governance models that unlock responsible AI, analytics, and automation.",
+                icon: <Server className="w-8 h-8" />,
                 color: "from-blue-400 to-cyan-500"
               }
             ].map((item, index) => (

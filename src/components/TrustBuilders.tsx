@@ -7,80 +7,80 @@ import IntersectionObserverWrapper from './IntersectionObserverWrapper';
 export default function TrustBuilders() {
   const certifications = [
     {
-      title: "SOC 2 Type II",
-      subtitle: "Security Certified",
+      title: "Security & Resiliency Frameworks",
+      subtitle: "NIST • ISO • CIS",
       icon: <Shield className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
-      description: "Independently verified security controls"
+      description: "We orchestrate providers that align to the frameworks that matter to your auditors."
     },
     {
-      title: "ISO 27001",
-      subtitle: "Information Security",
+      title: "Compliance-Ready Programs",
+      subtitle: "HIPAA • PCI • FedRAMP",
       icon: <Lock className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      description: "International security standards compliance"
+      description: "We integrate the right partners, processes, and controls—without running the infrastructure ourselves."
     },
     {
-      title: "GDPR",
-      subtitle: "Data Protection",
+      title: "FinOps & Cost Governance",
+      subtitle: "TBM • CFM • KPI Suites",
       icon: <CheckCircle className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
-      description: "European data privacy compliance"
+      description: "Funding strategies, unit economics, and optimization loops embedded in every engagement."
     },
     {
-      title: "HIPAA",
-      subtitle: "Healthcare Ready",
+      title: "AI & Data Governance",
+      subtitle: "Responsible Innovation",
       icon: <Award className="w-8 h-8" />,
       color: "from-red-500 to-orange-500",
-      description: "Healthcare information protection"
+      description: "Policy, model ops, and risk controls that keep automation and AI initiatives sustainable."
     }
   ];
 
   const partnerships = [
-    { name: "Microsoft Gold Partner", level: "Premier" },
-    { name: "AWS Advanced Partner", level: "Advanced" },
-    { name: "Google Cloud Partner", level: "Premier" },
-    { name: "Cisco Select Partner", level: "Select" },
-    { name: "VMware Principal", level: "Principal" },
-    { name: "Dell Technologies", level: "Titanium" }
+    { name: "National TSD Alliances", level: "Exclusive" },
+    { name: "AWS, Azure, Google", level: "Cloud" },
+    { name: "Cisco, Palo Alto, Fortinet", level: "Security & Network" },
+    { name: "Genesys, NICE, Five9", level: "CX/CCaaS" },
+    { name: "ServiceNow, Salesforce", level: "Digital Ops" },
+    { name: "Specialty Boutiques", level: "Emerging Tech" }
   ];
 
   const caseStudies = [
     {
       client: "Global Financial Services",
       industry: "Finance & Banking",
-      challenge: "Legacy infrastructure limiting growth",
-      solution: "Cloud migration & modernization",
+      challenge: "Fragmented multi-cloud portfolio with runaway spend",
+      solution: "Vendor-agnostic architecture, FinOps program, and TSD-aligned sourcing",
       results: [
-        { metric: "78%", label: "Cost Reduction" },
-        { metric: "300%", label: "Performance Gain" },
-        { metric: "99.99%", label: "Uptime SLA" }
+        { metric: "$14M", label: "Cost Avoidance" },
+        { metric: "3", label: "Clouds Unified" },
+        { metric: "12 wks", label: "Blueprint Delivery" }
       ],
       icon: <TrendingUp className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      client: "Healthcare Provider Network",
+      client: "National Healthcare Network",
       industry: "Healthcare",
-      challenge: "Security compliance & data protection",
-      solution: "Zero-trust architecture implementation",
+      challenge: "Security governance gaps blocking AI and data initiatives",
+      solution: "Zero-trust roadmap, data protection strategy, and partner oversight",
       results: [
-        { metric: "100%", label: "Compliance Score" },
-        { metric: "0", label: "Security Incidents" },
-        { metric: "$2.4M", label: "Cost Avoidance" }
+        { metric: "5", label: "Regulatory Audits Passed" },
+        { metric: "0", label: "Critical Findings" },
+        { metric: "30%", label: "Faster Approvals" }
       ],
       icon: <Shield className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      client: "E-commerce Platform",
+      client: "Digital Commerce Platform",
       industry: "Retail & Technology",
-      challenge: "Scaling for peak demand",
-      solution: "Auto-scaling cloud infrastructure",
+      challenge: "Complex contact center and data transformation initiatives lacking governance",
+      solution: "Experience strategy, provider selection, and program oversight across CCaaS + analytics",
       results: [
-        { metric: "500%", label: "Traffic Handled" },
-        { metric: "40ms", label: "Avg Response" },
-        { metric: "45%", label: "Cost Savings" }
+        { metric: "40%", label: "Faster Rollout" },
+        { metric: "25%", label: "OpEx Reduction" },
+        { metric: "Unified", label: "Customer Journey" }
       ],
       icon: <Zap className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
@@ -111,16 +111,15 @@ export default function TrustBuilders() {
             >
               <Shield className="w-5 h-5 text-blue-600" />
               <span className="text-sm font-bold text-blue-900 uppercase tracking-wider">
-                Security & Compliance
+                Governance & Assurance
               </span>
             </motion.div>
             
             <h2 className="text-h1 text-gray-900 mb-6">
-              Enterprise-Grade <span className="gradient-text">Security</span>
+              Enterprise-Grade <span className="gradient-text">Accountability</span>
             </h2>
             <p className="text-body-lg text-gray-600 max-w-3xl mx-auto">
-              Your trust is our foundation. We maintain the highest security standards 
-              and compliance certifications in the industry.
+              We do not own or operate data centers. Instead, we hold every selected provider to the security, resiliency, and governance standards your business requires.
             </p>
           </div>
 
@@ -186,7 +185,7 @@ export default function TrustBuilders() {
                   <div className="font-bold text-gray-900 text-sm mb-2 group-hover:text-blue-600 transition-colors">
                     {partner.name.split(' ')[0]}
                   </div>
-                  <div className="text-xs text-gray-500">{partner.level}</div>
+                <div className="text-xs text-gray-500">{partner.level}</div>
                 </motion.div>
               ))}
             </div>

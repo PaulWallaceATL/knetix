@@ -6,52 +6,52 @@ import { Cloud, Server, Database, Lock, Gauge, GitBranch } from 'lucide-react';
 
 export default function CloudInfrastructurePage() {
   const stats = [
-    { value: '70%', label: 'Cost Savings' },
-    { value: '10x', label: 'Faster Deployment' },
-    { value: '99.99%', label: 'Availability' },
-    { value: 'Global', label: 'Scale' },
+    { value: 'Multi-Cloud', label: 'Architectures' },
+    { value: 'FinOps', label: 'Guardrails' },
+    { value: 'Data & AI', label: 'Readiness' },
+    { value: 'TSD', label: 'Ecosystem Access' },
   ];
 
   const features = [
     {
-      title: 'Cloud Migration',
-      description: 'Seamlessly transition your applications and data to the cloud with zero downtime and minimal risk.',
+      title: 'Cloud Migration & Modernization',
+      description: 'Blueprints, landing zones, and partner selection to move workloads with governed velocity.',
       icon: <Cloud className="w-8 h-8" />,
     },
     {
-      title: 'Infrastructure as Code',
-      description: 'Automate provisioning and management with declarative infrastructure templates and version control.',
+      title: 'Infrastructure as Code Enablement',
+      description: 'Reference patterns, tooling recommendations, and DevSecOps alignment for automated deployments.',
       icon: <Server className="w-8 h-8" />,
     },
     {
-      title: 'Database Management',
-      description: 'Optimize database performance with managed services, automated backups, and disaster recovery.',
+      title: 'Data & Analytics Platforms',
+      description: 'Lakehouse, fabric, and streaming architectures plus AI/ML readiness grounded in governance.',
       icon: <Database className="w-8 h-8" />,
     },
     {
-      title: 'Cloud Security',
-      description: 'Protect cloud assets with identity management, encryption, and continuous security monitoring.',
+      title: 'Cloud Security & Identity',
+      description: 'Zero-trust guardrails, identity strategies, and continuous controls managed through trusted providers.',
       icon: <Lock className="w-8 h-8" />,
     },
     {
-      title: 'Performance Optimization',
-      description: 'Maximize application speed and efficiency with auto-scaling, load balancing, and CDN integration.',
+      title: 'Performance & Resiliency Reviews',
+      description: 'Architecture assurance, capacity planning, and continuity validation without owning infrastructure.',
       icon: <Gauge className="w-8 h-8" />,
     },
     {
-      title: 'Hybrid Cloud',
-      description: 'Bridge on-premises and cloud environments for flexibility, compliance, and optimal performance.',
+      title: 'Hybrid & Edge Orchestration',
+      description: 'Integrate on-prem, colo, and cloud estates with policy-driven controls and lifecycle governance.',
       icon: <GitBranch className="w-8 h-8" />,
     },
   ];
 
   const benefits = [
-    'Reduce infrastructure costs by up to 70% with optimized cloud resources',
-    'Deploy new services 10x faster with automated infrastructure',
-    'Scale instantly to handle traffic spikes and business growth',
-    'Ensure 99.99% availability with multi-region redundancy',
-    'Simplify management with centralized cloud control',
-    'Maintain compliance with industry regulations and standards',
+    'Independent advisory that aligns cloud programs to board-level outcomes, risk posture, and budget guardrails.',
+    'Vendor-neutral architecture and provider selection leveraging the national TSD ecosystem.',
+    'Embedded FinOps practices covering funding capture, benchmarking, and continuous optimization.',
+    'Security, compliance, and resiliency patterns built into every modernization initiative.',
+    'Implementation governance that keeps partners accountable without Knetix operating any infrastructure.',
+    'Change management, enablement, and KPI visibility so adoption and value realization stay on track.',
   ];
 
   return (
@@ -59,7 +59,7 @@ export default function CloudInfrastructurePage() {
       <SolutionHero
         title="Cloud Infrastructure"
         subtitle="Cloud Solutions"
-        description="Modernize your operations with secure, flexible, and scalable cloud solutions that drive innovation and business agility."
+        description="Modernize cloud, data, and AI platforms with strategy, architecture, FinOps, and governance leadership—while the right ecosystem partners handle the build."
         stats={stats}
       />
 

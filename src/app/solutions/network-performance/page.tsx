@@ -6,52 +6,52 @@ import { Network, Zap, Shield, TrendingUp, Server, Globe } from 'lucide-react';
 
 export default function NetworkPerformancePage() {
   const stats = [
-    { value: '50%', label: 'Faster Performance' },
-    { value: '99.99%', label: 'Uptime SLA' },
-    { value: '40%', label: 'Cost Reduction' },
-    { value: '24/7', label: 'Monitoring' },
+    { value: 'Global', label: 'Carrier & Edge Reach' },
+    { value: 'Zero Trust', label: 'Architectures' },
+    { value: 'FinOps', label: 'Controls' },
+    { value: 'Continuity', label: 'Playbooks' },
   ];
 
   const features = [
     {
-      title: 'SD-WAN Solutions',
-      description: 'Optimize your wide area network with intelligent routing and bandwidth management for superior application performance.',
+      title: 'SD-WAN & SASE Strategy',
+      description: 'Design future-state architectures, evaluate providers, and govern deployment without operating the networks ourselves.',
       icon: <Network className="w-8 h-8" />,
     },
     {
-      title: 'Application Acceleration',
-      description: 'Deliver lightning-fast user experiences with advanced caching, compression, and protocol optimization.',
+      title: 'Application & Edge Acceleration',
+      description: 'Blueprints for CDN, application delivery, and edge services tailored to business-critical workloads.',
       icon: <Zap className="w-8 h-8" />,
     },
     {
-      title: 'Network Security',
-      description: 'Protect your network infrastructure with integrated security, DDoS protection, and threat intelligence.',
+      title: 'Integrated Security',
+      description: 'Zero-trust and threat-informed controls woven directly into transport, identity, and segmentation plans.',
       icon: <Shield className="w-8 h-8" />,
     },
     {
-      title: 'Performance Analytics',
-      description: 'Gain real-time visibility into network performance with comprehensive monitoring and reporting tools.',
+      title: 'Observability & Analytics',
+      description: 'Data models, KPI frameworks, and tooling recommendations that keep visibility front and center.',
       icon: <TrendingUp className="w-8 h-8" />,
     },
     {
-      title: 'Load Balancing',
-      description: 'Distribute traffic intelligently across resources to ensure optimal performance and eliminate bottlenecks.',
+      title: 'Load Balancing & Traffic Engineering',
+      description: 'Reference architectures and partner overlays for intelligent routing, balancing, and failure domains.',
       icon: <Server className="w-8 h-8" />,
     },
     {
-      title: 'Global CDN',
-      description: 'Accelerate content delivery worldwide with our enterprise-grade content distribution network.',
+      title: 'Carrier & Ecosystem Alignment',
+      description: 'Sourcing strategy and governance spanning carriers, cloud interconnects, and specialized providers.',
       icon: <Globe className="w-8 h-8" />,
     },
   ];
 
   const benefits = [
-    'Reduce latency and improve application response times by up to 50%',
-    'Maximize network uptime with 99.99% SLA guarantee',
-    'Lower WAN costs through intelligent bandwidth optimization',
-    'Gain complete visibility with real-time network analytics',
-    'Scale effortlessly to support business growth',
-    'Enterprise-grade security integrated at every layer',
+    'Vendor-neutral architecture that harmonizes cloud, data center, branch, and edge requirements.',
+    'Embedded security, compliance, and continuity playbooks that satisfy risk stakeholders.',
+    'FinOps alignment to rationalize spend on transport, carrier services, and managed offers.',
+    'Implementation governance ensuring carriers, OEMs, and MSPs deliver to design.',
+    'Observability frameworks that surface KPIs your executives and operators actually use.',
+    'No owned network assets—only advisory leadership focused on your outcomes.',
   ];
 
   return (
@@ -59,7 +59,7 @@ export default function NetworkPerformancePage() {
       <SolutionHero
         title="Network Performance Optimization"
         subtitle="Infrastructure Solutions"
-        description="Boost application delivery, maximize uptime, and optimize WAN costs for seamless connectivity and peak operational efficiency."
+        description="Engineer zero-trust, software-defined, and resilient connectivity strategies across cloud, branch, and edge—then oversee the right ecosystem partners through delivery."
         stats={stats}
       />
 

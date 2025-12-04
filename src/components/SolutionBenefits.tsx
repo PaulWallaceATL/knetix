@@ -20,7 +20,7 @@ export default function SolutionBenefits({ benefits }: SolutionBenefitsProps) {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-              Why Choose This Solution?
+              Advisory Outcomes You Can Trust
             </h2>
             <div className="space-y-6">
               {benefits.map((benefit, index) => (
@@ -48,11 +48,14 @@ export default function SolutionBenefits({ benefits }: SolutionBenefitsProps) {
             className="relative"
           >
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 p-12 shadow-2xl">
-              <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-6xl font-bold mb-4">99.99%</div>
-                  <div className="text-xl font-medium">Reliability</div>
+              <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 flex flex-col items-center justify-center text-center text-white space-y-3">
+                <div className="text-sm uppercase tracking-[0.3em] text-white/70">
+                  Our Role
                 </div>
+                <div className="text-3xl font-semibold">Strategy → Architecture → Provider Selection → Oversight</div>
+                <p className="text-base text-white/80">
+                  We remain asset-light and vendor-neutral while ensuring every partner delivers on the outcomes that matter.
+                </p>
               </div>
             </div>
           </motion.div>

@@ -6,10 +6,10 @@ import { Phone, MessageCircle, BarChart3, Brain, Globe, Headphones } from 'lucid
 
 export default function ContactCenterPage() {
   const stats = [
-    { value: '35%', label: 'Higher CSAT' },
-    { value: '50%', label: 'Faster Resolution' },
-    { value: '24/7', label: 'Availability' },
-    { value: 'Omni-', label: 'Channel' },
+    { value: 'CX/EX', label: 'Blueprints' },
+    { value: 'AI', label: 'Enablement' },
+    { value: 'Data', label: 'Visibility' },
+    { value: 'Governance', label: 'Cadence' },
   ];
 
   const features = [
@@ -19,13 +19,14 @@ export default function ContactCenterPage() {
       icon: <Phone className="w-8 h-8" />,
     },
     {
-      title: 'AI-Powered Routing',
-      description: 'Intelligent call routing based on skills, availability, and customer history for optimal outcomes.',
+      title: 'AI-Powered Routing & Automation',
+      description:
+        'Use cases, provider comparisons, and oversight for AI routing, self-service, and workforce engagement.',
       icon: <Brain className="w-8 h-8" />,
     },
     {
-      title: 'Real-Time Analytics',
-      description: 'Monitor performance metrics, agent productivity, and customer satisfaction in real-time dashboards.',
+      title: 'Experience Analytics',
+      description: 'Journey analytics, data integration, and KPI frameworks aligning CX and business stakeholders.',
       icon: <BarChart3 className="w-8 h-8" />,
     },
     {
@@ -46,12 +47,12 @@ export default function ContactCenterPage() {
   ];
 
   const benefits = [
-    'Increase customer satisfaction scores by 35% with personalized service',
-    'Reduce average handle time by 50% with intelligent routing',
-    'Lower operational costs with cloud-based infrastructure',
-    'Scale agents up or down based on demand',
-    'Gain actionable insights from customer interaction data',
-    'Ensure 24/7 availability with enterprise-grade reliability',
+    'Holistic CX strategy spanning CCaaS, UC, AI, analytics, and integration layers.',
+    'Vendor-neutral evaluation and sourcing of CCaaS, WEM, analytics, and AI partners via the TSD ecosystem.',
+    'Implementation governance that keeps providers on track while your teams focus on customer outcomes.',
+    'Data, analytics, and KPI frameworks that connect experience investments to revenue, cost, and loyalty goals.',
+    'Security, compliance, and resiliency guidance embedded from day one.',
+    'No owned contact centers—just advisory leadership eliminating complexity.',
   ];
 
   return (
@@ -59,7 +60,7 @@ export default function ContactCenterPage() {
       <SolutionHero
         title="Contact Center Solutions"
         subtitle="Customer Experience"
-        description="Elevate customer engagement with personalized interactions, enhance satisfaction, and optimize operations through our Contact Center as a Service."
+        description="Reimagine customer and employee experiences with vendor-agnostic CCaaS, AI, and analytics strategies governed by seasoned Technology Advisors."
         stats={stats}
       />
 

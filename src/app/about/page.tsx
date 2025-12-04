@@ -1,234 +1,155 @@
 import Link from 'next/link';
-import TeamGrid from '@/components/TeamGrid';
-import AnimatedCounter from '@/components/AnimatedCounter';
 
-const values = [
+const pillars = [
   {
-    title: 'Innovation',
-    description: 'Constantly exploring new frontiers to bring you the best.',
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-      </svg>
-    ),
+    title: 'Stealth, Client-Side Advocacy',
+    description:
+      'We operate quietly behind the scenes as your Technology Advisors—no marketing splash, no leadership spotlights, just elite engineering judgment focused on your business outcomes.',
   },
   {
-    title: 'Agility',
-    description: 'Responding swiftly to your needs and market dynamics.',
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
+    title: 'Embedded in the TSD Ecosystem',
+    description:
+      'Our relationships with national Technology Services Distributors open access to hundreds of vetted providers across cloud, security, network, CX, and emerging tech.',
   },
   {
-    title: 'Partnership',
-    description: 'Building lasting relationships based on trust and mutual growth.',
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    ),
+    title: 'Engineering-Led Methodology',
+    description:
+      'Every program is led by senior architects who have spent decades solving enterprise IT, security, data, and AI problems. Strategy, architecture, sourcing, and oversight stay in tight alignment.',
   },
   {
-    title: 'Excellence',
-    description: 'Committing to the highest standards in every solution we deliver.',
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-      </svg>
-    ),
+    title: 'Outcome & FinOps Discipline',
+    description:
+      'We design financial guardrails, adoption metrics, and governance cadences that keep innovation accountable—from multi-cloud programs to AI readiness and resiliency.',
+  },
+];
+
+const operatingTenets = [
+  {
+    title: 'Vendor-Agnostic Architecture',
+    content:
+      'We sit on the client side of the table, evaluating the strongest options until the right blend of capability, economics, and risk tolerance is proven.',
   },
   {
-    title: 'Security',
-    description: 'Prioritizing the integrity and safety of your digital assets.',
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
+    title: 'Cloud, Security, Data & AI',
+    content:
+      'Programs span hybrid and multi-cloud, zero-trust security, data modernization, AI/ML readiness, CX/UC transformation, and enterprise automation.',
+  },
+  {
+    title: 'Implementation Oversight',
+    content:
+      'Providers operate the technology; we ensure architecture fidelity, program management rigor, and measurable outcome tracking.',
+  },
+  {
+    title: 'Resiliency & Governance',
+    content:
+      'Continuity planning, policy, compliance, FinOps, and KPI frameworks are baked into every engagement so transformations stick.',
   },
 ];
 
 export default function AboutPage() {
   return (
     <main className="pt-20">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Technology Partners You Can Trust
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-[#000D33] via-[#0A2E50] to-[#000D33] text-white py-20 md:py-28">
+        <div className="max-w-5xl mx-auto px-4 text-center space-y-6">
+          <p className="uppercase tracking-[0.3em] text-white/60 text-sm">Operating in Stealth Mode</p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+            Technology Advisors (TAs) for Cloud, Security, Data, AI, and CX Programs
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            For over 15 years, we&apos;ve helped enterprises transform their operations with 
-            intelligent, secure, and scalable technology solutions.
+          <p className="text-xl text-white/80 leading-relaxed">
+            Knetix is a technology advisory and solutions agency embedded within the national Technology Services
+            Distributor ecosystem. We do not own infrastructure—we design the strategy, architect the approach, curate the
+            providers, and govern delivery so enterprises can move with confidence.
           </p>
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Who We Are */}
       <section className="py-16 md:py-20 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50] mb-6">
-                Our Story
-              </h2>
-              <div className="text-gray-700 leading-relaxed space-y-4">
-                <p className="text-lg">
-                  Knetix was founded on a simple yet powerful principle: <strong>technology should accelerate growth, not create barriers</strong>.
-                </p>
-                <p>
-                  With decades of collective experience in enterprise IT, our founders envisioned a new kind of 
-                  technology partner—one that combines deep industry expertise with cutting-edge innovation and 
-                  a genuine commitment to client success.
-                </p>
-                <p>
-                  Today, we&apos;re proud to serve enterprises across healthcare, finance, manufacturing, and technology sectors. 
-                  Our journey has been marked by an unwavering commitment to excellence, innovation, and delivering 
-                  measurable business value.
-                </p>
-              </div>
-            </div>
-            <div className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] rounded-lg p-8 text-white">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-white text-[#00C4B4] p-3 rounded-lg">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold">
-                      <AnimatedCounter end={15} suffix="+" />
-                    </div>
-                    <div className="text-gray-200">Years of Excellence</div>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="bg-white text-[#00C4B4] p-3 rounded-lg">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold">
-                      <AnimatedCounter end={100} suffix="%" />
-                    </div>
-                    <div className="text-gray-200">Client Satisfaction</div>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="bg-white text-[#00C4B4] p-3 rounded-lg">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold">
-                      <AnimatedCounter end={1000} suffix="+" />
-                    </div>
-                    <div className="text-gray-200">Projects Delivered</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Philosophy */}
-      <section className="py-16 md:py-20 lg:py-24 bg-[#F0F2F5]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50] mb-6">
-              Our Approach: Partnership Over Transactions
+        <div className="max-w-6xl mx-auto px-4 space-y-10">
+          <div className="space-y-4">
+            <p className="text-sm font-semibold uppercase tracking-wide text-[#00C4B4]">Who We Are</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50]">
+              An engineering-first advisory collective trusted by Fortune and large commercial enterprises.
             </h2>
-            <div className="text-lg text-gray-700 leading-relaxed space-y-4">
-              <p>
-                We believe in empowering businesses through strategic technology partnerships, not just 
-                one-time implementations.
-              </p>
-              <p>
-                Our approach centers on three key principles:
-              </p>
-              <ul className="text-left max-w-2xl mx-auto space-y-3 mt-6">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#00C4B4] font-bold text-xl">•</span>
-                  <span><strong>Understand your ecosystem</strong> — We take time to learn your business, challenges, and goals</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#00C4B4] font-bold text-xl">•</span>
-                  <span><strong>Anticipate future needs</strong> — We design solutions that scale with your growth</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#00C4B4] font-bold text-xl">•</span>
-                  <span><strong>Deliver measurable results</strong> — We focus on business outcomes, not just technology</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Team */}
-      <TeamGrid />
-
-      {/* Our Values */}
-      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-[#F0F2F5] to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50] mb-6">
-              Our Core Values
-            </h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              These principles guide everything we do and drive us to deliver exceptional results.
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Our principals have led multi-billion-dollar technology portfolios, zero-trust programs, global network
+              transformations, CX modernizations, and large-scale data/AI initiatives. Today we channel that experience into
+              an asset-light model—staying invisible, fiercely independent, and accountable only to client outcomes.
             </p>
           </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {values.map((value, index) => (
+          <div className="grid md:grid-cols-2 gap-6">
+            {pillars.map((pillar) => (
               <div
-                key={index}
-                className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-t-4 border-[#00C4B4]"
+                key={pillar.title}
+                className="rounded-2xl border border-gray-200 p-6 hover:border-[#00C4B4] hover:shadow-xl transition-all"
               >
-                <div className="text-[#00C4B4] mb-4">
-                  {value.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-[#0A2E50] mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {value.description}
-                </p>
+                <h3 className="text-xl font-semibold text-[#0A2E50] mb-3">{pillar.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{pillar.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your IT Infrastructure?
+      {/* How We Work */}
+      <section className="py-16 md:py-20 lg:py-24 bg-[#F3F5F9]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12 space-y-4">
+            <p className="text-sm font-semibold uppercase tracking-wide text-[#00C4B4]">Operating Model</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50]">Strategy → Architecture → Providers → Results</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              We translate board-level mandates into executable blueprints, orchestrate the ideal partner mix through TSD
+              relationships, and remain on point for governance throughout the lifecycle.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {operatingTenets.map((tenet) => (
+              <div key={tenet.title} className="bg-white rounded-2xl p-6 shadow-md border border-gray-100 space-y-3">
+                <h3 className="text-lg font-semibold text-[#0A2E50]">{tenet.title}</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{tenet.content}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Advisory Plays */}
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4 text-center space-y-6">
+          <p className="text-sm font-semibold uppercase tracking-wide text-[#00C4B4]">Core Focus Areas</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50]">
+            Multi-Cloud & FinOps • Cybersecurity & Zero Trust • Data & AI • CX & Unified Communications • Resiliency &
+            Continuity
           </h2>
-          <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-            Let&apos;s discuss how Knetix can help you achieve your technology goals. 
-            Schedule a free consultation with our enterprise solutions team.
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Every engagement blends strategic advisory with deep engineering validation, ensuring that architecture,
+            security, compliance, operational readiness, and financial performance stay synchronized.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
+        <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
+          <h2 className="text-3xl md:text-4xl font-bold">Ready to engage a Technology Advisor?</h2>
+          <p className="text-lg text-white/80 leading-relaxed">
+            Share your mandate—cloud rationalization, AI acceleration, security hardening, CX modernization, or a full
+            resiliency program—and we will build the roadmap, curate the partners, and govern delivery.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-block bg-[#FF8C00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block bg-white text-[#0A2E50] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Schedule Consultation
+              Book a Strategy Session
             </Link>
             <Link
               href="/solutions"
-              className="inline-block bg-white text-[#0A2E50] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block border border-white/60 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              View Solutions
+              Explore Advisory Plays
             </Link>
           </div>
         </div>

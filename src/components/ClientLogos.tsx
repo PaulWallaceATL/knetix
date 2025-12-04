@@ -53,10 +53,10 @@ export default function ClientLogos() {
     <div>
         <div className="text-center mb-12">
           <p className="text-sm font-semibold text-[#00C4B4] uppercase tracking-wide mb-2">
-            Trusted by Industry Leaders
+            Trusted by Enterprise Innovators
           </p>
           <h3 className="text-2xl font-bold text-[#0A2E50]">
-            Powering Success Across Multiple Industries
+            Advisory Partnerships Across Critical Industries
           </h3>
         </div>
 
@@ -80,7 +80,7 @@ export default function ClientLogos() {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600">
-            Join 500+ companies that trust Knetix for their technology needs
+            Enterprises rely on Knetix for discreet, vendor-neutral guidance that unlocks real outcomes.
           </p>
         </div>
     </div>

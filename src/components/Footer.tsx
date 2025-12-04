@@ -196,9 +196,9 @@ export default function Footer() {
                       viewport={{ once: true }}
                     >
                       {[
-                        { title: "SOC 2", subtitle: "Certified", color: "from-blue-400 to-blue-500" },
-                        { title: "ISO 27001", subtitle: "Compliant", color: "from-green-400 to-green-500" },
-                        { title: "99.9%", subtitle: "Uptime", color: "from-purple-400 to-purple-500" },
+                        { title: "Vendor-Neutral", subtitle: "Strategy & Architecture", color: "from-blue-400 to-blue-500" },
+                        { title: "Zero Trust", subtitle: "Security & Governance Lens", color: "from-green-400 to-green-500" },
+                        { title: "FinOps", subtitle: "Investment Discipline", color: "from-purple-400 to-purple-500" },
                       ].map((badge, index) => (
                         <motion.div 
                           key={badge.title}

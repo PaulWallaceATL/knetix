@@ -186,10 +186,10 @@ export default function HeroSection() {
             transition={{ duration: 1.2, delay: 1.5 }}
           >
             {[
-              { value: "99.9%", label: "Uptime", color: "from-blue-400 to-cyan-400" },
-              { value: "24/7", label: "Support", color: "from-purple-400 to-pink-400" },
-              { value: "500+", label: "Clients", color: "from-green-400 to-teal-400" },
-              { value: "15+", label: "Years", color: "from-orange-400 to-red-400" }
+              { value: "TSD", label: "Ecosystem Partners", color: "from-blue-400 to-cyan-400" },
+              { value: "Zero Trust", label: "Security Lens", color: "from-purple-400 to-pink-400" },
+              { value: "FinOps", label: "Investment Control", color: "from-green-400 to-teal-400" },
+              { value: "Advisory", label: "Operating Model", color: "from-orange-400 to-red-400" }
             ].map((stat, index) => (
               <motion.div 
                 key={index}

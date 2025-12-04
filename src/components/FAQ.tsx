@@ -5,28 +5,28 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'What industries does Knetix serve?',
-    answer: 'Knetix serves a diverse range of industries including healthcare, finance, manufacturing, retail, energy, and technology. Our solutions are tailored to meet the unique needs and compliance requirements of each sector.',
+    question: 'Do you own data centers or operate managed infrastructure?',
+    answer: 'No. Knetix is a strategic Technology Advisor. We do not own data centers, cloud platforms, or network assets. Our role is to evaluate the right providers, negotiate the best commercial constructs, and govern outcomes on your behalf.',
   },
   {
-    question: 'How quickly can you deploy a solution?',
-    answer: 'Deployment timelines vary based on complexity and scope. Simple solutions can be deployed in days, while comprehensive enterprise implementations typically range from 2-12 weeks. We work closely with you to establish realistic timelines that minimize disruption.',
+    question: 'How does the TSD ecosystem benefit my organization?',
+    answer: 'By working inside the national Technology Services Distributor (TSD) ecosystem, we give you streamlined access to hundreds of vetted cloud, security, connectivity, CX, and AI providers while maintaining vendor-neutral guidance.',
   },
   {
-    question: 'Do you provide 24/7 support?',
-    answer: 'Yes! Our expert support team is available 24/7/365 to ensure your systems run smoothly. We offer multiple support tiers with guaranteed response times based on your service level agreement.',
+    question: 'What industries do you support?',
+    answer: 'We partner with regulated and complex enterprises across healthcare, finance, manufacturing, retail, energy, and technology. Our methodologies adapt to strict security, data, and compliance requirements.',
   },
   {
-    question: 'What makes Knetix different from other IT providers?',
-    answer: 'Knetix combines deep technical expertise with a true partnership approach. We don\'t just implement solutions—we become invested in your success, providing strategic guidance, proactive monitoring, and continuous optimization.',
+    question: 'What types of challenges do you solve?',
+    answer: 'Clients engage us for multi-cloud architecture, cybersecurity governance, AI and data modernization, contact center transformation, resiliency planning, and enterprise cost optimization/FinOps initiatives.',
   },
   {
-    question: 'Can you work with our existing infrastructure?',
-    answer: 'Absolutely. We specialize in hybrid environments and can integrate with your current systems. Our approach is to enhance and optimize what works while modernizing areas that need improvement.',
+    question: 'How do you ensure cost optimization and FinOps discipline?',
+    answer: 'We build FinOps guardrails into every engagement—covering funding programs, baselines, KPIs, and ongoing optimization tight to business outcomes. Providers execute; we hold them accountable.',
   },
   {
-    question: 'What security certifications do you maintain?',
-    answer: 'Knetix maintains ISO 27001 certification, SOC 2 Type II compliance, and adheres to industry-specific standards like HIPAA for healthcare and PCI DSS for payment processing. Security is foundational to everything we do.',
+    question: 'Can you work alongside our existing teams and vendors?',
+    answer: 'Absolutely. We embed with your IT, security, finance, and operations leaders, then coordinate the right partner mix through the TSD network so your teams stay focused on the business.'
   },
 ];
 

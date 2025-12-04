@@ -11,25 +11,24 @@ export default function BottomCTA() {
       <div className="relative max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
         {/* Headline */}
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-          Start Your Digital Transformation Today
+          Engage an Elite Technology Advisor
         </h2>
 
         {/* Sub-headline */}
         <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
-          Join hundreds of enterprises that trust Knetix to power their technology infrastructure. 
-          Let&apos;s discuss how we can help you achieve your goals.
+          We guide cloud, security, data, AI, and CX transformations through a vendor-neutral lens—no owned infrastructure, just pure advocacy and measurable outcomes.
         </p>
 
         {/* CTA Button */}
         <Link href="/contact">
           <button className="px-12 py-5 rounded-xl bg-white text-[#0A2E50] font-bold text-lg hover:bg-white/90 hover:shadow-2xl hover:shadow-white/20 transition-all duration-300 hover:-translate-y-1">
-            Schedule Free Consultation
+            Schedule a Strategy Session
           </button>
         </Link>
 
         {/* Additional Info */}
         <p className="mt-10 text-base text-white/70">
-          No obligations. Just a conversation about your technology needs and how we can help.
+          No obligations—just a transparent conversation about eliminating complexity and accelerating outcomes.
         </p>
       </div>
 

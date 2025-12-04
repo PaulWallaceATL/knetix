@@ -1,25 +1,25 @@
-import { Shield, Award, Clock, Users } from 'lucide-react';
+import { Shield, Award, Compass, Globe } from 'lucide-react';
 
 const badges = [
   {
     icon: Shield,
-    title: 'ISO 27001 Certified',
-    description: 'Information Security Management',
+    title: 'Security & Resiliency',
+    description: 'Zero-trust, governance, and continuity programs without owning infrastructure',
   },
   {
     icon: Award,
-    title: 'Industry Awards',
-    description: 'Recognized Excellence 2024',
+    title: 'Engineering-First Advisory',
+    description: 'Deep technical bench with decades of enterprise IT and TSD expertise',
   },
   {
-    icon: Clock,
-    title: '99.9% Uptime',
-    description: 'Guaranteed SLA',
+    icon: Compass,
+    title: 'Vendor-Agnostic Guidance',
+    description: 'Strategy, architecture, sourcing, and oversight across 300+ ecosystem partners',
   },
   {
-    icon: Users,
-    title: '24/7 Support',
-    description: 'Expert Team Available',
+    icon: Globe,
+    title: 'National TSD Partnerships',
+    description: 'Embedded within top Technology Services Distributors for unparalleled reach',
   },
 ];
 

@@ -24,7 +24,7 @@ export default function EnterpriseNavbar() {
     { name: 'Cybersecurity', href: '/solutions/cybersecurity', icon: <Shield className="w-5 h-5" />, description: 'Advanced threat protection' },
     { name: 'Cloud Infrastructure', href: '/solutions/cloud-infrastructure', icon: <Cloud className="w-5 h-5" />, description: 'Scalable cloud solutions' },
     { name: 'Unified Communications', href: '/solutions/unified-communications', icon: <Phone className="w-5 h-5" />, description: 'Seamless collaboration' },
-    { name: 'Managed Services', href: '/solutions/managed-services', icon: <Server className="w-5 h-5" />, description: '24/7 expert support' },
+    { name: 'Managed Services', href: '/solutions/managed-services', icon: <Server className="w-5 h-5" />, description: 'Advisory governance' },
     { name: 'Contact Center', href: '/solutions/contact-center', icon: <Users className="w-5 h-5" />, description: 'Customer experience' },
   ];
 

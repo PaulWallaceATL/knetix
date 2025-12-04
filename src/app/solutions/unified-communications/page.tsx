@@ -6,26 +6,26 @@ import { Phone, Video, MessageSquare, Users, Calendar, FileText } from 'lucide-r
 
 export default function UnifiedCommunicationsPage() {
   const stats = [
-    { value: '40%', label: 'Productivity Gain' },
-    { value: '60%', label: 'Cost Savings' },
-    { value: '99.9%', label: 'Call Quality' },
-    { value: 'Global', label: 'Coverage' },
+    { value: 'UCaaS', label: 'Blueprints' },
+    { value: 'Workflow', label: 'Integration' },
+    { value: 'Security', label: 'Controls' },
+    { value: 'Adoption', label: 'Playbooks' },
   ];
 
   const features = [
     {
-      title: 'Enterprise VoIP',
-      description: 'Crystal-clear voice communications with advanced call routing, auto-attendant, and call analytics.',
+      title: 'Enterprise Voice & UCaaS',
+      description: 'Vendor-neutral evaluation of UCaaS platforms, PSTN strategies, numbering, and compliance considerations.',
       icon: <Phone className="w-8 h-8" />,
     },
     {
-      title: 'Video Conferencing',
-      description: 'HD video meetings with screen sharing, recording, and seamless integration with your workflow tools.',
+      title: 'Video & Collaboration',
+      description: 'Experience design, governance, and workflow integration across meetings, rooms, and shared spaces.',
       icon: <Video className="w-8 h-8" />,
     },
     {
-      title: 'Team Messaging',
-      description: 'Secure instant messaging and collaboration spaces for teams, projects, and departments.',
+      title: 'Messaging & Workflow Automation',
+      description: 'Secure messaging and automation patterns that tie collaboration into business applications.',
       icon: <MessageSquare className="w-8 h-8" />,
     },
     {
@@ -46,12 +46,12 @@ export default function UnifiedCommunicationsPage() {
   ];
 
   const benefits = [
-    'Increase team productivity by 40% with seamless collaboration tools',
-    'Reduce communication costs by up to 60% compared to traditional systems',
-    'Enable remote work with enterprise-grade reliability',
-    'Integrate with existing business applications (CRM, ERP, etc.)',
-    'Scale effortlessly as your organization grows',
-    'Maintain business continuity with 99.9% uptime SLA',
+    'Strategic blueprint that balances user experience, compliance, and cost.',
+    'Curated provider mix for UCaaS, CPaaS, meeting, and workflow platforms via the TSD ecosystem.',
+    'Integration and automation guidance so collaboration lives inside the tools teams already use.',
+    'Security, governance, and lifecycle planning embedded into every decision.',
+    'Adoption playbooks, training, and KPI dashboards that connect collaboration to productivity outcomes.',
+    'Knetix stays vendor-neutral, ensuring every platform choice serves the business first.',
   ];
 
   return (
@@ -59,7 +59,7 @@ export default function UnifiedCommunicationsPage() {
       <SolutionHero
         title="Unified Communications"
         subtitle="Collaboration Platform"
-        description="Foster effortless collaboration and effective communication across all channels, empowering your workforce to connect from anywhere."
+        description="Reinvent workforce collaboration through vendor-agnostic UCaaS, video, messaging, and workflow strategies engineered by Technology Advisors—not infrastructure owners."
         stats={stats}
       />
 

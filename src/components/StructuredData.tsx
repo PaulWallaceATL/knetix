@@ -3,7 +3,7 @@ export default function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Knetix',
-    description: 'Enterprise technology solutions provider specializing in IT infrastructure, cybersecurity, cloud services, and digital transformation.',
+    description: 'Technology advisory and solutions agency specializing in enterprise cloud, security, data, AI, and CX strategy through a vendor-agnostic ecosystem.',
     url: 'https://knetix.com',
     logo: 'https://knetix.com/logo.png',
     address: {
@@ -33,23 +33,23 @@ export default function StructuredData() {
     service: [
       {
         '@type': 'Service',
-        name: 'Network Performance Solutions',
-        description: 'Optimize application delivery and maximize uptime',
+        name: 'Cloud & Architecture Advisory',
+        description: 'Multi-cloud strategy, FinOps, and modernization roadmaps delivered through trusted providers.',
       },
       {
         '@type': 'Service',
-        name: 'Cybersecurity Solutions',
-        description: 'Future-ready security solutions for data protection',
+        name: 'Cybersecurity & Governance Consulting',
+        description: 'Zero-trust, compliance, resiliency, and security program leadership without owning infrastructure.',
       },
       {
         '@type': 'Service',
-        name: 'Cloud Infrastructure',
-        description: 'Scalable and secure cloud solutions',
+        name: 'Data, AI & Automation Strategy',
+        description: 'Responsible AI readiness, data modernization, and analytics operating models.',
       },
       {
         '@type': 'Service',
-        name: 'Managed Services',
-        description: '24/7 IT support and proactive monitoring',
+        name: 'Customer & Workforce Experience Advisory',
+        description: 'CX, CCaaS, and UC strategy, provider selection, and implementation oversight.',
       },
     ],
   };

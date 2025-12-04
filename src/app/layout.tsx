@@ -23,8 +23,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Knetix - Transform Your Business With Enterprise Technology Solutions",
-  description: "Partner with industry-leading experts to accelerate growth, optimize operations, and secure your digital future. Trusted by enterprises worldwide. 99.99% uptime SLA, SOC 2 certified, 24/7 support.",
+  title: "Knetix - Technology Advisors for Cloud, Security, Data & AI",
+  description: "Knetix is a technology advisory and solutions agency specializing in complex enterprise cloud, security, data, AI, and CX programs. We operate inside the national TSD ecosystem—vendor-agnostic, engineering-led, and asset-light.",
   keywords: "Enterprise IT Solutions, Digital Transformation, Cloud Infrastructure, Cybersecurity Services, Managed IT Services, Network Performance Optimization, Unified Communications, Contact Center Solutions, IT Consulting, Technology Modernization, Cloud Migration, Zero Trust Security, Enterprise Software, Business Technology, IT Strategy",
   authors: [{ name: "Knetix" }],
   creator: "Knetix",
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://knetix.io",
-    title: "Knetix - Transform Your Business With Enterprise Technology Solutions",
-    description: "Partner with industry-leading experts to accelerate growth and secure your digital future. Trusted by enterprises worldwide. 99.99% uptime SLA.",
+    title: "Knetix - Technology Advisors for Cloud, Security, Data & AI",
+    description: "Technology Advisors (TAs) embedded in the national TSD ecosystem guiding enterprises through multi-cloud, cybersecurity, AI/data modernization, and CX transformations.",
     siteName: "Knetix",
     images: [
       {
@@ -73,8 +73,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@knetix",
     creator: "@knetix",
-    title: "Knetix - Transform Your Business With Enterprise Technology",
-    description: "Industry-leading IT solutions trusted by enterprises worldwide. 99.99% uptime, SOC 2 certified, 24/7 support.",
+    title: "Knetix - Technology Advisors for Cloud, Security, Data & AI",
+    description: "Vendor-neutral Technology Advisors solving complex enterprise cloud, security, data, AI, and CX challenges through a world-class provider ecosystem.",
     images: ["https://knetix.io/api/og"],
   },
   verification: {
@@ -101,8 +101,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Explicit Open Graph tags */}
-        <meta property="og:title" content="Knetix - Transform Your Business With Enterprise Technology Solutions" />
-        <meta property="og:description" content="Partner with industry-leading experts to accelerate growth and secure your digital future. Trusted by enterprises worldwide." />
+        <meta property="og:title" content="Knetix - Technology Advisors for Cloud, Security, Data & AI" />
+        <meta property="og:description" content="Technology Advisors embedded in the national TSD ecosystem guiding cloud, security, data, AI, and CX transformations." />
         <meta property="og:image" content="https://knetix.io/api/og" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -115,8 +115,8 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@knetix" />
         <meta name="twitter:creator" content="@knetix" />
-        <meta name="twitter:title" content="Knetix - Transform Your Business With Enterprise Technology" />
-        <meta name="twitter:description" content="Industry-leading IT solutions trusted by enterprises worldwide. 99.99% uptime, SOC 2 certified, 24/7 support." />
+        <meta name="twitter:title" content="Knetix - Technology Advisors for Cloud, Security, Data & AI" />
+        <meta name="twitter:description" content="Vendor-agnostic Technology Advisors delivering strategy, architecture, provider selection, and oversight across cloud, security, data, AI, and CX." />
         <meta name="twitter:image" content="https://knetix.io/api/og" />
         
         {/* Additional SEO Tags */}

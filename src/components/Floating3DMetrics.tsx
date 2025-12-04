@@ -9,18 +9,17 @@ export default function Floating3DMetrics() {
   const metrics = [
     { 
       icon: <TrendingUp className="w-4 h-4 md:w-5 md:h-5" />, 
-      value: '300%', 
-      label: 'ROI', 
+      value: 'TSD', 
+      label: 'Ecosystem Access', 
       color: 'from-green-400 to-emerald-500', 
-      // Safe positioning - always visible
       mobilePos: 'top-[12%] left-[5%]',
       desktopPos: 'top-[15%] left-[10%]',
       delay: 1.5 
     },
     { 
       icon: <Shield className="w-4 h-4 md:w-5 md:h-5" />, 
-      value: '99.99%', 
-      label: 'Uptime', 
+      value: 'Zero Trust', 
+      label: 'Security DNA', 
       color: 'from-cyan-400 to-blue-500', 
       mobilePos: 'top-[12%] right-[5%]',
       desktopPos: 'top-[20%] right-[10%]',
@@ -28,8 +27,8 @@ export default function Floating3DMetrics() {
     },
     { 
       icon: <Zap className="w-4 h-4 md:w-5 md:h-5" />, 
-      value: '24/7', 
-      label: 'Support', 
+      value: 'FinOps', 
+      label: 'Guardrails', 
       color: 'from-purple-400 to-pink-500', 
       mobilePos: 'bottom-[15%] left-[5%]',
       desktopPos: 'bottom-[25%] left-[10%]',
