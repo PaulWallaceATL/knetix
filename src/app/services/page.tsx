@@ -141,7 +141,7 @@ export default function ServicesPage() {
             Architecting the Future of Cloud, Security, AI, and CX
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            We engineer the strategy and architecture that drive complex enterprise change. We deliver unbiased, high-performance outcomes for the world's most demanding organizations—without owning data centers or pushing proprietary infrastructure.
+            We engineer the strategy and architecture that drive complex enterprise change. We deliver unbiased, high-performance outcomes for the world&apos;s most demanding organizations—without owning data centers or pushing proprietary infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
             <Link

@@ -11,7 +11,7 @@ export default function AboutPage() {
             Built on Amazon-Scale Rigor
           </h1>
           <p className="text-xl text-white/80 leading-relaxed">
-            Knetix and Knnect are led by Matt Lane, a top Amazon CX Sales Executive with deep expertise in enterprise technology transformations. Our approach combines Amazon's operational excellence with decades of enterprise IT experience.
+            Knetix and Knnect are led by Matt Lane, a top Amazon CX Sales Executive with deep expertise in enterprise technology transformations. Our approach combines Amazon&apos;s operational excellence with decades of enterprise IT experience.
           </p>
         </div>
       </section>
@@ -30,10 +30,10 @@ export default function AboutPage() {
                   Matt Lane brings exceptional credentials from Amazon, where he served as a top Customer Experience (CX) Sales Executive. His deep understanding of Amazon Connect, AWS architecture, and enterprise-scale customer experience solutions forms the foundation of both Knetix and Knnect.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  At Amazon, Matt was instrumental in helping Fortune 500 companies transform their customer experience operations using Amazon Connect and the broader AWS ecosystem. This hands-on experience with Amazon's rigorous operational standards and customer-centric approach directly informs our methodology.
+                  At Amazon, Matt was instrumental in helping Fortune 500 companies transform their customer experience operations using Amazon Connect and the broader AWS ecosystem. This hands-on experience with Amazon&apos;s rigorous operational standards and customer-centric approach directly informs our methodology.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Today, Matt channels this Amazon-scale rigor into Knetix's broader technology advisory practice, ensuring that every engagement—whether focused on CX, cloud infrastructure, security, or AI—meets the highest standards of engineering excellence and business outcomes.
+                  Today, Matt channels this Amazon-scale rigor into Knetix&apos;s broader technology advisory practice, ensuring that every engagement—whether focused on CX, cloud infrastructure, security, or AI—meets the highest standards of engineering excellence and business outcomes.
                 </p>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function AboutPage() {
                 <strong>Focus:</strong> Customer Experience (CX) and Amazon Connect
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Knnect specializes exclusively in building high-availability enterprise contact centers with Amazon Connect. This is the core "hook" based on Matt's Amazon background, delivering production-ready environments built for maximum scale.
+                Knnect specializes exclusively in building high-availability enterprise contact centers with Amazon Connect. This is the core &quot;hook&quot; based on Matt&apos;s Amazon background, delivering production-ready environments built for maximum scale.
               </p>
             </div>
 
