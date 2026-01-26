@@ -9,6 +9,7 @@ export default function ContactPage() {
     email: '',
     phone: '',
     company: '',
+    partnerType: '',
     message: '',
   });
 
@@ -16,7 +17,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     // Clear error when user starts typing
@@ -73,6 +74,7 @@ export default function ContactPage() {
         email: '',
         phone: '',
         company: '',
+        partnerType: '',
         message: '',
       });
 
@@ -89,12 +91,10 @@ export default function ContactPage() {
       <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
         <div className="container-clean text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Speak with a Technology Advisor
+            Connect with Knetix & Knnect
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Knetix operates as an asset-light advisory agency embedded in the national TSD ecosystem. Share your cloud,
-            security, data, AI, CX, or resiliency mandate and we&apos;ll align the right strategy, architecture, and provider
-            oversight.
+            Channel partners and enterprise clients: Share your cloud, security, data, AI, CX, or Amazon Connect requirements. We&apos;ll align the right strategy, architecture, and provider oversight to deliver measurable outcomes.
           </p>
         </div>
       </section>
@@ -106,11 +106,10 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-bold text-[#0A2E50] mb-4">
-                Send Us a Message
+                Partner & Client Inquiry
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Provide context on your initiative and a senior Technology Advisor will respond within one business day. For
-                confidential or urgent programs, include secure contact preferences or call us directly at (555) 123-4567.
+                Channel partners: Use this form to refer clients or explore collaboration opportunities. Enterprise clients: Share your technology mandate and a senior Technology Advisor will respond within one business day. For confidential or urgent programs, include secure contact preferences.
               </p>
 
               {submitSuccess && (
@@ -220,17 +219,35 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#00C4B4] focus:border-transparent outline-none transition ${
                       errors.company ? 'border-red-500' : 'border-gray-300'
                     }`}
-                    placeholder="Your Company Inc."
+                    placeholder="Your Company Inc. or Client Company"
                   />
                   {errors.company && (
                     <p className="mt-1 text-sm text-red-500">{errors.company}</p>
                   )}
                 </div>
 
+                {/* Partner Type - New Field */}
+                <div>
+                  <label htmlFor="partnerType" className="block text-sm font-semibold text-gray-700 mb-2">
+                    I am a: *
+                  </label>
+                  <select
+                    id="partnerType"
+                    name="partnerType"
+                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#00C4B4] focus:border-transparent outline-none transition border-gray-300"
+                  >
+                    <option value="">Select...</option>
+                    <option value="channel-partner">Channel Partner / Referrer</option>
+                    <option value="enterprise-client">Enterprise Client</option>
+                    <option value="prospect">Prospect / Evaluating Services</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
                 {/* Message */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Message or Comment *
+                    Message or Project Details *
                   </label>
                   <textarea
                     id="message"
@@ -241,7 +258,7 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#00C4B4] focus:border-transparent outline-none transition resize-none ${
                       errors.message ? 'border-red-500' : 'border-gray-300'
                     }`}
-                    placeholder="Tell us about your project or how we can help..."
+                    placeholder="Channel partners: Describe the client opportunity or collaboration interest. Enterprise clients: Share your cloud, security, data, AI, CX, or Amazon Connect requirements..."
                   ></textarea>
                   {errors.message && (
                     <p className="mt-1 text-sm text-red-500">{errors.message}</p>
@@ -265,8 +282,7 @@ export default function ContactPage() {
                 Contact Information
               </h2>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                Reach us through any of the channels below. We keep engagements discreet and focus solely on the outcomes that
-                matter to your organization.
+                Channel partners and enterprise clients: Reach us through any of the channels below. We keep engagements discreet and focus solely on the outcomes that matter to your organization or your clients.
               </p>
 
               {/* Contact Details */}
@@ -341,15 +357,16 @@ export default function ContactPage() {
       <section className="bg-[#F0F2F5] py-12 md:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl font-bold text-[#0A2E50] mb-4">
-            Ready to remove complexity from your transformation?
+            Partner Ready. Client Focused.
           </h2>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Schedule a confidential strategy session with a principal Technology Advisor. We&apos;ll clarify objectives,
-            outline potential plays, and map the provider ecosystem—no obligation.
+            Channel partners: Refer clients with confidence. Enterprise clients: Schedule a confidential strategy session with a principal Technology Advisor. We&apos;ll clarify objectives, outline potential plays, and map the provider ecosystem—no obligation.
           </p>
-          <button className="bg-[#00C4B4] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#00b3a3] transition-all duration-300 shadow-lg hover:shadow-xl">
-            Book a Strategy Session
-          </button>
+          <Link href="/contact">
+            <button className="bg-[#00C4B4] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#00b3a3] transition-all duration-300 shadow-lg hover:shadow-xl">
+              Get Started
+            </button>
+          </Link>
         </div>
       </section>
     </main>

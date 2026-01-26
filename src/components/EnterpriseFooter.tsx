@@ -23,36 +23,16 @@ export default function EnterpriseFooter() {
   const currentYear = new Date().getFullYear();
 
   const navigationLinks = {
-    solutions: [
-      { name: 'Network Performance', href: '/solutions/network-performance' },
-      { name: 'Cybersecurity', href: '/solutions/cybersecurity' },
-      { name: 'Unified Communications', href: '/solutions/unified-communications' },
-      { name: 'Cloud Infrastructure', href: '/solutions/cloud-infrastructure' },
-      { name: 'Contact Center', href: '/solutions/contact-center' },
-      { name: 'Managed Services', href: '/solutions/managed-services' },
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Insights', href: '/insights' },
-      { name: 'Careers', href: '/careers' },
+    main: [
+      { name: 'Home', href: '/' },
+      { name: 'Services', href: '/services' },
+      { name: 'About', href: '/about' },
       { name: 'Contact', href: '/contact' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'News', href: '/news' },
-    ],
-    resources: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api' },
-      { name: 'Support Center', href: '/support' },
-      { name: 'Training', href: '/training' },
-      { name: 'Community', href: '/community' },
-      { name: 'Status', href: '/status' },
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'Security', href: '/security' },
-      { name: 'Compliance', href: '/compliance' },
     ],
   };
 
@@ -125,7 +105,7 @@ export default function EnterpriseFooter() {
 
       {/* Main Footer Content */}
       <div className="relative z-10 container-clean pt-16 md:pt-20 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 md:gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-16">
           {/* Company Info */}
           <motion.div
             className="lg:col-span-2"
@@ -136,7 +116,7 @@ export default function EnterpriseFooter() {
           >
             <KnetixLogo size="lg" className="mb-6" />
             <p className="text-body text-white/70 mb-8 leading-relaxed">
-              Knetix is a technology advisory and solutions agency embedded in the national TSD ecosystem. We solve complex cloud, security, data, AI, and CX problems with vendor-neutral strategy, architecture, and oversight—never by owning infrastructure.
+              Knetix and Knnect work together as Technology Advisors embedded in the national TSD ecosystem. We solve complex cloud, security, data, AI, and CX problems with vendor-neutral strategy, architecture, and oversight—never by owning infrastructure.
             </p>
 
             {/* Contact Info */}
@@ -167,9 +147,7 @@ export default function EnterpriseFooter() {
 
           {/* Navigation Links */}
           {[
-            { title: 'Solutions', links: navigationLinks.solutions },
-            { title: 'Company', links: navigationLinks.company },
-            { title: 'Resources', links: navigationLinks.resources },
+            { title: 'Navigation', links: navigationLinks.main },
             { title: 'Legal', links: navigationLinks.legal },
           ].map((section, index) => (
             <motion.div

@@ -1,155 +1,175 @@
 import Link from 'next/link';
 
-const pillars = [
-  {
-    title: 'Stealth, Client-Side Advocacy',
-    description:
-      'We operate quietly behind the scenes as your Technology Advisors—no marketing splash, no leadership spotlights, just elite engineering judgment focused on your business outcomes.',
-  },
-  {
-    title: 'Embedded in the TSD Ecosystem',
-    description:
-      'Our relationships with national Technology Services Distributors open access to hundreds of vetted providers across cloud, security, network, CX, and emerging tech.',
-  },
-  {
-    title: 'Engineering-Led Methodology',
-    description:
-      'Every program is led by senior architects who have spent decades solving enterprise IT, security, data, and AI problems. Strategy, architecture, sourcing, and oversight stay in tight alignment.',
-  },
-  {
-    title: 'Outcome & FinOps Discipline',
-    description:
-      'We design financial guardrails, adoption metrics, and governance cadences that keep innovation accountable—from multi-cloud programs to AI readiness and resiliency.',
-  },
-];
-
-const operatingTenets = [
-  {
-    title: 'Vendor-Agnostic Architecture',
-    content:
-      'We sit on the client side of the table, evaluating the strongest options until the right blend of capability, economics, and risk tolerance is proven.',
-  },
-  {
-    title: 'Cloud, Security, Data & AI',
-    content:
-      'Programs span hybrid and multi-cloud, zero-trust security, data modernization, AI/ML readiness, CX/UC transformation, and enterprise automation.',
-  },
-  {
-    title: 'Implementation Oversight',
-    content:
-      'Providers operate the technology; we ensure architecture fidelity, program management rigor, and measurable outcome tracking.',
-  },
-  {
-    title: 'Resiliency & Governance',
-    content:
-      'Continuity planning, policy, compliance, FinOps, and KPI frameworks are baked into every engagement so transformations stick.',
-  },
-];
-
 export default function AboutPage() {
   return (
     <main className="pt-20">
-      {/* Hero */}
+      {/* Hero Section - Matt's Amazon Background */}
       <section className="bg-gradient-to-br from-[#000D33] via-[#0A2E50] to-[#000D33] text-white py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-4 text-center space-y-6">
-          <p className="uppercase tracking-[0.3em] text-white/60 text-sm">Operating in Stealth Mode</p>
+          <p className="uppercase tracking-[0.3em] text-white/60 text-sm">Leadership & Expertise</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-            Technology Advisors (TAs) for Cloud, Security, Data, AI, and CX Programs
+            Built on Amazon-Scale Rigor
           </h1>
           <p className="text-xl text-white/80 leading-relaxed">
-            Knetix is a technology advisory and solutions agency embedded within the national Technology Services
-            Distributor ecosystem. We do not own infrastructure—we design the strategy, architect the approach, curate the
-            providers, and govern delivery so enterprises can move with confidence.
+            Knetix and Knnect are led by Matt Lane, a top Amazon CX Sales Executive with deep expertise in enterprise technology transformations. Our approach combines Amazon's operational excellence with decades of enterprise IT experience.
           </p>
         </div>
       </section>
 
-      {/* Who We Are */}
+      {/* Matt's Background Section */}
       <section className="py-16 md:py-20 lg:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 space-y-10">
-          <div className="space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-wide text-[#00C4B4]">Who We Are</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50]">
-              An engineering-first advisory collective trusted by Fortune and large commercial enterprises.
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Our principals have led multi-billion-dollar technology portfolios, zero-trust programs, global network
-              transformations, CX modernizations, and large-scale data/AI initiatives. Today we channel that experience into
-              an asset-light model—staying invisible, fiercely independent, and accountable only to client outcomes.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {pillars.map((pillar) => (
-              <div
-                key={pillar.title}
-                className="rounded-2xl border border-gray-200 p-6 hover:border-[#00C4B4] hover:shadow-xl transition-all"
-              >
-                <h3 className="text-xl font-semibold text-[#0A2E50] mb-3">{pillar.title}</h3>
-                <p className="text-gray-700 leading-relaxed">{pillar.description}</p>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-[#00C4B4] mb-2">Executive Leadership</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50] mb-4">
+                  Matt Lane: Top Amazon CX Sales Executive
+                </h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  Matt Lane brings exceptional credentials from Amazon, where he served as a top Customer Experience (CX) Sales Executive. His deep understanding of Amazon Connect, AWS architecture, and enterprise-scale customer experience solutions forms the foundation of both Knetix and Knnect.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  At Amazon, Matt was instrumental in helping Fortune 500 companies transform their customer experience operations using Amazon Connect and the broader AWS ecosystem. This hands-on experience with Amazon's rigorous operational standards and customer-centric approach directly informs our methodology.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Today, Matt channels this Amazon-scale rigor into Knetix's broader technology advisory practice, ensuring that every engagement—whether focused on CX, cloud infrastructure, security, or AI—meets the highest standards of engineering excellence and business outcomes.
+                </p>
               </div>
-            ))}
+            </div>
+            <div className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-6">Amazon Pedigree</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <svg className="w-6 h-6 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Top Amazon CX Sales Executive with proven track record</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-6 h-6 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Deep expertise in Amazon Connect and AWS Well-Architected frameworks</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-6 h-6 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Fortune 500 enterprise transformation experience</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-6 h-6 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Vendor-agnostic approach with Amazon-scale operational rigor</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* How We Work */}
+      {/* Two Brands, One Vision */}
       <section className="py-16 md:py-20 lg:py-24 bg-[#F3F5F9]">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12 space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-wide text-[#00C4B4]">Operating Model</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50]">Strategy → Architecture → Providers → Results</h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              We translate board-level mandates into executable blueprints, orchestrate the ideal partner mix through TSD
-              relationships, and remain on point for governance throughout the lifecycle.
+          <div className="text-center space-y-4 mb-12">
+            <p className="text-sm font-semibold uppercase tracking-wide text-[#00C4B4]">Our Approach</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50]">
+              Two Brands, One Vision
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Knetix and Knnect work together as sister companies to solve complex enterprise challenges. This unified approach ensures channel partners understand how both entities collaborate to deliver comprehensive solutions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#00C4B4] hover:shadow-xl transition-all">
+              <h3 className="text-2xl font-bold text-[#0A2E50] mb-4">Knnect</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                <strong>Focus:</strong> Customer Experience (CX) and Amazon Connect
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Knnect specializes exclusively in building high-availability enterprise contact centers with Amazon Connect. This is the core "hook" based on Matt's Amazon background, delivering production-ready environments built for maximum scale.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#00C4B4] hover:shadow-xl transition-all">
+              <h3 className="text-2xl font-bold text-[#0A2E50] mb-4">Knetix</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                <strong>Focus:</strong> Comprehensive Technology Advisory
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Knetix provides broader advisory services covering cloud infrastructure, cybersecurity, data modernization, AI/ML readiness, unified communications, and enterprise automation—everything outside the Amazon Connect ecosystem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Operating Principles */}
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center space-y-4 mb-12">
+            <p className="text-sm font-semibold uppercase tracking-wide text-[#00C4B4]">Our Methodology</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50]">
+              Engineering-Led, Outcome-Focused
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Every program is led by senior architects with decades of enterprise IT experience. We operate as Technology Advisors embedded in the national TSD ecosystem—vendor-agnostic, asset-light, and accountable only to client outcomes.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {operatingTenets.map((tenet) => (
-              <div key={tenet.title} className="bg-white rounded-2xl p-6 shadow-md border border-gray-100 space-y-3">
-                <h3 className="text-lg font-semibold text-[#0A2E50]">{tenet.title}</h3>
-                <p className="text-gray-700 text-sm leading-relaxed">{tenet.content}</p>
+            {[
+              {
+                title: 'Vendor-Agnostic Architecture',
+                description: 'We sit on the client side of the table, evaluating the strongest options until the right blend of capability, economics, and risk tolerance is proven.',
+              },
+              {
+                title: 'Deep Engineering Bench',
+                description: 'Senior architects with decades of enterprise IT, security, data, and AI experience guiding every decision.',
+              },
+              {
+                title: 'Outcome & FinOps Discipline',
+                description: 'We design financial guardrails, adoption metrics, and governance cadences that keep innovation accountable.',
+              },
+              {
+                title: 'Amazon-Scale Rigor',
+                description: "Leveraging Amazon's operational excellence and AWS Well-Architected frameworks to ensure enterprise-grade outcomes.",
+              },
+            ].map((principle, index) => (
+              <div
+                key={index}
+                className="bg-[#F8FAFC] border border-gray-200 rounded-2xl p-6 hover:border-[#00C4B4] hover:shadow-xl transition-all"
+              >
+                <h3 className="text-lg font-semibold text-[#0A2E50] mb-3">{principle.title}</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{principle.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Advisory Plays */}
-      <section className="py-16 md:py-20 lg:py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-4 text-center space-y-6">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[#00C4B4]">Core Focus Areas</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50]">
-            Multi-Cloud & FinOps • Cybersecurity & Zero Trust • Data & AI • CX & Unified Communications • Resiliency &
-            Continuity
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Every engagement blends strategic advisory with deep engineering validation, ensuring that architecture,
-            security, compliance, operational readiness, and financial performance stay synchronized.
-          </p>
-        </div>
-      </section>
-
-      {/* CTA */}
+      {/* CTA Section */}
       <section className="bg-gradient-to-r from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold">Ready to engage a Technology Advisor?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Ready to Engage a Technology Advisor?</h2>
           <p className="text-lg text-white/80 leading-relaxed">
-            Share your mandate—cloud rationalization, AI acceleration, security hardening, CX modernization, or a full
-            resiliency program—and we will build the roadmap, curate the partners, and govern delivery.
+            Whether you need Amazon Connect expertise through Knnect or comprehensive technology advisory through Knetix, we bring Amazon-scale rigor to every engagement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="inline-block bg-white text-[#0A2E50] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Book a Strategy Session
+              Speak with a Technology Advisor
             </Link>
             <Link
-              href="/solutions"
+              href="/services"
               className="inline-block border border-white/60 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Explore Advisory Plays
+              Explore Our Services
             </Link>
           </div>
         </div>
@@ -157,4 +177,3 @@ export default function AboutPage() {
     </main>
   );
 }
-

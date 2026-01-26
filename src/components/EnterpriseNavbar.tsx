@@ -4,12 +4,11 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import KnetixLogo from './KnetixLogo';
-import { ChevronDown, Shield, Cloud, Network, Phone, Server, BookOpen, Users, Briefcase, Mail, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function EnterpriseNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,22 +17,6 @@ export default function EnterpriseNavbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const solutions = [
-    { name: 'Network Performance', href: '/solutions/network-performance', icon: <Network className="w-5 h-5" />, description: 'Optimize connectivity' },
-    { name: 'Cybersecurity', href: '/solutions/cybersecurity', icon: <Shield className="w-5 h-5" />, description: 'Advanced threat protection' },
-    { name: 'Cloud Infrastructure', href: '/solutions/cloud-infrastructure', icon: <Cloud className="w-5 h-5" />, description: 'Scalable cloud solutions' },
-    { name: 'Unified Communications', href: '/solutions/unified-communications', icon: <Phone className="w-5 h-5" />, description: 'Seamless collaboration' },
-    { name: 'Managed Services', href: '/solutions/managed-services', icon: <Server className="w-5 h-5" />, description: 'Advisory governance' },
-    { name: 'Contact Center', href: '/solutions/contact-center', icon: <Users className="w-5 h-5" />, description: 'Customer experience' },
-  ];
-
-  const company = [
-    { name: 'About Us', href: '/about', icon: <Briefcase className="w-5 h-5" />, description: 'Our story & mission' },
-    { name: 'Insights', href: '/insights', icon: <BookOpen className="w-5 h-5" />, description: 'Industry expertise' },
-    { name: 'Careers', href: '/careers', icon: <Users className="w-5 h-5" />, description: 'Join our team' },
-    { name: 'Contact', href: '/contact', icon: <Mail className="w-5 h-5" />, description: 'Get in touch' },
-  ];
 
   return (
     <motion.nav
@@ -62,114 +45,15 @@ export default function EnterpriseNavbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {/* Solutions Mega Menu */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveMegaMenu('solutions')}
-              onMouseLeave={() => setActiveMegaMenu(null)}
-            >
-              <button className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-semibold transition-colors">
-                Solutions
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeMegaMenu === 'solutions' ? 'rotate-180' : ''}`} />
-              </button>
-              
-              <AnimatePresence>
-                {activeMegaMenu === 'solutions' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    className="fixed left-1/2 -translate-x-1/2 top-24 w-[900px] max-w-[90vw] bg-white rounded-2xl shadow-2xl border border-gray-200 p-8 z-50"
-                  >
-                    <div className="grid grid-cols-3 gap-4 mb-6">
-                      {solutions.map((solution, index) => (
-                        <Link
-                          key={index}
-                          href={solution.href}
-                          onClick={() => setActiveMegaMenu(null)}
-                          className="group flex flex-col items-center text-center p-6 rounded-xl hover:bg-gradient-to-br hover:from-blue-50 hover:to-cyan-50 transition-all hover:shadow-lg"
-                        >
-                          <div 
-                            className="flex-shrink-0 p-4 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 text-white mb-4 shadow-lg"
-                          >
-                            {solution.icon}
-                          </div>
-                          <div className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
-                            {solution.name}
-                          </div>
-                          <div className="text-sm text-gray-500">{solution.description}</div>
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="pt-6 border-t border-gray-200 flex justify-center">
-                      <Link
-                        href="/solutions"
-                        onClick={() => setActiveMegaMenu(null)}
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:shadow-lg transition-all"
-                      >
-                        View All Solutions
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Services */}
+            <Link href="/" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">
+              Home
+            </Link>
             <Link href="/services" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">
               Services
             </Link>
-
-            {/* Company Mega Menu */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveMegaMenu('company')}
-              onMouseLeave={() => setActiveMegaMenu(null)}
-            >
-              <button className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-semibold transition-colors">
-                Company
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeMegaMenu === 'company' ? 'rotate-180' : ''}`} />
-              </button>
-              
-              <AnimatePresence>
-                {activeMegaMenu === 'company' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    className="fixed left-1/2 -translate-x-1/2 top-24 w-[600px] max-w-[90vw] bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 z-50"
-                  >
-                    <div className="grid grid-cols-2 gap-3">
-                      {company.map((item, index) => (
-                        <Link
-                          key={index}
-                          href={item.href}
-                          onClick={() => setActiveMegaMenu(null)}
-                          className="group flex items-start gap-4 p-4 rounded-xl hover:bg-gradient-to-br hover:from-blue-50 hover:to-cyan-50 transition-all hover:shadow-md"
-                        >
-                          <div 
-                            className="flex-shrink-0 p-3 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600 text-white shadow-md"
-                          >
-                            {item.icon}
-                          </div>
-                          <div>
-                            <div className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">
-                              {item.name}
-                            </div>
-                            <div className="text-sm text-gray-500">{item.description}</div>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* CTA Button */}
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">
+              About
+            </Link>
             <Link href="/contact">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -237,58 +121,28 @@ export default function EnterpriseNavbar() {
             className="lg:hidden bg-white border-t border-gray-200 overflow-y-auto"
             style={{ maxHeight: 'calc(100vh - 80px)' }}
           >
-            <div className="container-clean py-6 space-y-4">
-              <div>
-                <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-3 px-3">Solutions</div>
-                <div className="space-y-2">
-                  {solutions.map((solution, index) => (
-                    <Link
-                      key={index}
-                      href={solution.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 text-white flex-shrink-0">
-                        {solution.icon}
-                      </div>
-                      <span className="font-semibold text-sm text-gray-900">{solution.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              <div className="pt-4 border-t border-gray-200">
-                <Link
-                  href="/services"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                >
-                  <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 text-white flex-shrink-0">
-                    <Server className="w-5 h-5" />
-                  </div>
-                  <span className="font-semibold text-sm text-gray-900">Services</span>
-                </Link>
-              </div>
-
-              <div className="pt-4 border-t border-gray-200">
-                <div className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-3 px-3">Company</div>
-                <div className="space-y-2">
-                  {company.map((item, index) => (
-                    <Link
-                      key={index}
-                      href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 text-white flex-shrink-0">
-                        {item.icon}
-                      </div>
-                      <span className="font-semibold text-sm text-gray-900">{item.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
+            <div className="container-clean py-6 space-y-2">
+              <Link
+                href="/"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-gray-900"
+              >
+                Home
+              </Link>
+              <Link
+                href="/services"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-gray-900"
+              >
+                Services
+              </Link>
+              <Link
+                href="/about"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-gray-900"
+              >
+                About
+              </Link>
               <div className="pt-4 pb-2 border-t border-gray-200">
                 <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                   <button className="btn btn-primary w-full justify-center text-sm">

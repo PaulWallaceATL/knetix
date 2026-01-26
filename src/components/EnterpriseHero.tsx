@@ -139,7 +139,7 @@ export default function EnterpriseHero() {
             </motion.div>
           </Link>
 
-          <Link href="/solutions">
+          <Link href="/services">
             <motion.div
               whileHover={{ 
                 scale: 1.05, 
