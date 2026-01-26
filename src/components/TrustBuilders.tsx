@@ -71,19 +71,6 @@ export default function TrustBuilders() {
       ],
       icon: <Shield className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
-    },
-    {
-      client: "Digital Commerce Platform",
-      industry: "Retail & Technology",
-      challenge: "Complex contact center and data transformation initiatives lacking governance",
-      solution: "Experience strategy, provider selection, and program oversight across CCaaS + analytics",
-      results: [
-        { metric: "40%", label: "Faster Rollout" },
-        { metric: "25%", label: "OpEx Reduction" },
-        { metric: "Unified", label: "Customer Journey" }
-      ],
-      icon: <Zap className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
     }
   ];
 
@@ -213,7 +200,7 @@ export default function TrustBuilders() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
             {caseStudies.map((study, index) => (
               <motion.div
                 key={index}
