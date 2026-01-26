@@ -70,6 +70,39 @@ const offerings = [
     href: '/services',
     color: 'teal',
   },
+  {
+    title: 'Connectivity & Global Networks',
+    description: 'We engineer high-availability, low-latency networks to ensure your critical Cloud and AI applications never underperform.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+      </svg>
+    ),
+    href: '/services',
+    color: 'purple',
+  },
+  {
+    title: 'Customer Experience (CX) Platforms',
+    description: 'We engineer world-class engagement platforms that turn customer experience into a measurable competitive advantage.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+    ),
+    href: '/services',
+    color: 'orange',
+  },
+  {
+    title: 'IT Lifecycle & Governance',
+    description: 'We optimize commercial constructs and lifecycle management to eliminate waste and ensure technology spend delivers guaranteed outcomes.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+      </svg>
+    ),
+    href: '/services',
+    color: 'teal',
+  },
 ];
 
 const colorClasses = {
