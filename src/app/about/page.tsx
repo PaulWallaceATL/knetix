@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function AboutPage() {
   return (
     <main className="pt-20">
-      {/* Hero Section - Matt's Amazon Background */}
+      {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#000D33] via-[#0A2E50] to-[#000D33] text-white py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-4 text-center space-y-6">
           <p className="uppercase tracking-[0.3em] text-white/60 text-sm">Leadership & Expertise</p>
@@ -11,12 +11,12 @@ export default function AboutPage() {
             Built on Amazon-Scale Rigor
           </h1>
           <p className="text-xl text-white/80 leading-relaxed">
-            Knetix and Knnect are led by Matt Lane, a top Amazon CX Sales Executive with deep expertise in enterprise technology transformations. Our approach combines Amazon&apos;s operational excellence with decades of enterprise IT experience.
+            Knetix and Knnect are led by top Amazon CX Sales Executives with deep expertise in enterprise technology transformations. Our approach combines Amazon&apos;s operational excellence with decades of enterprise IT experience.
           </p>
         </div>
       </section>
 
-      {/* Matt's Background Section */}
+      {/* Leadership Section */}
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -24,16 +24,16 @@ export default function AboutPage() {
               <div>
                 <p className="text-sm font-semibold uppercase tracking-wide text-[#00C4B4] mb-2">Executive Leadership</p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50] mb-4">
-                  Matt Lane: Top Amazon CX Sales Executive
+                  Top Amazon CX Sales Executives
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  Matt Lane brings exceptional credentials from Amazon, where he served as a top Customer Experience (CX) Sales Executive. His deep understanding of Amazon Connect, AWS architecture, and enterprise-scale customer experience solutions forms the foundation of both Knetix and Knnect.
+                  Our leadership team brings exceptional credentials from Amazon, where they served as top Customer Experience (CX) Sales Executives. Their deep understanding of Amazon Connect, AWS architecture, and enterprise-scale customer experience solutions forms the foundation of both Knetix and Knnect.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  At Amazon, Matt was instrumental in helping Fortune 500 companies transform their customer experience operations using Amazon Connect and the broader AWS ecosystem. This hands-on experience with Amazon&apos;s rigorous operational standards and customer-centric approach directly informs our methodology.
+                  At Amazon, our team was instrumental in helping Fortune 500 companies transform their customer experience operations using Amazon Connect and the broader AWS ecosystem. This hands-on experience with Amazon&apos;s rigorous operational standards and customer-centric approach directly informs our methodology.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Today, Matt channels this Amazon-scale rigor into Knetix&apos;s broader technology advisory practice, ensuring that every engagement—whether focused on CX, cloud infrastructure, security, or AI—meets the highest standards of engineering excellence and business outcomes.
+                  Today, we channel this Amazon-scale rigor into Knetix&apos;s broader technology advisory practice, ensuring that every engagement—whether focused on CX, cloud infrastructure, security, or AI—meets the highest standards of engineering excellence and business outcomes.
                 </p>
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function AboutPage() {
                   <svg className="w-6 h-6 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Top Amazon CX Sales Executive with proven track record</span>
+                  <span>Top Amazon CX Sales Executives with proven track records</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-6 h-6 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +90,7 @@ export default function AboutPage() {
                 <strong>Focus:</strong> Customer Experience (CX) and Amazon Connect
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Knnect specializes exclusively in building high-availability enterprise contact centers with Amazon Connect. This is the core &quot;hook&quot; based on Matt&apos;s Amazon background, delivering production-ready environments built for maximum scale.
+                Knnect specializes exclusively in building high-availability enterprise contact centers with Amazon Connect. This is the core &quot;hook&quot; based on our team&apos;s Amazon background, delivering production-ready environments built for maximum scale.
               </p>
             </div>
 
