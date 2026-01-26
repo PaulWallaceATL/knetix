@@ -12,14 +12,8 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
   
-  // Optimize fonts
-  optimizeFonts: true,
-  
   // Compress output
   compress: true,
-  
-  // Enable SWC minification
-  swcMinify: true,
   
   // Production optimizations
   poweredByHeader: false,
