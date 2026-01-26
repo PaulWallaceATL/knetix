@@ -172,8 +172,8 @@ export default function EnterpriseHero() {
           {[
             { 
               icon: <TrendingUp className="w-5 h-5 md:w-6 md:h-6" />, 
-              title: "Vendor-Agnostic Architecture", 
-              description: "Design multi-cloud, network, CX, and edge strategies backed by the strongest providers in the TSD ecosystem.",
+              title: "Unbiased Intelligence. Interoperable Design.", 
+              description: "Architecting the Future of Cloud, Security, AI, and CX. We engineer the strategy and architecture that drive complex enterprise change. We deliver unbiased, high-performance outcomes for the world&apos;s most demanding organizations.",
               color: "from-green-400 to-emerald-500"
             },
             { 
