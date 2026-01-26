@@ -10,21 +10,21 @@ export default function InteractiveDashboard() {
     {
       end: 325,
       suffix: '+',
-      label: 'Ecosystem Providers Aligned',
+      label: 'Technology Suppliers are in our network.',
       icon: <Users className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      end: 180,
+      end: 40,
       suffix: '+',
-      label: 'Enterprise Programs Orchestrated',
+      label: 'Funding Programs available through the major Cloud providers',
       icon: <TrendingUp className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-500'
     },
     {
-      end: 45,
+      end: 60,
       suffix: '+',
-      label: 'Regulated Industries Served',
+      label: 'Certified Engineers available on-demand',
       icon: <Globe className="w-6 h-6" />,
       color: 'from-purple-500 to-pink-500'
     },
@@ -69,11 +69,11 @@ export default function InteractiveDashboard() {
           </motion.div>
           
           <h2 className="text-h1 mb-6">
-            Outcomes That <span className="gradient-text-gold">Stand Up</span> in the Boardroom
+            Outcomes That <span className="gradient-text-gold">Command</span> the Boardroom
           </h2>
           
           <p className="text-body-lg text-white/80 max-w-3xl mx-auto">
-            We measure what matters—cost optimization, resiliency, security posture, and adoption. These are the signals our Technology Advisors use to keep every transformation accountable.
+            We weaponize data to enforce accountability. By tracking the critical signals of cost optimization, resilience, and security posture, our advisors ensure every transformation is a verifiable success.
           </p>
         </IntersectionObserverWrapper>
 
