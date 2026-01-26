@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import KnetixLogo from './KnetixLogo';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube, ArrowRight } from 'lucide-react';
+import { Mail, Linkedin, Twitter, Facebook, Instagram, Youtube, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 export default function EnterpriseFooter() {
@@ -105,10 +105,9 @@ export default function EnterpriseFooter() {
 
       {/* Main Footer Content */}
       <div className="relative z-10 container-clean pt-16 md:pt-20 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16">
           {/* Company Info */}
           <motion.div
-            className="lg:col-span-2"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -116,63 +115,42 @@ export default function EnterpriseFooter() {
           >
             <KnetixLogo size="lg" className="mb-6" />
             <p className="text-body text-white/70 mb-8 leading-relaxed">
-              Knetix and Knnect work together as Technology Advisors embedded in the national TSD ecosystem. We solve complex cloud, security, data, AI, and CX problems with vendor-neutral strategy, architecture, and oversight—never by owning infrastructure.
+              We engineer vendor-neutral architectures for Cloud, Security, and AI. By owning no infrastructure, we eliminate bias to focus exclusively on one thing: your outcome.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-4">
-              <div className="flex items-start gap-3 group cursor-pointer">
-                <MapPin className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
-                <div className="text-sm text-white/70 group-hover:text-white transition-colors">
-                  <div className="font-semibold">Strategic Operations</div>
-                  <div>Distributed national footprint with primary presence in Dallas-Fort Worth.</div>
-                </div>
-              </div>
-
               <a href="mailto:info@knetix.io" className="flex items-center gap-3 group">
                 <Mail className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span className="text-sm text-white/70 group-hover:text-cyan-400 transition-colors">
                   info@knetix.io
                 </span>
               </a>
-
-              <a href="tel:+15551234567" className="flex items-center gap-3 group">
-                <Phone className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                <span className="text-sm text-white/70 group-hover:text-cyan-400 transition-colors">
-                  (555) 123-4567
-                </span>
-              </a>
             </div>
           </motion.div>
 
           {/* Navigation Links */}
-          {[
-            { title: 'Navigation', links: navigationLinks.main },
-            { title: 'Legal', links: navigationLinks.legal },
-          ].map((section, index) => (
-            <motion.div
-              key={section.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: (index + 1) * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-h4 mb-6">{section.title}</h3>
-              <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-body-sm text-white/70 hover:text-cyan-400 transition-colors group flex items-center gap-2"
-                    >
-                      <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-h4 mb-6">Navigation</h3>
+            <ul className="space-y-3">
+              {navigationLinks.main.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-body-sm text-white/70 hover:text-cyan-400 transition-colors group flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
         </div>
 
         {/* Trust Pillars */}
