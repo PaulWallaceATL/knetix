@@ -74,7 +74,7 @@ export default function EnterpriseHero() {
               ease: "easeInOut"
             }}
           >
-            Technology Advisors for Complex Change.
+            The Blueprint for Complex Digital Transformation.
           </motion.span>
           <motion.span 
             className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent"
@@ -91,7 +91,7 @@ export default function EnterpriseHero() {
               ease: "linear"
             }}
           >
-            Strategy. Architecture. Outcomes.
+            Elite IT Strategy. Global Architecture. Accelerated Outcomes.
           </motion.span>
         </motion.h1>
 
@@ -102,7 +102,7 @@ export default function EnterpriseHero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-lg md:text-xl lg:text-2xl text-white/70 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed font-light px-4"
         >
-          Knetix operates as an elite Technology Advisor inside the national TSD ecosystem. With decades of enterprise IT, deep engineering rigor, and a vendor-agnostic mindset, we solve the hardest cloud, security, data, and AI problems—without owning data centers or pushing proprietary infrastructure.
+          Knetix is an elite IT strategy and engineering firm for high-stakes technology transitions. We don&apos;t sell infrastructure; we engineer certainty. Leveraging a global intelligence ecosystem and Amazon-scale rigor, we architect unbiased solutions for the enterprise&apos;s most complex Cloud, Security, and AI challenges.
         </motion.p>
 
           {/* CTA Buttons - with 3D depth */}
@@ -155,7 +155,7 @@ export default function EnterpriseHero() {
             >
               <span className="flex items-center gap-2 md:gap-3 text-white font-semibold text-base md:text-lg">
                 <Sparkles className="w-4 h-4 md:w-5 md:h-5" />
-                Explore Advisory Plays
+                Explore IT Services
               </span>
             </motion.div>
           </Link>
