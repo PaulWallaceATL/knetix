@@ -13,8 +13,8 @@ export default function TermsPage() {
           </p>
           <p>
             For any questions regarding our terms, please contact us at{' '}
-            <a href="mailto:info@knetix.com" className="text-[#00C4B4] hover:underline">
-              info@knetix.com
+            <a href="mailto:info@knetix.io" className="text-[#00C4B4] hover:underline">
+              info@knetix.io
             </a>.
           </p>
         </div>

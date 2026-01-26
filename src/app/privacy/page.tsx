@@ -13,8 +13,8 @@ export default function PrivacyPage() {
           </p>
           <p>
             For any privacy-related questions or concerns, please contact us at{' '}
-            <a href="mailto:info@knetix.com" className="text-[#00C4B4] hover:underline">
-              info@knetix.com
+            <a href="mailto:info@knetix.io" className="text-[#00C4B4] hover:underline">
+              info@knetix.io
             </a>.
           </p>
         </div>

@@ -124,8 +124,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="apple-text-footnote text-gray-500 mb-1">Email</div>
-                  <a href="mailto:info@knetix.com" className="apple-text-body text-blue-400 hover:text-blue-300 transition-colors duration-300">
-                    info@knetix.com
+                  <a href="mailto:info@knetix.io" className="apple-text-body text-blue-400 hover:text-blue-300 transition-colors duration-300">
+                    info@knetix.io
                   </a>
                 </div>
               </div>

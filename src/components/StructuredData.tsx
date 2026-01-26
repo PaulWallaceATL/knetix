@@ -18,7 +18,7 @@ export default function StructuredData() {
       '@type': 'ContactPoint',
       telephone: '+1-555-123-4567',
       contactType: 'customer service',
-      email: 'info@knetix.com',
+      email: 'info@knetix.io',
       availableLanguage: 'English',
     },
     sameAs: [

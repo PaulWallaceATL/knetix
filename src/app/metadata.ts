@@ -27,7 +27,7 @@ export const siteMetadata = {
     country: 'United States',
   },
   contact: {
-    email: 'info@knetix.com',
+    email: 'info@knetix.io',
     phone: '(555) 123-4567',
   },
   social: {

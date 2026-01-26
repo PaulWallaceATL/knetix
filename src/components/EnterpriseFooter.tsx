@@ -129,10 +129,10 @@ export default function EnterpriseFooter() {
                 </div>
               </div>
 
-              <a href="mailto:info@knetix.com" className="flex items-center gap-3 group">
+              <a href="mailto:info@knetix.io" className="flex items-center gap-3 group">
                 <Mail className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span className="text-sm text-white/70 group-hover:text-cyan-400 transition-colors">
-                  info@knetix.com
+                  info@knetix.io
                 </span>
               </a>
 

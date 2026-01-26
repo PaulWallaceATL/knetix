@@ -15,8 +15,8 @@ export default function CookiesPage() {
           </p>
           <p>
             For any questions about our use of cookies, please contact us at{' '}
-            <a href="mailto:info@knetix.com" className="text-[#00C4B4] hover:underline">
-              info@knetix.com
+            <a href="mailto:info@knetix.io" className="text-[#00C4B4] hover:underline">
+              info@knetix.io
             </a>.
           </p>
         </div>
