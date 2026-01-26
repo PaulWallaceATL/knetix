@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import KnetixLogo from './KnetixLogo';
-import { Mail, Linkedin, Twitter, Facebook, Instagram, Youtube, ArrowRight } from 'lucide-react';
+import { Mail, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 export default function EnterpriseFooter() {
@@ -36,13 +36,6 @@ export default function EnterpriseFooter() {
     ],
   };
 
-  const socialLinks = [
-    { name: 'LinkedIn', icon: <Linkedin className="w-5 h-5" />, href: '#', color: 'hover:bg-blue-600' },
-    { name: 'Twitter', icon: <Twitter className="w-5 h-5" />, href: '#', color: 'hover:bg-sky-500' },
-    { name: 'Facebook', icon: <Facebook className="w-5 h-5" />, href: '#', color: 'hover:bg-blue-700' },
-    { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, href: '#', color: 'hover:bg-pink-600' },
-    { name: 'Youtube', icon: <Youtube className="w-5 h-5" />, href: '#', color: 'hover:bg-red-600' },
-  ];
 
   return (
     <footer className="relative bg-gradient-to-br from-[#000D33] via-[#0A2E50] to-[#000D33] text-white overflow-hidden mt-20 md:mt-24 lg:mt-32">
@@ -163,10 +156,9 @@ export default function EnterpriseFooter() {
         >
           <div className="flex flex-wrap justify-center items-center gap-12">
             {[
-              { title: "Vendor-Neutral TA", subtitle: "Strategy • Architecture • Oversight" },
-              { title: "300+ Providers", subtitle: "TSD Ecosystem Access" },
+              { title: "Outcome Driven IT", subtitle: "Advisory", description: "Strategy - Advisory - Oversight" },
+              { title: "350+ Technology", subtitle: "Vendors", description: "Global Access to the best technology" },
               { title: "Engineering First", subtitle: "Deep Cloud • Security • Data • AI" },
-              { title: "Outcome-Driven", subtitle: "FinOps • Security • CX • Resiliency" },
             ].map((badge, index) => (
               <motion.div
                 key={badge.title}
@@ -180,9 +172,16 @@ export default function EnterpriseFooter() {
                 <div className="text-2xl font-bold text-cyan-400 group-hover:text-cyan-300 transition-colors">
                   {badge.title}
                 </div>
-                <div className="text-xs text-white/50 group-hover:text-white/70 transition-colors">
-                  {badge.subtitle}
-                </div>
+                {badge.subtitle && (
+                  <div className="text-xs text-white/50 group-hover:text-white/70 transition-colors">
+                    {badge.subtitle}
+                  </div>
+                )}
+                {badge.description && (
+                  <div className="text-xs text-white/50 group-hover:text-white/70 transition-colors mt-1">
+                    {badge.description}
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
@@ -190,7 +189,7 @@ export default function EnterpriseFooter() {
 
         {/* Bottom Section */}
         <motion.div
-          className="border-t border-white/10 pt-8 pb-8 flex flex-col lg:flex-row justify-between items-center gap-6"
+          className="border-t border-white/10 pt-8 pb-8 flex flex-col lg:flex-row justify-center items-center gap-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -198,23 +197,6 @@ export default function EnterpriseFooter() {
         >
           <div className="text-body-sm text-white/50">
             &copy; {currentYear} Knetix. All rights reserved.
-          </div>
-
-          {/* Social Links */}
-          <div className="flex items-center gap-3">
-            {socialLinks.map((social) => (
-              <motion.a
-                key={social.name}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -3 }}
-                whileTap={{ scale: 0.95 }}
-                className={`p-3 rounded-xl bg-white/5 border border-white/10 text-white/70 hover:text-white hover:border-white/30 transition-all ${social.color}`}
-              >
-                {social.icon}
-              </motion.a>
-            ))}
           </div>
         </motion.div>
       </div>
