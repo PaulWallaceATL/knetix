@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 const offerings = [
   {
-    title: 'Multi-Cloud Networking & Resiliency',
-    description: 'Engineer cloud, edge, and campus connectivity with vendor-agnostic designs, zero-trust guardrails, and TSD-sourced partners.',
+    title: 'Cloud & Edge Infrastructure',
+    description: 'We engineer resilient, vendor-neutral infrastructure designed for enterprise scale and absolute data control',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -16,8 +16,8 @@ const offerings = [
     color: 'blue',
   },
   {
-    title: 'Cybersecurity & Governance',
-    description: 'Bring security architecture, identity, and compliance programs under one roadmap backed by proven ecosystem providers.',
+    title: 'Cybersecurity & Resilience',
+    description: 'We move beyond point solutions to engineer Zero Trust frameworks that protect your enterprise and ensure operational resilience.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -27,11 +27,11 @@ const offerings = [
     color: 'red',
   },
   {
-    title: 'Unified Collaboration',
-    description: 'Reimagine workforce experiences across voice, video, messaging, and workflow platforms with measurable adoption plans.',
+    title: 'Applied AI & Data Intelligence',
+    description: 'We transform fragmented data into automated workflows and real-time intelligence for faster, better decision-making.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
       </svg>
     ),
     href: '/services',
@@ -86,18 +86,30 @@ export default function KeyOfferings() {
     <div>
         {/* Header */}
         <motion.div 
-          className="text-center space-y-clean-lg mb-16"
+          className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="apple-text-title1 text-gray-900">
-            Advisory Plays Built for Modern Enterprises
-          </h2>
-          <p className="apple-text-body text-gray-600 max-w-3xl mx-auto">
-            We translate board-level mandates into pragmatic strategies for cloud, security, AI, data, and customer experience—aligning the right TSD partners, commercial constructs, and governance models to protect outcomes and optimize spend.
-          </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="text-center lg:text-left space-y-clean-lg">
+              <h2 className="apple-text-title1 text-gray-900">
+                Advisory Plays Built for Modern Enterprises
+              </h2>
+              <p className="apple-text-body text-gray-600">
+                We translate board-level mandates into pragmatic strategies for cloud, security, AI, data, and customer experience—aligning the right TSD partners, commercial constructs, and governance models to protect outcomes and optimize spend.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                Unbiased Strategy. Proven Outcomes.
+              </h3>
+              <p className="apple-text-body text-gray-600 leading-relaxed">
+                We bridge the gap between Board-level vision and technical execution. By architecting high-performance strategies for Cloud, Security, AI, and CX, we eliminate vendor bias to engineer certainty. We don&apos;t just optimize spend; we secure your most critical business outcomes.
+              </p>
+            </div>
+          </div>
         </motion.div>
 
         {/* Enhanced Cards Grid with Scroll Animations */}
