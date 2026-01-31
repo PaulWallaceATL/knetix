@@ -106,7 +106,7 @@ export default function EnterpriseFooter() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <KnetixLogo size="lg" className="mb-6" />
+            <KnetixLogo size="lg" variant="light" className="mb-6" />
             <p className="text-body text-white/70 mb-8 leading-relaxed">
               We engineer vendor-neutral architectures for Cloud, Security, and AI. By owning no infrastructure, we eliminate bias to focus exclusively on one thing: your outcome.
             </p>

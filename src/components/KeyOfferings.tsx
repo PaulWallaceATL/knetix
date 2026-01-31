@@ -214,25 +214,6 @@ export default function KeyOfferings() {
                     </motion.p>
                   </div>
 
-                  {/* Animated Arrow */}
-                  <motion.div 
-                    className="mt-6 flex items-center text-blue-600 group-hover:text-purple-600 transition-colors duration-300 relative z-10"
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <span className="apple-text-callout font-medium">Learn more</span>
-                    <motion.svg 
-                      className="w-4 h-4 ml-2" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                      whileHover={{ x: 3 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </motion.svg>
-                  </motion.div>
-
                   {/* Hover Effect Overlay */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"

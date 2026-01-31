@@ -4,7 +4,6 @@ import "./globals.css";
 import EnterpriseNavbar from "@/components/EnterpriseNavbar";
 import EnterpriseFooter from "@/components/EnterpriseFooter";
 import StructuredData from "@/components/StructuredData";
-import LiveChatWidget from "@/components/LiveChatWidget";
 import ScrollToTop from "@/components/ScrollToTop";
 import CookieConsent from "@/components/CookieConsent";
 
@@ -134,7 +133,6 @@ export default function RootLayout({
         <EnterpriseNavbar />
         {children}
         <EnterpriseFooter />
-        <LiveChatWidget />
         <ScrollToTop />
         <CookieConsent />
       </body>

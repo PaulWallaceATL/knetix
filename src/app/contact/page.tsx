@@ -15,7 +15,6 @@ export default function ContactPage() {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -55,35 +54,49 @@ export default function ContactPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validateForm()) {
       return;
     }
 
-    setIsSubmitting(true);
+    const partnerTypeLabels: Record<string, string> = {
+      'channel-partner': 'Channel Partner / Referrer',
+      'enterprise-client': 'Enterprise Client',
+      'prospect': 'Prospect / Evaluating Services',
+      'other': 'Other',
+    };
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        company: '',
-        partnerType: '',
-        message: '',
-      });
+    const bodyLines = [
+      `First Name: ${formData.firstName}`,
+      `Last Name: ${formData.lastName}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      `Company: ${formData.company}`,
+      `I am a: ${partnerTypeLabels[formData.partnerType] || formData.partnerType || 'Not specified'}`,
+      '',
+      'Message or Project Details:',
+      formData.message,
+    ];
 
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1000);
+    const subject = `Client Inquiry from ${formData.firstName} ${formData.lastName} - ${formData.company}`;
+    const body = bodyLines.join('\n');
+
+    const mailtoUrl = `mailto:info@knetix.io?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+
+    setSubmitSuccess(true);
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      company: '',
+      partnerType: '',
+      message: '',
+    });
+    setTimeout(() => setSubmitSuccess(false), 5000);
   };
 
   return (
@@ -107,16 +120,16 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-bold text-[#0A2E50] mb-4">
-                Partner & Client Inquiry
+                Client Inquiry
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Channel partners: Use this form to refer clients or explore collaboration opportunities. Enterprise clients: Share your technology mandate and a senior Technology Advisor will respond within one business day. For confidential or urgent programs, include secure contact preferences.
+                Share your technology mandate and a senior Technology Advisor will respond within one business day.
               </p>
 
               {submitSuccess && (
                 <div className="mb-6 bg-green-50 border-l-4 border-green-500 p-4 rounded">
                   <p className="text-green-700 font-semibold">
-                    Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.
+                    Your email client should open with the message pre-filled. Please complete and send the email to info@knetix.io.
                   </p>
                 </div>
               )}
@@ -269,10 +282,9 @@ export default function ContactPage() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-[#FF8C00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-[#FF8C00] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#e67e00] transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  Send Message
                 </button>
               </form>
             </div>
@@ -283,7 +295,7 @@ export default function ContactPage() {
                 Contact Information
               </h2>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                Channel partners and enterprise clients: Reach us through any of the channels below. We keep engagements discreet and focus solely on the outcomes that matter to your organization or your clients.
+                We keep engagements discreet and focus solely on the outcomes that matter to your organization or your clients.
               </p>
 
               {/* Contact Details */}
@@ -297,7 +309,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-[#0A2E50] mb-1">Strategic Operations</h3>
-                    <p className="text-gray-700">Distributed advisory team with primary presence in Dallas–Fort Worth.</p>
+                    <p className="text-gray-700">Distributed advisory team with primary presence in California.</p>
                   </div>
                 </div>
 

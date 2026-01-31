@@ -4,12 +4,14 @@ interface KnetixLogoProps {
   className?: string;
   showText?: boolean;
   size?: 'sm' | 'md' | 'lg';
+  variant?: 'default' | 'light';
 }
 
 export default function KnetixLogo({ 
   className = '', 
   showText = true, 
-  size = 'md' 
+  size = 'md',
+  variant = 'default'
 }: KnetixLogoProps) {
   const sizeClasses = {
     sm: 'w-6 h-6',
@@ -58,7 +60,7 @@ export default function KnetixLogo({
       
       {/* Logo Text */}
       {showText && (
-        <span className={`font-bold text-[#0A2E50] ${textSizes[size]} tracking-tight`}>
+        <span className={`font-bold ${variant === 'light' ? 'text-white' : 'text-[#0A2E50]'} ${textSizes[size]} tracking-tight`}>
           Knetix
         </span>
       )}
