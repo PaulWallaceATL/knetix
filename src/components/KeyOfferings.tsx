@@ -125,16 +125,8 @@ export default function KeyOfferings() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="text-center lg:text-left space-y-clean-lg">
-              <h2 className="apple-text-title1 text-gray-900">
-                Advisory Plays Built for Modern Enterprises
-              </h2>
-              <p className="apple-text-body text-gray-600">
-                We translate board-level mandates into pragmatic strategies for cloud, security, AI, data, and customer experience—aligning the right TSD partners, commercial constructs, and governance models to protect outcomes and optimize spend.
-              </p>
-            </div>
-            <div className="space-y-4">
+          <div>
+            <div className="space-y-4 max-w-3xl">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
                 Unbiased Strategy. Proven Outcomes.
               </h3>
@@ -145,7 +137,7 @@ export default function KeyOfferings() {
           </div>
         </motion.div>
 
-        {/* Enhanced Cards Grid with Scroll Animations */}
+        {/* Cards Grid */}
         <motion.div 
           className="grid-clean"
           initial={{ opacity: 0 }}

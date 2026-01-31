@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-const knnectServices = [
+const cxServices = [
   {
-    title: 'Amazon Connect Architecture',
-    description: 'Production-ready Amazon Connect environments built for maximum scale, aligned with rigorous AWS Well-Architected frameworks to guarantee security, reliability, and performance.',
+    title: 'Cloud Connect Architecture',
+    description: 'Production-ready contact center environments built for maximum scale, aligned with rigorous Well-Architected frameworks to guarantee security, reliability, and performance.',
   },
   {
     title: 'High-Availability Contact Centers',
@@ -11,7 +11,7 @@ const knnectServices = [
   },
   {
     title: 'CX Strategy & Implementation',
-    description: 'End-to-end customer experience transformation leveraging Amazon Connect and AWS ecosystem to deliver measurable business outcomes.',
+    description: 'End-to-end customer experience transformation leveraging cloud-based contact center and ecosystem solutions to deliver measurable business outcomes.',
   },
 ];
 
@@ -44,31 +44,31 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#000D33] via-[#0A2E50] to-[#000D33] text-white py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-4 text-center space-y-6">
-          <p className="uppercase tracking-[0.3em] text-white/60 text-sm">Two Brands, One Vision</p>
+          <p className="uppercase tracking-[0.3em] text-white/60 text-sm">Technology Advisory</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
             Technology Advisory Services
           </h1>
           <p className="text-xl text-white/80 leading-relaxed">
-            Knetix and Knnect work together to solve complex enterprise challenges. Knnect specializes in Customer Experience and Amazon Connect, while Knetix provides comprehensive technology advisory across cloud, security, data, AI, and more.
+            Knetix solves complex enterprise challenges through Customer Experience and contact center expertise, along with comprehensive technology advisory across cloud, security, data, AI, and more.
           </p>
         </div>
       </section>
 
-      {/* Knnect Section - CX & Amazon Connect */}
+      {/* CX & Contact Center Section */}
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center space-y-4 mb-12">
-            <p className="text-sm uppercase tracking-wide text-[#00C4B4] font-semibold">Knnect</p>
+            <p className="text-sm uppercase tracking-wide text-[#00C4B4] font-semibold">Customer Experience</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50]">
-              Customer Experience & Amazon Connect
+              Customer Experience & Contact Center
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Knnect builds high-availability enterprise contact centers with Amazon Connect. We deliver production-ready environments built for maximum scale, aligned with AWS Well-Architected frameworks.
+              Knetix builds high-availability enterprise contact centers. We deliver production-ready environments built for maximum scale, aligned with Well-Architected frameworks.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {knnectServices.map((service, index) => (
+            {cxServices.map((service, index) => (
               <div
                 key={index}
                 className="bg-[#F8FAFC] border border-gray-200 rounded-2xl p-6 hover:border-[#00C4B4] hover:shadow-xl transition-all"
@@ -84,7 +84,7 @@ export default function ServicesPage() {
               href="/contact"
               className="inline-block bg-[#00C4B4] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#00b3a3] transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Contact an AWS Connect Expert
+              Contact a Contact Center Expert
             </Link>
           </div>
         </div>

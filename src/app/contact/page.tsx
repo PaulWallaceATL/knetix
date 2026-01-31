@@ -92,7 +92,7 @@ export default function ContactPage() {
       <section className="bg-gradient-to-br from-[#0A2E50] to-[#00C4B4] text-white py-16 md:py-20 lg:py-24">
         <div className="container-clean text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Connect with Knetix & Knnect
+            Connect with Knetix
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
             We translate complex mandates into precision architectures. By leveraging the global market without vendor bias, we provide the elite oversight required to guarantee your most critical transformations.
@@ -259,7 +259,7 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#00C4B4] focus:border-transparent outline-none transition resize-none ${
                       errors.message ? 'border-red-500' : 'border-gray-300'
                     }`}
-                    placeholder="Channel partners: Describe the client opportunity or collaboration interest. Enterprise clients: Share your cloud, security, data, AI, CX, or Amazon Connect requirements..."
+                    placeholder=""
                   ></textarea>
                   {errors.message && (
                     <p className="mt-1 text-sm text-red-500">{errors.message}</p>
@@ -322,10 +322,10 @@ export default function ContactPage() {
       <section className="bg-[#F0F2F5] py-12 md:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl font-bold text-[#0A2E50] mb-4">
-            Partner Ready. Client Focused.
+            Client Outcomes Focused
           </h2>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Channel partners: Refer clients with confidence. Enterprise clients: Schedule a confidential strategy session with a principal Technology Advisor. We&apos;ll clarify objectives, outline potential plays, and map the provider ecosystem—no obligation.
+            Schedule a confidential strategy session with a principal Technology Advisor. We&apos;ll clarify objectives, outline potential plays, and map the provider ecosystem—no obligation.
           </p>
           <Link href="/contact">
             <button className="bg-[#00C4B4] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#00b3a3] transition-all duration-300 shadow-lg hover:shadow-xl">

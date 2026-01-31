@@ -11,7 +11,7 @@ export default function AboutPage() {
             Built on Amazon-Scale Rigor
           </h1>
           <p className="text-xl text-white/80 leading-relaxed">
-            Knetix and Knnect are led by top Amazon CX Sales Executives with deep expertise in enterprise technology transformations. Our approach combines Amazon&apos;s operational excellence with decades of enterprise IT experience.
+            Knetix is led by top Amazon CX Sales Executives with deep expertise in enterprise technology transformations. Our approach combines Amazon&apos;s operational excellence with decades of enterprise IT experience.
           </p>
         </div>
       </section>
@@ -27,7 +27,7 @@ export default function AboutPage() {
                   Top Amazon CX Sales Executives
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  Our leadership team brings exceptional credentials from Amazon, where they served as top Customer Experience (CX) Sales Executives. Their deep understanding of Amazon Connect, AWS architecture, and enterprise-scale customer experience solutions forms the foundation of both Knetix and Knnect.
+                  Our leadership team brings exceptional credentials from Amazon, where they served as top Customer Experience (CX) Sales Executives. Their deep understanding of Amazon Connect, AWS architecture, and enterprise-scale customer experience solutions forms the foundation of Knetix.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
                   At Amazon, our team was instrumental in helping Fortune 500 companies transform their customer experience operations using Amazon Connect and the broader AWS ecosystem. This hands-on experience with Amazon&apos;s rigorous operational standards and customer-centric approach directly informs our methodology.
@@ -76,26 +76,26 @@ export default function AboutPage() {
           <div className="text-center space-y-4 mb-12">
             <p className="text-sm font-semibold uppercase tracking-wide text-[#00C4B4]">Our Approach</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0A2E50]">
-              Two Brands, One Vision
+              One Vision, Complete Capability
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Knetix and Knnect work together as sister companies to solve complex enterprise challenges. This unified approach ensures channel partners understand how both entities collaborate to deliver comprehensive solutions.
+              Knetix solves complex enterprise challenges through a unified approach that brings together Customer Experience, Amazon Connect, and comprehensive technology advisory.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#00C4B4] hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-[#0A2E50] mb-4">Knnect</h3>
+              <h3 className="text-2xl font-bold text-[#0A2E50] mb-4">Customer Experience & Amazon Connect</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                <strong>Focus:</strong> Customer Experience (CX) and Amazon Connect
+                <strong>Focus:</strong> CX and Amazon Connect
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Knnect specializes exclusively in building high-availability enterprise contact centers with Amazon Connect. This is the core &quot;hook&quot; based on our team&apos;s Amazon background, delivering production-ready environments built for maximum scale.
+                Knetix specializes in building high-availability enterprise contact centers with Amazon Connect. This is the core &quot;hook&quot; based on our team&apos;s Amazon background, delivering production-ready environments built for maximum scale.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#00C4B4] hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-[#0A2E50] mb-4">Knetix</h3>
+              <h3 className="text-2xl font-bold text-[#0A2E50] mb-4">Technology Advisory</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 <strong>Focus:</strong> Comprehensive Technology Advisory
               </p>
@@ -156,7 +156,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold">Ready to Engage a Technology Advisor?</h2>
           <p className="text-lg text-white/80 leading-relaxed">
-            Whether you need Amazon Connect expertise through Knnect or comprehensive technology advisory through Knetix, we bring Amazon-scale rigor to every engagement.
+            Whether you need Amazon Connect expertise or comprehensive technology advisory, Knetix brings Amazon-scale rigor to every engagement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
