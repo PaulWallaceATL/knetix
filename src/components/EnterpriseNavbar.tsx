@@ -1,14 +1,21 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import KnetixLogo from './KnetixLogo';
 import { ArrowRight } from 'lucide-react';
 
 export default function EnterpriseNavbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinkClass = (path: string) => {
+    const isActive = pathname === path || (path === '/' && pathname === '/');
+    return `font-semibold transition-colors ${isActive ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,13 +52,13 @@ export default function EnterpriseNavbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">
+            <Link href="/" className={navLinkClass('/')}>
               Home
             </Link>
-            <Link href="/services" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">
+            <Link href="/services" className={navLinkClass('/services')}>
               Services
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">
+            <Link href="/about" className={navLinkClass('/about')}>
               About
             </Link>
             <Link href="/contact">
@@ -125,21 +132,21 @@ export default function EnterpriseNavbar() {
               <Link
                 href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-gray-900"
+                className={`block px-4 py-3 rounded-lg transition-colors font-semibold ${pathname === '/' ? 'text-blue-600 bg-blue-50' : 'text-gray-900 hover:bg-gray-50'}`}
               >
                 Home
               </Link>
               <Link
                 href="/services"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-gray-900"
+                className={`block px-4 py-3 rounded-lg transition-colors font-semibold ${pathname === '/services' ? 'text-blue-600 bg-blue-50' : 'text-gray-900 hover:bg-gray-50'}`}
               >
                 Services
               </Link>
               <Link
                 href="/about"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-gray-900"
+                className={`block px-4 py-3 rounded-lg transition-colors font-semibold ${pathname === '/about' ? 'text-blue-600 bg-blue-50' : 'text-gray-900 hover:bg-gray-50'}`}
               >
                 About
               </Link>

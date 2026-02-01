@@ -129,7 +129,7 @@ export default function ContactPage() {
               {submitSuccess && (
                 <div className="mb-6 bg-green-50 border-l-4 border-green-500 p-4 rounded">
                   <p className="text-green-700 font-semibold">
-                    Your email client should open with the message pre-filled. Please complete and send the email to info@knetix.io.
+                    Thank you for your message.
                   </p>
                 </div>
               )}

@@ -91,7 +91,7 @@ export default function EnterpriseHero() {
               ease: "linear"
             }}
           >
-            Elite IT Strategy. Global Architecture. Accelerated Outcomes.
+            Elite IT Strategy. Accelerated Outcomes.
           </motion.span>
         </motion.h1>
 
